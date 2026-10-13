@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>대한민국 올바른 분리배출 &amp; 재활용 완벽 백과사전</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+tailwind.config = { theme: { extend: { colors: { brandRed: '#dc2626' } } } }
+</script>
+<style>
+body { font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Noto Sans KR', 'Malgun Gothic', sans-serif; word-break: keep-all; }
+.badge-pet { background:#ea580c; color:#fff; }
+.badge-plastic { background:#0284c7; color:#fff; }
+.badge-paper { background:#15803d; color:#fff; }
+.badge-vinyl { background:#7c3aed; color:#fff; }
+.badge-can { background:#4b5563; color:#fff; }
+.badge-glass { background:#d97706; color:#fff; }
+.badge-styro { background:#0891b2; color:#fff; }
+.badge-multi { background:#be185d; color:#fff; }
+.badge-general { background:#dc2626; color:#fff; }
+.badge-food-ok { background:#0284c7; color:#fff; }
+.badge-food-no { background:#e11d48; color:#fff; }
+.badge-special { background:#0d9488; color:#fff; }
+::-webkit-scrollbar { width:8px; height:8px; }
+::-webkit-scrollbar-track { background:#f1f5f9; }
+::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:4px; }
+::-webkit-scrollbar-thumb:hover { background:#94a3b8; }
+.modal-animate-in { animation: modalFadeIn .22s cubic-bezier(.16,1,.3,1) forwards; }
+@keyframes modalFadeIn { from{opacity:0; transform:scale(.96) translateY(8px);} to{opacity:1; transform:scale(1) translateY(0);} }
+.faq-body { display:none; }
+.faq-open .faq-body { display:block; }
+.faq-open .faq-chev { transform: rotate(180deg); }
+.no-scrollbar::-webkit-scrollbar { display:none; }
+.no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+mark.hl { background:#fde68a; color:inherit; padding:0 2px; border-radius:3px; }
+.quiz-opt:disabled { cursor:default; }
+button:focus-visible, input:focus-visible { outline:3px solid #10b981; outline-offset:2px; }
+@media (prefers-reduced-motion: reduce) { * { animation:none !important; transition:none !important; } }
+@media print { header, #searchSection, #mainTabContainer, #subTabContainer, footer, .no-print { display:none !important; } }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white">
+
+<div class="bg-slate-950 text-slate-200 border-b border-slate-800 text-center py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-2 flex-wrap">
+  <span class="bg-red-600/20 text-red-500 border border-red-500/40 px-3 py-0.5 rounded-full text-xs font-black tracking-wide shadow-sm">만든이: 핏빛초콜릿</span>
+  <span class="text-slate-400">| 환경부(현 기후에너지환경부) 분리배출 지침 &amp; 지자체 통일 기준 기반 자원순환 백과사전</span>
+</div>
+
+<header class="bg-gradient-to-r from-emerald-950 via-teal-900 to-slate-900 text-white shadow-xl relative overflow-hidden">
+  <div class="absolute -right-10 -bottom-10 opacity-10 text-[220px] pointer-events-none select-none" aria-hidden="true">♻️</div>
+  <div class="max-w-7xl mx-auto px-4 py-8 sm:py-10 relative z-10">
+    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-bold px-3 py-1 rounded-full mb-3 backdrop-blur-md">
+          <i class="fa-solid fa-leaf"></i> 대한민국 자원순환 &amp; 환경보호 통합 가이드
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-2">대한민국 올바른 분리배출 완벽 백과사전</h1>
+        <p class="text-emerald-100/90 text-xs sm:text-sm max-w-2xl leading-relaxed">
+          재활용 · 음식물 · 종량제 · 특수배출 품목 검색부터 제품에 인쇄된 분리배출 마크 읽는 법, 재활용 등급, FAQ, 퀴즈까지 한 곳에서 확인하세요.
+        </p>
+      </div>
+      <div class="grid grid-cols-3 gap-2 w-full lg:w-auto">
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-3 rounded-2xl text-center">
+          <div class="text-2xl font-black text-white" id="statItems">--</div>
+          <div class="text-[11px] text-emerald-200 font-medium">품목 가이드</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-3 rounded-2xl text-center">
+          <div class="text-2xl font-black text-white" id="statMarks">--</div>
+          <div class="text-[11px] text-emerald-200 font-medium">마크 도감</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-3 rounded-2xl text-center">
+          <div class="text-2xl font-black text-white" id="statFaq">--</div>
+          <div class="text-[11px] text-emerald-200 font-medium">FAQ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 핵심 4원칙 -->
+<section class="bg-emerald-50 border-b border-emerald-100">
+  <div class="max-w-7xl mx-auto px-4 py-4 grid grid-cols-2 md:grid-cols-4 gap-3 text-xs sm:text-sm">
+    <div class="flex items-start gap-2.5"><span class="text-2xl">💧</span><div><b class="text-emerald-900">비우기</b><div class="text-emerald-800/80">내용물은 싹 비우고 헹굽니다</div></div></div>
+    <div class="flex items-start gap-2.5"><span class="text-2xl">🏷️</span><div><b class="text-emerald-900">떼어내기</b><div class="text-emerald-800/80">라벨·뚜껑·테이프는 재질별로 분리</div></div></div>
+    <div class="flex items-start gap-2.5"><span class="text-2xl">🗂️</span><div><b class="text-emerald-900">구분하기</b><div class="text-emerald-800/80">마크를 보고 재질별로 따로 배출</div></div></div>
+    <div class="flex items-start gap-2.5"><span class="text-2xl">🚫</span><div><b class="text-emerald-900">섞지 않기</b><div class="text-emerald-800/80">다른 재질을 비닐봉지에 담아 버리지 않기</div></div></div>
+  </div>
+</section>
+
+<main class="flex-grow max-w-7xl w-full mx-auto px-4 py-6">
+
+  <!-- 검색 -->
+  <div id="searchSection" class="bg-white rounded-3xl shadow-sm border border-slate-200 p-4 sm:p-6 mb-6">
+    <div class="relative">
+      <span class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-400"><i class="fa-solid fa-magnifying-glass text-lg"></i></span>
+      <input type="text" id="searchInput" autocomplete="off" aria-label="품목 검색" placeholder="무엇이든 검색하세요! (예: 치킨뼈, 영수증, 컵라면, 햇반, 보조배터리, 양파껍질, 깨진유리, 아이스팩...)" class="w-full pl-12 pr-12 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition text-sm sm:text-base shadow-inner">
+      <button id="clearSearchBtn" aria-label="검색어 지우기" class="hidden absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-600"><i class="fa-solid fa-circle-xmark text-lg"></i></button>
+    </div>
+    <div class="mt-3 flex flex-wrap items-center gap-2" id="quickChips"></div>
+  </div>
+
+  <!-- 메인 탭 -->
+  <div class="sticky top-0 z-30 bg-slate-50/95 backdrop-blur pt-1">
+    <div class="flex overflow-x-auto no-scrollbar border-b border-slate-200 mb-4 gap-1.5" id="mainTabContainer" role="tablist"></div>
+  </div>
+
+  <div class="flex flex-wrap gap-2 mb-5" id="subTabContainer"></div>
+
+  <!-- 품목 그리드 -->
+  <div id="itemsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+
+  <!-- 마크 도감 -->
+  <div id="marksTab" class="hidden space-y-8"></div>
+
+  <!-- FAQ -->
+  <div id="faqTab" class="hidden"></div>
+
+  <!-- 퀴즈 -->
+  <div id="quizTab" class="hidden"></div>
+
+  <!-- 통합 검색 결과 -->
+  <div id="searchResults" class="hidden space-y-8"></div>
+
+  <div id="emptyState" class="hidden bg-white rounded-3xl p-12 text-center border border-slate-200">
+    <div class="text-6xl mb-4">🔍</div>
+    <h3 class="text-xl font-bold text-slate-800 mb-2">검색된 품목이 없습니다</h3>
+    <p class="text-slate-500 text-sm max-w-md mx-auto">입력하신 단어와 일치하는 항목을 찾지 못했습니다.<br>다른 단어(예: 닭뼈, 영수증, 멸균팩, 건전지)로 검색하거나, 거주지 지자체의 「내 손안의 분리배출」 앱을 확인해 보세요.</p>
+  </div>
+</main>
+
+<footer class="bg-slate-900 text-slate-400 text-xs mt-8">
+  <div class="max-w-7xl mx-auto px-4 py-8 space-y-3 leading-relaxed">
+    <div class="flex items-center gap-2 text-emerald-400 font-black text-sm"><i class="fa-solid fa-circle-info"></i> 이용 안내</div>
+    <p>이 백과사전은 「재활용가능자원의 분리수거 등에 관한 지침」, 「분리배출 표시에 관한 지침」, 서울시 음식물류 폐기물 분리배출 표준안, 「내 손안의 분리배출」 앱 안내 등을 바탕으로 정리했습니다. 분리배출 기준은 <b class="text-slate-200">지자체 조례·주택 유형(아파트/단독주택)·처리시설 여건에 따라 달라질 수 있으므로</b>, 헷갈리는 품목은 거주지 지자체 안내를 최종 기준으로 삼으세요.</p>
+    <p>마크·도안은 이해를 돕기 위해 단순화한 일러스트이며, 실제 제품에 인쇄된 공식 도안과 모양·색상이 다를 수 있습니다.</p>
+    <p class="text-slate-500">만든이: 핏빛초콜릿 · 문서 정리 기준: 2026년 10월</p>
+  </div>
+</footer>
+
+<!-- 상세 모달 -->
+<div id="detailModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm hidden" role="dialog" aria-modal="true">
+  <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-slate-100 modal-animate-in" id="modalContainer">
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   마크 / 라벨 도감 : SVG 도안 + 설명 데이터
+   (※ 공식 도안을 단순화한 일러스트입니다)
+   ============================================================ */
+
+// ── 1) 픽토그램 ─────────────────────────────────────────────
+const PIC = {
+  paper: c => `<path d="M42 18h26l14 14v42H42z"/><path d="M68 18v14h14"/><path d="M50 46h24M50 56h24M50 66h16"/>`,
+  carton: c => `<path d="M44 38l16-16 16 16v38H44z"/><path d="M44 38h32"/><path d="M60 22v16"/><path d="M52 54h16M52 64h16"/>`,
+  carton_s: c => `<path d="M44 38l16-16 16 16v38H44z"/><path d="M44 38h32"/><path d="M60 22v16"/><rect x="50" y="48" width="20" height="6" fill="${c}"/><path d="M50 62h20M50 68h20" stroke-dasharray="3 3"/>`,
+  bottle: c => `<path d="M54 18h12v14c0 8 12 10 12 22v22H42V54c0-12 12-14 12-22z"/><path d="M42 58h36"/>`,
+  can_fe: c => `<ellipse cx="60" cy="28" rx="16" ry="6"/><path d="M44 28v42c0 3 7 6 16 6s16-3 16-6V28"/><text x="60" y="58" text-anchor="middle" font-size="15" font-weight="800" fill="${c}" stroke="none" font-family="sans-serif">Fe</text>`,
+  can_al: c => `<ellipse cx="60" cy="28" rx="16" ry="6"/><path d="M44 28v42c0 3 7 6 16 6s16-3 16-6V28"/><text x="60" y="58" text-anchor="middle" font-size="15" font-weight="800" fill="${c}" stroke="none" font-family="sans-serif">Al</text>`,
+  pet: c => `<rect x="55" y="16" width="10" height="7" rx="1.5"/><path d="M56 23v8c-8 4-12 8-12 16v26c0 3 4 4 8 4h16c4 0 8-1 8-4V47c0-8-4-12-12-16v-8"/><path d="M44 52h32M44 64h32"/>`,
+  tub: c => `<path d="M38 36h44l-6 40H44z"/><path d="M34 36h52"/><path d="M48 50h24"/>`,
+  bag: c => `<path d="M42 30h36l6 46H36z"/><path d="M42 30c4 4 8 4 12 0s8-4 12 0 8 4 12 0"/>`,
+  box: c => `<path d="M36 40l24-12 24 12v28L60 80 36 68z"/><path d="M36 40l24 12 24-12M60 52v28"/>`,
+  battery: c => `<rect x="38" y="34" width="40" height="32" rx="4"/><path d="M78 44h6v12h-6"/><path d="M48 50h12M54 44v12"/>`,
+  trash: c => `<path d="M44 34h32l-3 42H47z"/><path d="M40 34h40M54 28h12v6"/><path d="M54 44v24M66 44v24"/>`,
+  apple: c => `<path d="M60 38c-8-8-22-2-20 14s14 26 20 22c6 4 18-6 20-22s-12-22-20-14z"/><path d="M60 38c0-6 2-10 8-14"/>`,
+  bulb: c => `<path d="M60 22c-12 0-20 9-20 19 0 8 5 12 8 17v8h24v-8c3-5 8-9 8-17 0-10-8-19-20-19z"/><path d="M50 72h20M53 78h14"/>`,
+  pill: c => `<rect x="36" y="42" width="48" height="22" rx="11" transform="rotate(-30 60 53)"/><path d="M52 40l16 26" />`,
+  cloth: c => `<path d="M46 22l-18 12 8 10 8-5v36h32V39l8 5 8-10-18-12c-3 6-8 8-14 8s-11-2-14-8z"/>`,
+  oil: c => `<path d="M60 22c-10 14-16 22-16 32a16 16 0 0032 0c0-10-6-18-16-32z"/>`
+};
+
+// ── 2) 마크 정의 ─────────────────────────────────────────────
+const MK = {
+  paper:        { c:'#15803d', l:'종이',   s:'',            pic:'paper',    name:'종이',            desc:'신문·책·노트·골판지 상자·종이 쇼핑백 등 종이 재질 포장재에 표시됩니다.', how:'테이프·스프링·비닐코팅 부분을 제거하고 펼쳐 묶어 종이류로 배출' },
+  pack:         { c:'#15803d', l:'종이팩', s:'일반팩',       pic:'carton',   name:'종이팩 · 일반팩', desc:'우유·주스처럼 냉장 유통되는 살균 종이팩입니다. 고급 화장지 원료로 쓰입니다.', how:'내용물을 비우고 헹군 뒤 펼쳐 말려 종이팩 전용 수거함에 배출' },
+  pack_s:       { c:'#0f766e', l:'종이팩', s:'멸균팩',       pic:'carton_s', name:'종이팩 · 멸균팩', desc:'두유·아몬드유·와인팩처럼 상온 유통되는 팩으로 내부에 알루미늄박이 붙어 있습니다.', how:'일반팩과 섞지 않고 멸균팩 구분 수거함(없으면 종이팩류)에 배출' },
+  glass:        { c:'#b45309', l:'유리',   s:'',            pic:'bottle',   name:'유리병',          desc:'음료·주류·식품 유리병입니다. 빈용기보증금 대상 병은 소매점에 반환하면 보증금을 돌려받습니다.', how:'내용물을 비우고 헹군 뒤 금속·플라스틱 뚜껑을 분리해 유리병류로 배출' },
+  can_fe:       { c:'#475569', l:'캔',     s:'철(Fe)',       pic:'can_fe',   name:'금속캔 · 철',     desc:'참치캔·통조림·부탄가스 등 철(스틸) 재질 캔입니다. 자석에 붙으면 철입니다.', how:'내용물을 비우고 헹궈 플라스틱 뚜껑·라벨을 제거한 뒤 캔류로 배출' },
+  can_al:       { c:'#64748b', l:'캔',     s:'알루미늄',     pic:'can_al',   name:'금속캔 · 알루미늄', desc:'음료수 캔·맥주 캔 등 알루미늄 재질 캔입니다. 자석에 붙지 않습니다.', how:'내용물을 비우고 헹궈 가볍게 압착한 뒤 캔류로 배출' },
+  pet:          { c:'#ea580c', l:'무색페트', s:'PET',        pic:'pet',      name:'무색 페트(투명 페트병)', desc:'생수·음료 투명 페트병에 표시됩니다. 2022년 이후 제조 제품부터 도안 속 문자가 ‘페트’에서 ‘무색페트’로 바뀌었습니다.', how:'비우고 → 라벨 제거 → 압착 → 뚜껑 닫아 투명 페트병 전용함에 배출' },
+  hdpe:         { c:'#0284c7', l:'플라스틱', s:'HDPE',       pic:'tub',      name:'플라스틱 · HDPE', desc:'세제·샴푸 용기, 우유병 뚜껑 등 고밀도 폴리에틸렌 용기입니다.', how:'내용물을 비우고 헹궈 라벨을 제거한 뒤 플라스틱류로 배출' },
+  ldpe:         { c:'#0284c7', l:'플라스틱', s:'LDPE',       pic:'tub',      name:'플라스틱 · LDPE', desc:'말랑한 튜브·뚜껑·일부 용기에 쓰이는 저밀도 폴리에틸렌입니다.', how:'내용물을 비우고 헹궈 플라스틱류로 배출' },
+  pp:           { c:'#0284c7', l:'플라스틱', s:'PP',         pic:'tub',      name:'플라스틱 · PP',   desc:'배달용기·밀폐용기·요거트 용기·병뚜껑에 흔한 내열성 좋은 폴리프로필렌입니다.', how:'음식물과 양념을 씻어내고 플라스틱류로 배출' },
+  ps:           { c:'#0284c7', l:'플라스틱', s:'PS',         pic:'tub',      name:'플라스틱 · PS',   desc:'요거트 컵·일회용 컵·도시락 용기에 쓰이는 폴리스티렌입니다. 단단하고 잘 깨집니다.', how:'깨끗이 씻어 플라스틱류로 배출 (발포된 PS는 스티로폼)' },
+  plastic_other:{ c:'#0284c7', l:'플라스틱', s:'OTHER',      pic:'tub',      name:'플라스틱 · OTHER', desc:'여러 재질이 합쳐진 복합 수지(예: PP+EVOH 즉석밥 용기)나 위 분류에 없는 수지입니다.', how:'세척해 플라스틱류로 배출. 단, 재활용 등급이 낮을 수 있어 재질 분리 노력이 중요' },
+  vinyl_pe:     { c:'#7c3aed', l:'비닐류', s:'PE',          pic:'bag',      name:'비닐류 · PE',     desc:'택배 비닐봉투·지퍼백·양파망 등 폴리에틸렌 필름입니다.', how:'이물질을 털고 투명 봉투에 모아 비닐류로 배출' },
+  vinyl_pp:     { c:'#7c3aed', l:'비닐류', s:'PP',          pic:'bag',      name:'비닐류 · PP',     desc:'과자 봉지·라면 봉지 등에 쓰이는 폴리프로필렌 필름(OPP)입니다.', how:'이물질을 털고 비닐류로 배출' },
+  vinyl_other:  { c:'#7c3aed', l:'비닐류', s:'OTHER',       pic:'bag',      name:'비닐류 · OTHER',  desc:'알루미늄 증착·여러 겹 적층 필름처럼 복합 재질 비닐입니다.', how:'이물질을 털어 비닐류로 배출 (등급이 낮을 수 있음)' },
+  styro:        { c:'#0891b2', l:'스티로폼', s:'EPS',       pic:'box',      name:'스티로폼(발포합성수지)', desc:'가전 완충재·과일/생선 상자·컵라면 용기 등 발포 폴리스티렌입니다.', how:'테이프·라벨·송장을 떼고 이물질을 헹궈 스티로폼 전용 수거함에 배출' },
+  battery:      { c:'#dc2626', l:'폐건전지', s:'전용 수거',   pic:'battery',  name:'폐건전지(전지류)', desc:'일반 건전지·보조배터리·단추전지 등은 일반쓰레기나 재활용품과 섞지 않고 전용 수거함에 배출합니다.', how:'주민센터·아파트 단지·편의점/마트의 전용 수거함에 배출 (단자는 절연테이프로 감싸기)' },
+  general:      { c:'#dc2626', l:'일반쓰레기', s:'종량제',   pic:'trash',    name:'일반쓰레기(종량제)', desc:'재활용이 어렵거나 불가능한 품목입니다.', how:'지자체 종량제 규격 봉투에 담아 배출' },
+  food:         { c:'#0284c7', l:'음식물', s:'',            pic:'apple',    name:'음식물쓰레기',    desc:'사료·퇴비·바이오가스로 재활용되는 음식물류입니다.', how:'물기를 최대한 빼고 이물질을 제거해 전용 수거함에 배출' },
+  bulb:         { c:'#0d9488', l:'형광등', s:'전용 수거',   pic:'bulb',     name:'폐형광등',        desc:'수은이 들어 있어 깨지지 않게 전용 수거함에 배출합니다.', how:'동주민센터·아파트 단지 형광등 수거함에 깨지지 않게 배출' },
+  pill:         { c:'#0d9488', l:'폐의약품', s:'전용 수거', pic:'pill',     name:'폐의약품',        desc:'약국·보건소·주민센터 수거함에 배출합니다.', how:'알약만 모아 약국·보건소·주민센터의 폐의약품 수거함에 배출' },
+  cloth:        { c:'#0d9488', l:'의류', s:'의류수거함',    pic:'cloth',    name:'의류',            desc:'깨끗하고 재사용 가능한 헌 옷은 의류수거함으로 배출합니다.', how:'깨끗하게 말려 묶어서 의류수거함에 배출' },
+  oil:          { c:'#0d9488', l:'폐식용유', s:'전용 수거', pic:'oil',      name:'폐식용유',        desc:'하수구에 붓지 않고 별도 수거함에 배출합니다.', how:'뚜껑 있는 페트병에 모아 주민센터·아파트 수거함으로 배출' }
+};
+
+function markSVG(id, size = 56) {
+  const m = MK[id]; if (!m) return '';
+  const c = m.c;
+  const ls = m.l.length > 4 ? 12 : (m.l.length > 3 ? 14 : 16);
+  return `<svg viewBox="0 0 120 120" width="${size}" height="${size}" role="img" aria-label="${m.name} 마크" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+    <rect x="4" y="4" width="112" height="112" rx="18" fill="#fff" stroke="${c}" stroke-width="5"/>
+    <g fill="none" stroke="${c}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">${PIC[m.pic](c)}</g>
+    <text x="60" y="${m.s ? 92 : 100}" text-anchor="middle" font-size="${ls}" font-weight="800" fill="${c}" font-family="'Pretendard Variable',sans-serif">${m.l}</text>
+    ${m.s ? `<text x="60" y="108" text-anchor="middle" font-size="11" font-weight="700" fill="${c}" font-family="'Pretendard Variable',sans-serif">${m.s}</text>` : ''}
+  </svg>`;
+}
+
+// ── 3) 재질 식별 코드 (삼각형) ───────────────────────────────
+const RESIN = [
+  { n:1, code:'PET',   color:'#ea580c', where:'생수·음료 페트병, 일부 반찬/과일 투명 용기', rec:'최우수 · 투명 페트병은 별도 배출 → 의류용 섬유·재생 페트병', note:'비중 약 1.38로 물에 가라앉습니다.' },
+  { n:2, code:'HDPE',  color:'#0284c7', where:'세제·샴푸·우유병·병뚜껑, 일부 장난감', rec:'우수 · 재생 용기·파이프·화분', note:'화학적으로 안정적이고 단단합니다.' },
+  { n:3, code:'PVC',   color:'#be123c', where:'과거 랩, 수액팩, 알약 포장재, 배관', rec:'재활용 부적합 · 포장재 사용 금지(2022 이후 표시에서 삭제)', note:'소각 시 유해물질이 나와 포장재로는 금지되었습니다.' },
+  { n:4, code:'LDPE',  color:'#0284c7', where:'비닐봉투, 지퍼백, 말랑한 튜브, 일부 뚜껑', rec:'보통 · 재생 비닐·쓰레기봉투', note:'얇은 필름류는 선별 시 작은 조각이 잔재물이 되기 쉽습니다.' },
+  { n:5, code:'PP',    color:'#0284c7', where:'배달용기·밀폐용기·요거트 컵·빨대·병뚜껑', rec:'우수 · 재생 용기·건축자재·열분해', note:'내열성이 높아 전자레인지 용기로 많이 쓰입니다.' },
+  { n:6, code:'PS',    color:'#0891b2', where:'일회용 컵·도시락 용기, 발포 PS는 스티로폼', rec:'보통 · 스티로폼은 잉고트로 재생', note:'발포된 형태가 EPS(스티로폼)입니다.' },
+  { n:7, code:'OTHER', color:'#7c3aed', where:'복합 수지(즉석밥 용기), 폴리카보네이트, 기타', rec:'낮음 · 복합재질이라 선별·재생이 까다로움', note:'여러 재질이 한 용기에 합쳐진 경우 대부분 여기에 속합니다.' }
+];
+
+function triSVG(n, code, color, size = 64) {
+  return `<svg viewBox="0 0 120 120" width="${size}" height="${size}" role="img" aria-label="재질코드 ${n} ${code}" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+    <g fill="none" stroke="${color}" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M60 18 L100 88 H20 Z"/>
+    </g>
+    <g fill="${color}">
+      <polygon points="60,10 72,26 48,26" transform="rotate(0 60 60)"/>
+      <polygon points="60,10 72,26 48,26" transform="rotate(120 60 60)"/>
+      <polygon points="60,10 72,26 48,26" transform="rotate(240 60 60)"/>
+    </g>
+    <rect x="46" y="44" width="28" height="30" fill="#fff"/>
+    <text x="60" y="68" text-anchor="middle" font-size="26" font-weight="900" fill="${color}" font-family="sans-serif">${n}</text>
+    <text x="60" y="110" text-anchor="middle" font-size="15" font-weight="800" fill="${color}" font-family="sans-serif">${code}</text>
+  </svg>`;
+}
+
+// ── 4) 재활용 용이성 등급 ────────────────────────────────────
+const GRADES = [
+  { id:'best', name:'최우수', color:'#15803d', bg:'#dcfce7', bars:4, desc:'재활용이 매우 쉬운 단일 재질·구조입니다.', ex:'라벨 없는 투명 페트병, 단일 재질 PP 용기', act:'씻어서 마크대로 정상 배출' },
+  { id:'good', name:'우수', color:'#65a30d', bg:'#ecfccb', bars:3, desc:'재활용에 큰 어려움이 없는 포장재입니다.', ex:'일반 우유팩, 단일 PP·HDPE 용기', act:'씻어서 마크대로 정상 배출' },
+  { id:'mid',  name:'보통', color:'#d97706', bg:'#fef3c7', bars:2, desc:'재활용은 가능하지만 일부 방해 요소(접착·코팅 등)가 있습니다.', ex:'접착 라벨이 붙은 용기, 일부 컬러 페트', act:'라벨·뚜껑 등 방해 요소를 최대한 분리해 배출' },
+  { id:'hard', name:'어려움', color:'#dc2626', bg:'#fee2e2', bars:1, desc:'복합재질·구조로 재활용 공정이 까다롭습니다. 생산자(기업)에게 부담금을 매기기 위한 평가입니다.', ex:'멸균팩, PP+EVOH 복합 용기, 유색 페트', act:'소비자는 일반쓰레기가 아니라 그대로 분리배출 (표시가 있어도 재활용 대상)' }
+];
+function gradeSVG(g, size = 72) {
+  const bars = [0,1,2,3].map(i => `<rect x="${22 + i*20}" y="${64 - i*8}" width="14" height="${20 + i*8}" rx="3" fill="${i < g.bars ? g.color : '#e2e8f0'}"/>`).join('');
+  return `<svg viewBox="0 0 120 120" width="${size}" height="${size}" role="img" aria-label="재활용 용이성 ${g.name}" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+    <rect x="4" y="4" width="112" height="112" rx="18" fill="${g.bg}" stroke="${g.color}" stroke-width="5"/>
+    <g transform="translate(0,-4)">${bars}</g>
+    <text x="60" y="108" text-anchor="middle" font-size="18" font-weight="900" fill="${g.color}" font-family="'Pretendard Variable',sans-serif">${g.name}</text>
+  </svg>`;
+}
+
+// ── 5) 기타 마크 ────────────────────────────────────────────
+const EXTRA_MARKS = [
+  { name:'환경표지(환경마크)', svg:(s)=>`<svg viewBox="0 0 120 120" width="${s}" height="${s}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="환경표지"><circle cx="60" cy="60" r="52" fill="#ecfdf5" stroke="#15803d" stroke-width="5"/><path d="M60 88V54" stroke="#15803d" stroke-width="6" stroke-linecap="round"/><path d="M60 62c-18 0-24-14-22-26 14 0 24 8 22 26z" fill="#22c55e"/><path d="M60 54c14-2 22-12 20-24-12 2-22 10-20 24z" fill="#16a34a"/><path d="M34 92c16 8 36 8 52 0" fill="none" stroke="#0284c7" stroke-width="5" stroke-linecap="round"/></svg>`, desc:'같은 용도의 다른 제품보다 오염 물질 발생이 적고 자원을 덜 쓰는 제품에 부여되는 인증 마크입니다.', note:'이 마크가 있어도 버릴 때는 재질 마크를 따라 분리배출해야 합니다.' },
+  { name:'GR(우수재활용제품) 마크', svg:(s)=>`<svg viewBox="0 0 120 120" width="${s}" height="${s}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GR 마크"><rect x="6" y="6" width="108" height="108" rx="22" fill="#fef3c7" stroke="#d97706" stroke-width="5"/><text x="60" y="72" text-anchor="middle" font-size="46" font-weight="900" fill="#b45309" font-family="sans-serif">GR</text><text x="60" y="98" text-anchor="middle" font-size="12" font-weight="800" fill="#b45309" font-family="sans-serif">Good Recycled</text></svg>`, desc:'폐자원을 재활용한 원료로 만든 우수한 제품에 부여되는 인증입니다. 재생 원료 제품 구매를 장려하는 마크입니다.', note:'GR 제품을 사는 것도 자원순환의 한 축입니다.' },
+  { name:'빈용기보증금 표시', svg:(s)=>`<svg viewBox="0 0 120 120" width="${s}" height="${s}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="빈용기보증금"><rect x="6" y="6" width="108" height="108" rx="20" fill="#fff" stroke="#b45309" stroke-width="5"/><g fill="none" stroke="#b45309" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M54 18h12v12c0 6 10 8 10 18v28H44V48c0-10 10-12 10-18z"/></g><text x="60" y="68" text-anchor="middle" font-size="22" font-weight="900" fill="#b45309" font-family="sans-serif">₩</text><text x="60" y="104" text-anchor="middle" font-size="12" font-weight="800" fill="#b45309" font-family="'Pretendard Variable',sans-serif">보증금 환불</text></svg>`, desc:'소주병·맥주병 등 지정 유리병을 소매점·마트에 반환하면 보증금(소주병 100원, 맥주병 130원 수준)을 돌려받습니다.', note:'보증금 대상 병은 분리수거함에 버리면 보증금을 포기하는 셈입니다.' },
+  { name:'폐전기·전자 마크(X 표시 바퀴 쓰레기통)', svg:(s)=>`<svg viewBox="0 0 120 120" width="${s}" height="${s}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="폐전기전자 마크"><rect x="6" y="6" width="108" height="108" rx="20" fill="#fff" stroke="#334155" stroke-width="5"/><g fill="none" stroke="#334155" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M42 40h36l-4 36H46z"/><path d="M38 40h44M54 34h12v6"/><circle cx="48" cy="84" r="4"/><circle cx="72" cy="84" r="4"/><path d="M30 26l60 62M90 26L30 88" stroke="#dc2626"/></g></svg>`, desc:'해외 직구 가전·전자기기에서 자주 보이는 마크로, ‘일반 쓰레기로 버리지 말고 전용 수거’하라는 뜻입니다.', note:'국내에서는 폐가전 무상방문수거 서비스, 소형가전 수거함을 이용하세요.' },
+  { name:'생분해성 / 바이오 마크', svg:(s)=>`<svg viewBox="0 0 120 120" width="${s}" height="${s}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="생분해 마크"><rect x="6" y="6" width="108" height="108" rx="20" fill="#f0fdf4" stroke="#16a34a" stroke-width="5"/><path d="M60 88V50" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/><path d="M60 62c-20 0-26-16-24-30 16 0 26 10 24 30z" fill="#4ade80" stroke="#16a34a" stroke-width="3"/><path d="M60 52c16-2 24-14 22-28-14 2-24 12-22 28z" fill="#86efac" stroke="#16a34a" stroke-width="3"/><text x="60" y="106" text-anchor="middle" font-size="12" font-weight="800" fill="#15803d" font-family="'Pretendard Variable',sans-serif">생분해</text></svg>`, desc:'일정 조건(산업용 퇴비화 시설 등)에서 분해되도록 만든 소재에 붙는 표시입니다.', note:'가정 음식물쓰레기·재활용 수거함에 넣으면 오히려 방해가 됩니다. 별도 수거가 없다면 일반쓰레기로 배출하세요.' },
+  { name:'도포·첩합 표시', svg:(s)=>`<svg viewBox="0 0 120 120" width="${s}" height="${s}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="도포 첩합 표시"><rect x="6" y="6" width="108" height="108" rx="20" fill="#fff" stroke="#7c3aed" stroke-width="5"/><rect x="26" y="30" width="68" height="14" rx="3" fill="#c4b5fd" stroke="#7c3aed" stroke-width="3"/><rect x="26" y="48" width="68" height="10" rx="3" fill="#ddd6fe" stroke="#7c3aed" stroke-width="3"/><rect x="26" y="62" width="68" height="14" rx="3" fill="#c4b5fd" stroke="#7c3aed" stroke-width="3"/><text x="60" y="100" text-anchor="middle" font-size="12" font-weight="800" fill="#6d28d9" font-family="'Pretendard Variable',sans-serif">도포·첩합</text></svg>`, desc:'종이에 PE를 코팅(도포)하거나 서로 다른 재질을 붙인(첩합) 경우, 분리배출 마크 옆에 그 재질을 함께 적도록 한 표시입니다.', note:'예) ‘종이팩 일반팩 · PE 도포’처럼 적혀 있으면 겉종이에 폴리에틸렌 코팅이 되어 있다는 뜻입니다.' }
+];
+
+// ── 6) 라벨 해부도 (제품별 SVG + 설명) ───────────────────────
+function callout(n, x, y) {
+  return `<g><circle cx="${x}" cy="${y}" r="11" fill="#0f172a"/><text x="${x}" y="${y+4.5}" text-anchor="middle" font-size="13" font-weight="800" fill="#fff" font-family="sans-serif">${n}</text></g>`;
+}
+const ANATOMY = [
+  {
+    id:'pet', title:'생수·음료 투명 페트병', icon:'🍶',
+    svg: `<svg viewBox="0 0 360 330" width="100%" style="max-width:340px" role="img" aria-label="투명 페트병 해부도" xmlns="http://www.w3.org/2000/svg">
+      <rect width="360" height="330" rx="18" fill="#f8fafc"/>
+      <rect x="150" y="26" width="60" height="26" rx="5" fill="#2563eb"/>
+      <path d="M154 52h52v8h-52z" fill="#cbd5e1"/>
+      <path d="M156 60c0 20-34 34-34 70v140c0 14 14 22 32 22h52c18 0 32-8 32-22V130c0-36-34-50-34-70z" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+      <rect x="124" y="140" width="112" height="70" fill="#16a34a" opacity=".9"/>
+      <text x="180" y="170" text-anchor="middle" font-size="16" font-weight="800" fill="#fff" font-family="sans-serif">맑은샘물</text>
+      <text x="180" y="192" text-anchor="middle" font-size="11" fill="#dcfce7" font-family="sans-serif">500ml · 비닐 라벨</text>
+      <path d="M124 150v50" stroke="#fff" stroke-width="2" stroke-dasharray="4 3"/>
+      <g transform="translate(224,224) scale(.34)">${markSVG('pet',120).replace(/<svg[^>]*>/, '').replace('</svg>','')}</g>
+      <path d="M140 296h80" stroke="#0284c7" stroke-width="3"/>
+      <text x="180" y="318" text-anchor="middle" font-size="12" font-weight="800" fill="#0284c7" font-family="sans-serif">♳ PET</text>
+      ${callout(1,262,40)} ${callout(2,262,66)} ${callout(3,96,175)} ${callout(4,312,244)} ${callout(5,262,312)}
+      <path d="M251 40H212M251 66H206" stroke="#0f172a" stroke-width="1.5"/>
+      <path d="M107 175H124" stroke="#0f172a" stroke-width="1.5"/>
+      <path d="M301 244H267" stroke="#0f172a" stroke-width="1.5"/>
+      <path d="M251 312H222" stroke="#0f172a" stroke-width="1.5"/>
+    </svg>`,
+    legend:[
+      ['뚜껑 (HDPE/PP)','페트병에 다시 닫아서 배출합니다. 세척·파쇄 공정에서 물에 뜨는 뚜껑이 자동으로 분리됩니다.'],
+      ['목 링(고리)','일부러 칼로 잘라 떼지 않아도 됩니다. 같은 이유로 자동 분리됩니다.'],
+      ['비닐 라벨','절취선(점선)을 따라 완전히 떼어 비닐류로 버립니다. 라벨이 남으면 의류용 고품질 재생이 어렵습니다.'],
+      ['분리배출 마크 ‘무색페트’','투명 페트병 전용 수거함에 배출하라는 표시입니다. 유색 병·기름병은 플라스틱류입니다.'],
+      ['바닥 재질 코드 ♳ PET','재질을 알려주는 번호입니다. 1번(PET)이면 같은 PET끼리 모아 재활용됩니다.']
+    ]
+  },
+  {
+    id:'pack', title:'우유팩 · 멸균팩', icon:'🥛',
+    svg: `<svg viewBox="0 0 360 330" width="100%" style="max-width:340px" role="img" aria-label="종이팩 해부도" xmlns="http://www.w3.org/2000/svg">
+      <rect width="360" height="330" rx="18" fill="#f8fafc"/>
+      <path d="M112 100l68-64 68 64v190H112z" fill="#ffffff" stroke="#15803d" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M112 100h136M180 36v64" stroke="#15803d" stroke-width="3"/>
+      <rect x="112" y="150" width="136" height="60" fill="#bbf7d0"/>
+      <text x="180" y="186" text-anchor="middle" font-size="22" font-weight="900" fill="#14532d" font-family="'Pretendard Variable',sans-serif">우유</text>
+      <g transform="translate(130,222) scale(.5)">${markSVG('pack',120).replace(/<svg[^>]*>/, '').replace('</svg>','')}</g>
+      <g transform="translate(190,222) scale(.5)">${markSVG('pack_s',120).replace(/<svg[^>]*>/, '').replace('</svg>','')}</g>
+      <rect x="236" y="48" width="40" height="14" rx="4" fill="#fb923c"/>
+      <path d="M262 56l20-18" stroke="#fb923c" stroke-width="5" stroke-linecap="round"/>
+      <path d="M126 292h108" stroke="#15803d" stroke-width="3" stroke-dasharray="6 4"/>
+      ${callout(1,296,56)} ${callout(2,64,130)} ${callout(3,64,260)} ${callout(4,296,260)} ${callout(5,180,316)}
+      <path d="M285 56H276M75 130H112M75 260H130M285 260H245" stroke="#0f172a" stroke-width="1.5"/>
+    </svg>`,
+    legend:[
+      ['빨대·플라스틱 주입구','종이팩과 다른 재질이므로 제거해 각각 플라스틱·비닐류로 버립니다.'],
+      ['종이 + 안쪽 PE 코팅','일반팩은 고급 천연펄프에 폴리에틸렌을 얇게 코팅했습니다. 펼쳐 말려야 곰팡이 없이 재생됩니다.'],
+      ['일반팩 마크','냉장 유통 살균 우유·주스 팩. 종이팩 전용 수거함(없으면 종이류와 분리해 묶어서)으로 배출합니다.'],
+      ['멸균팩 마크','상온 유통 두유·와인팩. 알루미늄박이 있어 일반팩과 섞이지 않게 별도 배출하는 것이 좋습니다.'],
+      ['접힌 바닥·옆면','가위로 잘라 펼치면 내용물 세척이 쉽고 부피도 줄어듭니다.']
+    ]
+  },
+  {
+    id:'delivery', title:'배달음식 · 즉석식품 플라스틱 용기', icon:'🍱',
+    svg: `<svg viewBox="0 0 360 330" width="100%" style="max-width:340px" role="img" aria-label="배달 용기 해부도" xmlns="http://www.w3.org/2000/svg">
+      <rect width="360" height="330" rx="18" fill="#f8fafc"/>
+      <path d="M70 120h220l-26 100H96z" fill="#fff7ed" stroke="#c2410c" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M58 120h244" stroke="#c2410c" stroke-width="6" stroke-linecap="round"/>
+      <path d="M64 114h232" stroke="#94a3b8" stroke-width="5" stroke-dasharray="7 4"/>
+      <ellipse cx="180" cy="150" rx="70" ry="14" fill="#fdba74" opacity=".8"/>
+      <ellipse cx="180" cy="190" rx="50" ry="10" fill="#fb923c" opacity=".7"/>
+      <ellipse cx="180" cy="274" rx="54" ry="30" fill="#fff" stroke="#0284c7" stroke-width="3"/>
+      <g transform="translate(156,244) scale(.4)">${triSVG(5,'PP','#0284c7',120).replace(/<svg[^>]*>/, '').replace('</svg>','')}</g>
+      <g transform="translate(238,238) scale(.5)">${markSVG('pp',120).replace(/<svg[^>]*>/, '').replace('</svg>','')}</g>
+      <text x="180" y="316" text-anchor="middle" font-size="11" fill="#64748b" font-family="sans-serif">용기 바닥면</text>
+      ${callout(1,92,86)} ${callout(2,300,170)} ${callout(3,100,278)} ${callout(4,320,250)} ${callout(5,52,176)}
+      <path d="M103 90L120 112M289 170H280M111 278H128M309 250H300M63 176H88" stroke="#0f172a" stroke-width="1.5"/>
+    </svg>`,
+    legend:[
+      ['테두리 실링 비닐','뜯어 낸 필름은 비닐류로, 용기 테두리에 남은 조각은 최대한 제거합니다.'],
+      ['고추기름·양념 착색','주방세제로 닦고 말리면 대부분 정상 배출됩니다. 지워지지 않는 심한 착색은 일반쓰레기로 안내하는 지자체도 있습니다.'],
+      ['바닥 재질 코드 ♵ PP','5번 PP는 내열성이 좋아 열분해·재생 플라스틱으로 쓰입니다.'],
+      ['분리배출 마크 ‘플라스틱 PP’','플라스틱류 수거함에 배출합니다.'],
+      ['음식물 찌꺼기','헹궈서 닦지 않으면 재생 원료의 품질이 떨어지고 악취가 납니다. 완전히 비워 주세요.']
+    ]
+  },
+  {
+    id:'snack', title:'과자·라면 봉지 (비닐 포장재 뒷면)', icon:'🍿',
+    svg: `<svg viewBox="0 0 360 330" width="100%" style="max-width:340px" role="img" aria-label="과자봉지 해부도" xmlns="http://www.w3.org/2000/svg">
+      <rect width="360" height="330" rx="18" fill="#f8fafc"/>
+      <path d="M100 40h160l8 20-8 24 8 24-8 24 8 24-8 24 8 24-8 24 8 24H100l8-24-8-24 8-24-8-24 8-24-8-24 8-24z" fill="#fef9c3" stroke="#a16207" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="116" y="70" width="128" height="40" rx="4" fill="#fff" stroke="#cbd5e1"/>
+      <text x="180" y="86" text-anchor="middle" font-size="9" fill="#475569" font-family="sans-serif">원재료명 및 함량 · 영양정보</text>
+      <path d="M126 96h108M126 102h80" stroke="#cbd5e1" stroke-width="2"/>
+      <g transform="translate(120,122) scale(.55)">${markSVG('vinyl_other',120).replace(/<svg[^>]*>/, '').replace('</svg>','')}</g>
+      <g transform="translate(190,122) scale(.55)">${gradeSVG(GRADES[3],120).replace(/<svg[^>]*>/, '').replace('</svg>','')}</g>
+      <text x="180" y="212" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12" font-family="'Pretendard Variable',sans-serif">재질: 폴리프로필렌 / 알루미늄 증착 / 폴리에틸렌</text>
+      <text x="180" y="232" text-anchor="middle" font-size="10" fill="#92400e" font-family="'Pretendard Variable',sans-serif">(OPP / VMCPP / PE 적층)</text>
+      <path d="M100 268h160" stroke="#a16207" stroke-width="3" stroke-dasharray="6 4"/>
+      ${callout(1,64,160)} ${callout(2,296,160)} ${callout(3,300,214)} ${callout(4,64,90)} ${callout(5,64,268)}
+      <path d="M75 160H120M285 160H246M289 214H264M75 90H116M75 268H100" stroke="#0f172a" stroke-width="1.5"/>
+    </svg>`,
+    legend:[
+      ['분리배출 마크 ‘비닐류 OTHER’','여러 겹의 복합 필름이라는 뜻입니다. 그래도 비닐류로 배출합니다.'],
+      ['재활용 용이성 등급 ‘어려움’','과자 봉지는 대부분 알루미늄 증착 적층 필름이라 ‘어려움’이 많지만, 이는 소비자가 일반쓰레기로 버리라는 뜻이 아닙니다.'],
+      ['재질 구성 표시','적층 구조를 적는 칸입니다. 합성수지 재질이 여러 개 적혀 있으면 단일 재질이 아닙니다.'],
+      ['원재료·영양정보 칸','식품 정보 영역이며 분리배출과는 관계없습니다. 마크는 보통 뒷면 하단·옆면에 있습니다.'],
+      ['봉지 윗·아랫단 접착부','가위로 자를 필요는 없습니다. 이물질을 털어내고 투명 봉투에 모아 배출하세요.']
+    ]
+  },
+  {
+    id:'can', title:'음료수 캔 · 통조림 캔', icon:'🥫',
+    svg: `<svg viewBox="0 0 360 330" width="100%" style="max-width:340px" role="img" aria-label="캔 해부도" xmlns="http://www.w3.org/2000/svg">
+      <rect width="360" height="330" rx="18" fill="#f8fafc"/>
+      <ellipse cx="180" cy="72" rx="62" ry="16" fill="#e2e8f0" stroke="#475569" stroke-width="3"/>
+      <ellipse cx="180" cy="70" rx="22" ry="6" fill="#94a3b8"/>
+      <path d="M118 72v186c0 12 28 22 62 22s62-10 62-22V72" fill="#fecaca" stroke="#475569" stroke-width="3"/>
+      <text x="180" y="150" text-anchor="middle" font-size="26" font-weight="900" fill="#7f1d1d" font-family="'Pretendard Variable',sans-serif">COLA</text>
+      <g transform="translate(150,172) scale(.5)">${markSVG('can_al',120).replace(/<svg[^>]*>/, '').replace('</svg>','')}</g>
+      <path d="M118 244c0 12 28 22 62 22s62-10 62-22" fill="none" stroke="#475569" stroke-width="3"/>
+      ${callout(1,290,70)} ${callout(2,290,200)} ${callout(3,70,160)} ${callout(4,290,265)} ${callout(5,70,70)}
+      <path d="M279 70H244M279 200H238M81 160H118M279 265H244M81 70H118" stroke="#0f172a" stroke-width="1.5"/>
+    </svg>`,
+    legend:[
+      ['뚜껑·탭','따로 뜯지 말고 캔에 붙은 채 배출해도 됩니다. 알루미늄 캔 뚜껑은 같은 알루미늄입니다.'],
+      ['분리배출 마크 ‘알루미늄’','자석을 대서 붙지 않으면 알루미늄입니다. 철 캔과 같은 캔류로 배출하되, 압착하면 부피가 줄어듭니다.'],
+      ['라벨·플라스틱 뚜껑','통조림에 붙은 플라스틱 뚜껑·종이 라벨은 떼서 각각 분리배출합니다.'],
+      ['바닥','돌출된 바닥은 내용물 찌꺼기가 끼기 쉬우니 헹궈 말려 주세요.'],
+      ['내용물·기름','음식물·기름이 남아 있으면 재활용 공정에서 불순물이 됩니다. 꼭 비우고 헹구세요.']
+    ]
+  }
+];
+
+// ── 7) 마크 도감 그룹 구성 ────────────────────────────────────
+const OFFICIAL_MARK_IDS = ['paper','pack','pack_s','glass','can_fe','can_al','pet','hdpe','ldpe','pp','ps','plastic_other','vinyl_pe','vinyl_pp','vinyl_other','styro'];
+const SPECIAL_MARK_IDS  = ['battery','bulb','pill','cloth','oil','general','food'];
+const TOTAL_MARK_COUNT = OFFICIAL_MARK_IDS.length + SPECIAL_MARK_IDS.length + RESIN.length + GRADES.length + EXTRA_MARKS.length;
+/* ============================================================
+   품목 데이터 공통 헬퍼
+   A(탭, 소분류, id, 아이콘, 이름, 버리는곳, 한줄요약, {옵션})
+   옵션: k(검색키워드) m(마크ID[]) g(등급키) gl(등급문구) ex(예시[]) p(부속품[[이름,재질,버리는곳,요령]])
+         st(단계[]) bad(흔한실수[]) tip(팁[]) why(이유) loc(지자체참고)
+   ============================================================ */
+const TAB_NAME = { rc:'recyclable', fd:'food_waste', gn:'general_waste' };
+
+const GRADE_PRESET = {
+  ok:     { label:'재활용 가능',      cls:'bg-emerald-100 text-emerald-800 border-emerald-300' },
+  best:   { label:'재활용 우수',      cls:'bg-emerald-100 text-emerald-800 border-emerald-300' },
+  care:   { label:'분리 후 배출',     cls:'bg-sky-100 text-sky-800 border-sky-300' },
+  hard:   { label:'재활용 어려움',    cls:'bg-amber-100 text-amber-800 border-amber-300' },
+  foodok: { label:'음식물 ⭕',        cls:'bg-sky-100 text-sky-800 border-sky-300' },
+  foodno: { label:'일반쓰레기 ❌',    cls:'bg-rose-100 text-rose-800 border-rose-300' },
+  no:     { label:'재활용 불가',      cls:'bg-rose-100 text-rose-800 border-rose-300' },
+  spec:   { label:'전용 수거',        cls:'bg-teal-100 text-teal-800 border-teal-300' },
+  mad:    { label:'불연성 마대',      cls:'bg-slate-200 text-slate-800 border-slate-400' },
+  tip:    { label:'배출 노하우',      cls:'bg-teal-100 text-teal-800 border-teal-300' },
+  local:  { label:'지자체 확인',      cls:'bg-violet-100 text-violet-800 border-violet-300' }
+};
+
+const SUB_BADGE = {
+  paper:'badge-paper', paper_pack:'badge-paper', pet_plastic:'badge-plastic', mixed_multipart:'badge-multi',
+  vinyl_film:'badge-vinyl', can_metal:'badge-can', glass_bottle:'badge-glass', styrofoam_box:'badge-styro',
+  food_ok:'badge-food-ok', food_no:'badge-food-no', food_knowhow:'badge-special',
+  standard_burn:'badge-general', incombustible_madae:'badge-general', special_collection:'badge-special', bulky:'badge-special'
+};
+
+const ITEMS = [];
+function A(t, s, id, icon, name, tg, sm, o = {}) {
+  const gKey = o.g || (t === 'fd' ? (s === 'food_ok' ? 'foodok' : s === 'food_no' ? 'foodno' : 'tip')
+                    : t === 'gn' ? (s === 'incombustible_madae' ? 'mad' : s === 'standard_burn' ? 'no' : 'spec') : 'ok');
+  const gp = GRADE_PRESET[gKey];
+  ITEMS.push({
+    id, mainTab: TAB_NAME[t], subCategory: s, icon, name, target: tg, summary: sm,
+    keywords: o.k || '',
+    marks: o.m || [],
+    badgeClass: o.b || SUB_BADGE[s] || 'badge-general',
+    symbolName: tg,
+    officialGrade: o.gl || gp.label,
+    gradeClass: gp.cls,
+    examples: o.ex || [],
+    parts: o.p || [],
+    steps: o.st || [],
+    mistakes: o.bad || [],
+    tips: o.tip || [],
+    why: o.why || '',
+    local: o.loc || '',
+    guide: o.gd || []
+  });
+}
+
+const subCategoriesMap = {
+  recyclable: [
+    { id:'all', name:'전체' },
+    { id:'paper', name:'📰 종이류' },
+    { id:'paper_pack', name:'🧃 종이팩·멸균팩·종이컵' },
+    { id:'pet_plastic', name:'🥤 페트/플라스틱' },
+    { id:'vinyl_film', name:'🛍️ 비닐류/필름' },
+    { id:'can_metal', name:'🥫 캔/금속류' },
+    { id:'glass_bottle', name:'🍾 유리병' },
+    { id:'styrofoam_box', name:'📦 스티로폼' },
+    { id:'mixed_multipart', name:'🧩 다부속/복합제품' }
+  ],
+  food_waste: [
+    { id:'all', name:'전체보기' },
+    { id:'food_ok', name:'⭕ 음식물 인정 (사료/퇴비 가능)' },
+    { id:'food_no', name:'❌ 일반 종량제 배출 (실수 주의)' },
+    { id:'food_knowhow', name:'💡 배출 노하우' }
+  ],
+  general_waste: [
+    { id:'all', name:'전체' },
+    { id:'standard_burn', name:'🔥 타는 쓰레기 (종량제)' },
+    { id:'incombustible_madae', name:'🧱 안 타는 쓰레기 (불연성 마대)' },
+    { id:'special_collection', name:'🔋 전용 수거/특수 배출' },
+    { id:'bulky', name:'🛋️ 대형폐기물·폐가전' }
+  ],
+  marks: [], faq: [], quiz: []
+};
+/* ============ 1. 분리수거(재활용) ============ */
+
+// ───────── 종이류 ─────────
+A('rc','paper','newspaper_books','📰','신문지·책·노트·전단지·잡지','종이류','스프링·비닐 표지만 떼면 대부분 그대로 재활용되는 대표 품목',{
+  k:'신문 책 노트 공책 잡지 전단지 광고지 달력 스프링 종이',
+  m:['paper'], g:'best',
+  ex:['신문지','책·교과서','노트(스프링 제거)','잡지·카탈로그','광고 전단지','A4 용지·복사지','쇼핑 책자'],
+  p:[['종이 본문','천연 펄프','종이류','물에 젖지 않게 묶어서 배출'],['스프링·철침','철·플라스틱','캔·고철류 / 플라스틱','노트 스프링은 떼어 분리'],['비닐 표지','PP·PE 코팅','일반쓰레기/비닐','코팅 표지는 떼거나 통째로 일반쓰레기']],
+  st:['스프링·플라스틱 링·비닐 코팅 표지를 제거합니다.','물에 젖거나 오염된 종이는 빼냅니다.','종이끼리 끈으로 묶거나 종이 상자에 담아 배출합니다.'],
+  bad:['비닐 봉지에 넣어 버리기 (비닐째 선별 불가)','음식물·기름이 묻은 종이를 함께 섞기'],
+  tip:['양면 코팅(번들번들한 표지)이 두꺼운 책은 일반쓰레기로 안내하는 곳도 있어 지자체 확인','개인정보가 있는 서류는 파쇄하지 말고 찢어서 담되 가급적 종이류로 배출'],
+  why:'종이는 물에 풀어 펄프로 되돌리는 재활용이 가능합니다. 비닐·스프링 같은 다른 재질은 공정을 방해하는 불순물이 됩니다.'
+});
+A('rc','paper','cardboard_box','📦','골판지 상자 (택배상자·과일상자)','종이류','테이프·송장·스티로폼만 떼어 납작하게 펴서 배출',{
+  k:'박스 택배 상자 골판지 종이박스 테이프 송장 이삿짐',
+  m:['paper'], g:'best',
+  ex:['택배 상자','과일·라면 상자','신발 상자','이삿짐 박스'],
+  p:[['골판지','종이','종이류','납작하게 펴서 묶기'],['택배 송장 스티커','종이+접착','안 떼도 됨(서울 기준)','떼기 어려우면 그대로'],['박스 테이프','OPP 접착','비닐/일반쓰레기','가급적 모두 제거'],['내부 스티로폼·에어캡','EPS / PE','스티로폼류 / 비닐류','분리 후 각각 배출']],
+  st:['박스 테이프와 철핀(스테이플러 심)을 제거합니다.','내부 완충재(스티로폼·에어캡)를 분리합니다.','상자를 납작하게 접거나 펴서 끈으로 묶어 배출합니다.'],
+  bad:['테이프를 그대로 둔 채 배출','물에 젖은 박스를 그대로 배출 (젖은 골판지는 재활용 품질 저하)','음식물이 많이 묻은 박스를 종이류에 섞기'],
+  tip:['택배 송장은 개인정보 보호를 위해 가려서 버리세요(떼기 어려워도 재활용에는 지장이 적습니다).','서울시 통일 기준: 일반 골판지 상자는 테이프를 제거하고 종이류로 분리배출'],
+  why:'골판지는 재활용 비율이 가장 높은 종이 자원입니다. 비닐 테이프와 스티로폼이 섞이면 펄프 불순물이 되어 품질이 떨어집니다.'
+});
+A('rc','paper','pizza_chicken_box','🍕','피자·치킨 박스','종이류 / 오염 시 일반','기름·소스가 묻은 부분만 도려내고 깨끗한 부분은 종이류',{
+  k:'피자박스 치킨박스 배달 박스 기름 오염',
+  m:['paper'], g:'care',
+  ex:['피자 상자','치킨 박스','햄버거 포장지(오염 시 일반)'],
+  p:[['깨끗한 박스','종이','종이류','접어서 배출'],['기름·소스 오염 부분','오염 종이','일반쓰레기','도려내서 종량제']],
+  st:['남은 음식·소스 포장·치즈를 모두 제거합니다.','기름이 스민 부분은 잘라내 일반쓰레기로 버립니다.','깨끗한 부분은 납작하게 접어 종이류로 배출합니다.'],
+  bad:['기름 먹은 박스를 통째로 종이류에 투입 (같이 묶인 종이까지 오염)'],
+  tip:['오염이 절반 이상이면 통째로 일반쓰레기가 더 안전합니다.'],
+  why:'기름은 종이 펄프를 풀 때 분리되지 않아 재생지 품질과 공정 전체를 망칩니다.'
+});
+A('rc','paper','paper_shopping_bag','🛍️','종이 쇼핑백·종이 포장지','종이류','손잡이 끈과 금속 부품을 제거하고 종이만 배출',{
+  k:'종이가방 쇼핑백 포장지 선물포장 손잡이 리본 코팅',
+  m:['paper'], g:'care',
+  ex:['종이 쇼핑백','선물 포장 상자','종이 포장지(무코팅)'],
+  p:[['종이 본체','종이','종이류','접어서 배출'],['손잡이·리본·금속 아일렛','천·비닐·금속','일반쓰레기 / 캔류','제거']],
+  st:['손잡이 끈·리본·금속 고리를 제거합니다.','접어서 종이류로 배출합니다.'],
+  bad:['번쩍이는 금박·은박 코팅 포장지를 종이류에 섞기'],
+  tip:['금박·은박·비닐 코팅 포장지는 종이로 재활용되지 않으니 일반쓰레기'],
+  why:'다른 재질이 붙어 있으면 종이 재생 공정에서 불순물이 됩니다.'
+});
+A('rc','paper','egg_tray_paper_core','🥚','종이 달걀판·휴지심·키친타월 심','종이류','깨끗하고 마른 종이 재질은 종이류',{
+  k:'달걀판 계란판 휴지심 키친타월심 두루마리 종이 심지 종이트레이',
+  m:['paper'], g:'ok',
+  ex:['종이 달걀판','휴지심','랩·호일 종이 심(코팅 없는 것)'],
+  p:[['종이 재질','펄프 성형','종이류','젖지 않게']],
+  st:['달걀 껍데기·이물질을 털어냅니다.','접어서 종이류와 함께 묶어 배출합니다.'],
+  bad:['투명 플라스틱 달걀판을 종이류에 섞기 (이건 플라스틱류)'],
+  tip:['달걀판이 투명하면 플라스틱, 회색·갈색 펄프면 종이'],
+  why:'펄프 성형 제품은 종이 재생에 쓰이지만 플라스틱과 섞이면 선별이 어렵습니다.'
+});
+
+// ───────── 종이팩·종이컵 ─────────
+A('rc','paper_pack','pasteurized_milk_carton','🥛','일반 종이팩 (우유·주스팩)','종이팩 전용 수거함','냉장 유통 우유팩은 고급 천연펄프 → 화장지로 재활용',{
+  k:'우유팩 주스팩 종이팩 살균 일반팩 화장지 휴지교환 빨대',
+  m:['pack'], g:'best',
+  ex:['우유팩','주스 팩','요거트 음료 팩'],
+  p:[['팩 몸체','천연펄프 + PE 코팅','종이팩 수거함','씻어 펼쳐 말리기'],['플라스틱 주입구','HDPE / PP','플라스틱류','떼어서 분리'],['빨대 비닐','PE','비닐류','제거']],
+  st:['내용물을 비우고 물로 헹굽니다.','가위로 잘라 펼쳐 말립니다(부피도 줄고 곰팡이 방지).','빨대·비닐·플라스틱 주입구를 제거합니다.','종이팩 전용 수거함(없으면 종이류와 구분해 묶어서)에 배출합니다.'],
+  bad:['신문지·박스와 섞어서 한꺼번에 묶기','씻지 않고 납작하게 눌러 배출 (곰팡이·악취)'],
+  tip:['동주민센터에서 모아 가면 휴지·종량제봉투로 교환해 주는 지자체가 많습니다(지자체별 수량 상이).','천연 펄프 비율이 높아 일반 폐지보다 훨씬 고급 화장지가 됩니다.'],
+  why:'우유팩은 수입 천연펄프로 만든 고급 자원입니다. 일반 폐지와 섞이면 가치가 떨어집니다.'
+});
+A('rc','paper_pack','sterilized_milk_carton','🧃','멸균팩 (두유·아몬드유·와인팩·소주팩)','멸균팩 전용 수거함','상온 유통 팩은 알루미늄박 포함 — 일반팩과 구분',{
+  k:'멸균팩 두유 아몬드 와인팩 소주팩 알루미늄 상온 종이팩 어려움 일반팩 구분',
+  m:['pack_s'], g:'hard', gl:'어려움 (분리배출 O)',
+  ex:['두유팩','아몬드 음료','와인·소주 팩','육수팩'],
+  p:[['멸균팩 몸체','천연펄프 + 알루미늄 + PE','멸균팩 수거함 (없으면 종이팩류)','씻어 펼쳐 말리기'],['플라스틱 뚜껑·주입구','HDPE / PP','플라스틱류','떼어내기'],['빨대·비닐','PE','비닐류','제거']],
+  st:['내용물을 비우고 물로 헹굽니다.','가위로 잘라 펼쳐 완전히 말립니다.','빨대·플라스틱 뚜껑을 분리합니다.','일반 우유팩과 섞지 않고 멸균팩 구분 수거함(또는 지자체 안내 방법)으로 배출합니다.'],
+  bad:['‘재활용 어려움’이라 일반쓰레기로 버리기 (잘못!)','일반 우유팩과 한 묶음으로 배출'],
+  tip:['멸균팩은 알루미늄층이 있어 재생 펄프·알루미늄 분리 공정이 필요하지만 재활용은 됩니다.','2026년 7월 개정으로 알루미늄박 부착 종이팩의 재활용 용이성 등급 표시 의무가 3년간 한시 유예된 것으로 보도되었습니다(제도 변경 가능, 최신 확인 권장).'],
+  why:'멸균팩 속 알루미늄은 상온 유통을 가능하게 하지만, 분리 공정에서 펄프와 알루미늄으로 나눠 재생됩니다. 전용 수거로 모아야 효율이 올라갑니다.'
+});
+A('rc','paper_pack','paper_cup','☕','종이컵 · 컵홀더(종이슬리브)','종이컵 수거함 / 종이팩류','안쪽 PE 코팅이 있어 종이류와 분리해 별도 수거',{
+  k:'종이컵 컵홀더 슬리브 커피컵 일회용 컵 뚜껑 빨대',
+  m:['paper'], g:'care',
+  ex:['종이컵','컵홀더','종이 아이스크림 컵'],
+  p:[['컵 몸체','종이 + PE 코팅','종이컵 수거함 / 종이팩류','헹궈서 압착'],['플라스틱 뚜껑','PET/PS/PP','플라스틱류','떼어 분리'],['빨대','PP','일반쓰레기 (작음)','제거']],
+  st:['내용물을 비우고 물로 헹굽니다.','플라스틱 뚜껑·빨대를 떼어냅니다.','가볍게 눌러 포개고, 종이컵 수거함(없으면 종이팩류)에 배출합니다.'],
+  bad:['커피 얼룩이 남은 컵을 그대로 종이류와 섞어 배출','컵 안에 얼음·남은 음료 그대로 투입'],
+  tip:['종이컵을 종이류와 함께 버리면 코팅 때문에 일반 폐지 품질이 떨어지는 점 주의','가능하면 텀블러·다회용컵 사용이 최선입니다.'],
+  loc:'종이컵 전용 수거함이 없는 단지는 종이팩과 함께 별도 배출하라고 안내하는 곳이 많습니다.',
+  why:'안쪽 폴리에틸렌 코팅 때문에 일반 폐지와는 재생 공정이 다릅니다. 깨끗한 종이컵은 휴지·펄프로 재생됩니다.'
+});
+
+// ───────── 페트·플라스틱 ─────────
+A('rc','pet_plastic','transparent_pet_bottle','🍶','투명 페트병 (생수·음료수)','투명 페트병 전용 수거함','‘비우고·떼고·찌그러뜨리고·뚜껑 닫기’ — 의류용 섬유로 재생',{
+  k:'페트병 투명 생수 음료 라벨 뚜껑 무색페트 PET 요일제 압착',
+  m:['pet'], g:'best',
+  ex:['생수병','탄산·이온음료 투명병','소주·막걸리 무색 병(라벨 제거 시)','식혜·차 음료 투명병'],
+  p:[['투명 페트 몸체','무색 PET','투명 페트병 전용 수거함','헹굼 + 압착'],['비닐 라벨','PP / PE 필름','비닐류','절취선 따라 완전히 제거'],['뚜껑 & 링','PP / HDPE','페트병에 닫아서 배출','물 비중 차이로 자동 분리']],
+  st:['내용물을 완전히 비우고 물로 헹굽니다.','라벨 비닐을 절취선을 따라 떼어 비닐류로 버립니다.','발로 눌러 납작하게 압착한 뒤 뚜껑을 닫습니다.','투명 페트병 전용 수거함(공동주택 필수 설치) 또는 단독주택 지정 요일에 배출합니다.'],
+  bad:['라벨을 안 떼고 배출','유색 페트병·세제병과 섞기','빨대·담배꽁초 등 이물질을 병 안에 넣기'],
+  tip:['2020년 12월부터 공동주택은 투명 페트병을 별도 수거함에 배출해야 합니다.','수거함이 가득 찬 곳이면 압착 후 뚜껑을 닫아야 부피를 줄입니다.','일부 지자체는 투명 페트병을 모아오면 종량제봉투·휴지로 교환해 줍니다.'],
+  why:'무색 투명 페트는 색소·잉크가 없어 고품질 재생 섬유·재생 병으로 재활용될 수 있습니다. 비닐·유색 병이 섞이면 이런 고품질 재생이 어려워집니다.'
+});
+A('rc','pet_plastic','colored_pet_bottle','🥤','유색 페트병·기름병·세제용 병','플라스틱류','투명·무색 페트병과 구분 — 색이 있거나 오염되면 일반 플라스틱',{
+  k:'유색 페트 녹색 갈색 사이다 식용유병 간장병 참기름병 샴푸병 플라스틱',
+  m:['plastic_other'], g:'ok',
+  ex:['녹색 사이다병','식용유·참기름병','간장·식초병','이온음료 컬러병'],
+  p:[['병 몸체','유색 PET / HDPE','플라스틱류','헹궈서 압착'],['라벨','PP/PE 필름','비닐류','분리'],['뚜껑','PP/HDPE','플라스틱류','병에서 분리하거나 닫아서']],
+  st:['내용물을 비우고 기름병은 세제로 씻습니다.','라벨을 제거합니다.','압착 후 플라스틱류로 배출합니다.'],
+  bad:['투명 페트병 수거함에 유색 병 넣기'],
+  tip:['식용유병은 안쪽이 기름으로 미끈하면 세제로 한 번 닦아 주세요.'],
+  why:'유색 PET는 색소가 섞여 고급 재생이 어렵지만 일반 플라스틱 재생 원료로는 쓰입니다.'
+});
+A('rc','pet_plastic','detergent_shampoo_bottle','🧴','세제·샴푸·린스·화장품 플라스틱 용기','플라스틱류','내용물과 거품을 헹궈내고 펌프를 분리',{
+  k:'샴푸통 세제통 린스 바디워시 섬유유연제 락스 용기 펌프 HDPE',
+  m:['hdpe'], g:'ok',
+  ex:['샴푸·린스통','주방세제·섬유유연제 통','바디워시 용기','락스통'],
+  p:[['용기 본체','HDPE / PP','플라스틱류','헹궈서 배출'],['펌프 헤드','PP + 금속 스프링','일반쓰레기','스프링 분리 불가 시']],
+  st:['내용물을 최대한 비웁니다.','물을 반쯤 채워 흔들어 거품을 제거합니다.','펌프를 떼고, 라벨 비닐을 제거한 뒤 플라스틱류로 배출합니다.'],
+  bad:['펌프를 통째로 플라스틱 수거함에 넣기','내용물이 남은 채 버리기 (오염 → 선별 불가)'],
+  tip:['리필 제품으로 바꾸면 플라스틱 사용량이 크게 줄어듭니다.'],
+  why:'HDPE는 가장 우수한 재생 플라스틱 중 하나지만 내용물이 남으면 세척 비용이 늘고 선별이 어렵습니다.'
+});
+A('rc','pet_plastic','instant_rice_hetban','🍚','햇반·즉석밥 용기','플라스틱류','PP+EVOH 복합 용기라 등급은 낮지만 분리배출 대상',{
+  k:'햇반 즉석밥 오뚜기밥 용기 전자레인지 EVOH OTHER',
+  m:['plastic_other'], g:'hard', gl:'어려움 (분리배출 O)',
+  ex:['햇반','즉석 죽·카레 용기','즉석 국 용기'],
+  p:[['용기 본체','PP + EVOH (OTHER)','플라스틱류','밥알 씻어 배출'],['상단 비닐 덮개','OTHER 비닐','비닐류','완전히 제거']],
+  st:['상단 비닐 껍질을 완전히 떼어 비닐류로 버립니다.','용기 내부의 밥알·소스를 물로 씻어냅니다.','플라스틱류로 배출합니다.'],
+  bad:['‘어려움’이라고 일반쓰레기로 버리기','밥알이 붙은 채로 배출'],
+  tip:['세척이 어려운 소스 용기는 물에 불렸다가 닦으면 편합니다.'],
+  why:'단일 PP가 아니어서 등급은 낮지만, 세척 후 배출하면 건축자재 원료·열분해 등으로 재활용됩니다.'
+});
+A('rc','pet_plastic','yogurt_cup_etc','🍦','요거트·아이스크림·푸딩·두부 용기','플라스틱류','PP·PS 소재의 작은 용기는 헹구고 호일 뚜껑을 분리',{
+  k:'요거트 컵 푸딩 아이스크림 컵 두부 용기 요플레 배스킨라빈스 PS PP 호일 뚜껑',
+  m:['pp','ps'], g:'ok',
+  ex:['요거트·요플레 컵','푸딩 컵','아이스크림 컵','두부 용기','반찬·젓갈 통'],
+  p:[['컵 본체','PP / PS','플라스틱류','헹궈서 배출'],['알루미늄 호일 뚜껑','알루미늄 + 필름','비닐류','떼어서 분리'],['종이 포장지·라벨','종이','종이류','분리']],
+  st:['먹고 난 뒤 바로 물로 헹굽니다.','호일(은박) 뚜껑과 라벨을 떼어냅니다.','플라스틱류로 배출합니다.'],
+  bad:['호일 뚜껑 그대로 배출','음식물이 남은 채 배출'],
+  tip:['‘PS’ 마크 용기는 잘 깨지고 부서지는 재질이라 압착이 어렵습니다. 그냥 모아서 배출하세요.'],
+  why:'서로 다른 재질(플라스틱·알루미늄·종이)이 한 제품에 붙어 있으면 선별이 안 되어 잔재물이 됩니다.'
+});
+A('rc','pet_plastic','cafe_plastic_cup','🥛','카페 일회용 플라스틱컵·뚜껑','플라스틱류','투명컵은 플라스틱류, 컵 안 음료·얼음은 모두 비우기',{
+  k:'카페컵 일회용컵 아이스컵 플라스틱컵 투명컵 뚜껑 빨대 PET컵',
+  m:['pet','pp'], g:'care',
+  ex:['아이스 음료 투명컵','컵 뚜껑','컵 홀더 트레이(종이)'],
+  p:[['투명 컵','PET','플라스틱류 (일부 지자체: 투명 페트 수거함)','비우고 헹궈서 배출'],['뚜껑','PP/PS','플라스틱류','분리 배출'],['빨대·빨대 포장지','PP','일반쓰레기 / 비닐','작은 것은 일반']],
+  st:['남은 음료·얼음을 비우고 헹굽니다.','뚜껑을 분리합니다.','컵과 뚜껑을 플라스틱류로 배출하고 빨대는 일반쓰레기로 버립니다.'],
+  bad:['음료가 남은 채 버리기','투명 페트병 수거함에 임의로 컵 투입 (지자체 확인 필요)'],
+  loc:'음료·생수 투명 페트병만 ‘투명 페트병 별도 배출’ 대상이며, 투명 컵은 지자체에 따라 플라스틱류 또는 투명 페트 수거함으로 안내가 갈립니다.',
+  why:'재질이 PET라도 병과 컵은 두께·첨가제가 달라 지침상 구분하는 경우가 많습니다.'
+});
+A('rc','pet_plastic','plastic_household_goods','🧺','플라스틱 바구니·대야·장난감·수납함','플라스틱류','한 가지 재질로 된 플라스틱은 플라스틱류, 금속 섞이면 분리',{
+  k:'플라스틱 바구니 대야 장난감 수납함 쓰레기통 화분 의자 빨래 건조대 밀폐용기',
+  m:['pp','hdpe'], g:'care',
+  ex:['플라스틱 바구니·대야','수납함','밀폐용기','플라스틱 화분','장난감(전지·금속 없는 것)'],
+  p:[['단일 재질 플라스틱','PP/PE 등','플라스틱류','세척 후 배출'],['금속·고무·전자부품 혼합품','복합','일반쓰레기 / 대형폐기물','분리 불가 시']],
+  st:['먼지·흙·내용물을 씻어냅니다.','금속 부품·전지·스티커를 분리합니다.','플라스틱류로 배출하고, 매우 큰 것은 대형폐기물로 신고합니다.'],
+  bad:['건전지가 든 장난감을 그대로 배출 (화재 위험)','금속이 박힌 장난감을 플라스틱으로 배출'],
+  tip:['서울시 안내에 따르면 플라스틱 이외 재질이 부착된 완구·문구류는 재활용 비해당(일반쓰레기)입니다.'],
+  why:'혼합 재질은 파쇄 후 선별이 불가능해 전체가 잔재물이 됩니다.'
+});
+A('rc','pet_plastic','vitamin_medicine_bottle','💊','영양제 통·약병 (빈 플라스틱 용기)','플라스틱류','뚜껑·솜·은박 실링을 분리하고 헹구기',{
+  k:'영양제 약병 비타민 통 알약 통 솜 은박 실링 약통',
+  m:['hdpe','pet'], g:'ok',
+  ex:['영양제 통','약병','알약 통'],
+  p:[['통 본체','HDPE/PET','플라스틱류','헹궈서 배출'],['솜·은박 실링','솜/알루미늄','일반쓰레기','제거']],
+  st:['남은 알약은 폐의약품 수거함으로 배출합니다.','솜과 은박 실링을 제거합니다.','통을 헹궈 플라스틱류로 배출합니다.'],
+  bad:['알약을 통째로 종량제에 넣기'],
+  tip:['빈 통에 이름 스티커가 붙어 있으면 개인정보를 가리고 버리세요.'],
+  why:'약 성분이 남으면 환경으로 유출될 수 있어 내용물은 폐의약품으로 분리합니다.'
+});
+A('rc','pet_plastic','ice_pack','🧊','아이스팩 (물/젤 타입)','비닐류 + 일반쓰레기/하수구','포장 비닐은 비닐류, 내용물은 종류별로 분리',{
+  k:'아이스팩 냉매 젤 고흡수성수지 보냉팩 택배 신선식품 얼음팩',
+  m:['vinyl_pe'], g:'care',
+  ex:['신선식품 택배 아이스팩','보냉 젤팩'],
+  p:[['겉 비닐','PE','비닐류','가위로 잘라 분리'],['물 타입 내용물','물(얼음)','하수구','녹여 흘려보내기'],['젤(SAP) 타입 내용물','고흡수성수지','일반쓰레기(종량제)','하수구 배출 금지']],
+  st:['아이스팩이 물인지 젤인지 확인합니다.','가위로 잘라 내용물을 빼냅니다.','물은 싱크대로 흘려보내고, 젤(SAP)은 종량제봉투에 버립니다.','겉 비닐은 비닐류로 배출합니다.'],
+  bad:['젤 아이스팩을 하수구에 쏟기 (배관 막힘)','통째로 일반쓰레기에 넣기'],
+  tip:['포장 상태가 양호하면 일부 지자체·택배사의 아이스팩 회수·재사용 사업에 참여할 수 있습니다.'],
+  why:'젤 형태의 고흡수성수지는 하수구에서 팽창해 배관과 정화 시설에 문제를 일으킵니다.'
+});
+
+// ───────── 비닐류 ─────────
+A('rc','vinyl_film','snack_bag_film','🍿','과자·라면·커피 봉지 (비닐 포장재)','비닐류','털어내고 투명 봉투에 모아서 배출',{
+  k:'과자봉지 라면봉지 비닐 포장재 커피믹스 스낵 아이스크림 봉지 은박 OPP 폐비닐',
+  m:['vinyl_pp','vinyl_other'], g:'hard', gl:'어려움~보통 (분리배출 O)',
+  ex:['과자·라면 봉지','커피믹스 스틱 봉지','아이스크림 포장','냉동식품 봉지','사탕 껍질'],
+  p:[['비닐 포장지','PP / PE / 알루미늄 증착 적층','비닐류','이물질 털어 투명 봉투에 모아 배출']],
+  st:['안의 부스러기·이물질을 털어냅니다.','음식물·소스가 많이 묻은 것은 헹궈 말립니다.','투명 비닐봉지(또는 지정 봉투)에 모아서 비닐류로 배출합니다.'],
+  bad:['플라스틱류와 섞어서 배출','종량제봉투 대신 비닐봉지에 아무거나 담아 배출'],
+  tip:['서울시 안내: 작거나 이물질(물·기름)이 묻은 폐비닐도 분리배출 가능합니다.','사탕 껍질처럼 매우 작은 포장재도 비닐류에 모아 담으세요.','‘코팅·복합재질’이라는 이유만으로 일반쓰레기가 되는 것은 아닙니다. 상세 판단 기준은 ‘코팅·복합재질 비닐 판단 가이드’ 카드를 확인하세요.'],
+  why:'비닐류는 수거 후 열분해유·고형연료·재생 원료로 활용됩니다. 작은 비닐은 낱개로 선별이 안 되므로 봉투에 모아 배출해야 합니다.'
+});
+A('rc','vinyl_film','plastic_bags_airpack','📦','비닐봉지·택배 봉투·양파망·에어캡(뽁뽁이)','비닐류','투명 봉투에 모아 비닐류로 배출 — 송장 안 떼어져도 OK',{
+  k:'비닐봉지 택배봉투 양파망 에어캡 뽁뽁이 수축필름 지퍼백 검은봉지 폐비닐 완충재',
+  m:['vinyl_pe'], g:'ok',
+  ex:['비닐봉지·쇼핑봉투','택배 비닐봉투','양파·과일 그물망','에어캡·뽁뽁이','페트병 묶음 수축필름','검은 비닐봉지'],
+  p:[['비닐류 전반','PE / PP','비닐류','투명 봉투에 모아 배출']],
+  st:['이물질과 음식물을 털어내고 헹굽니다.','낱개로 버리지 않고 투명 봉투에 모읍니다.','입구를 묶어 비닐류 수거함 또는 지정 요일에 배출합니다.'],
+  bad:['비닐봉지 속에 종이·유리 등 다른 재활용품 넣기','봉지를 서로 이중·삼중으로 묶어 배출'],
+  tip:['서울시 통일 기준: 택배 비닐봉투는 송장 스티커가 안 떼어져도 분리배출합니다.','단독주택은 비닐류·투명 페트병 별도 요일제를 시행하는 지자체가 많습니다.'],
+  why:'비닐은 가볍고 작아 선별이 어렵기 때문에 투명 봉투에 모아 담아야 선별장에서 인식됩니다.'
+});
+A('rc','vinyl_film','cling_wrap_aluminum_pouch','🧻','랩 · 알루미늄 파우치 포장재','랩=일반쓰레기 / 파우치=비닐류','식품 랩은 일반, 파우치형 포장은 비닐류',{
+  k:'랩 식품 랩 호일 파우치 레토르트 알루미늄 파우치 사료 포장 PVC',
+  m:['vinyl_other'], g:'local',
+  ex:['식품용 랩','레토르트(카레·죽) 파우치','반려동물 사료 포장','믹스커피·파우치 포장'],
+  p:[['음식 랩','PVC/PE','일반쓰레기','종량제'],['알루미늄 적층 파우치','알루미늄 증착 필름','비닐류','내용물 비우고 세척']],
+  st:['랩은 오염이 있으니 일반쓰레기로 분리합니다.','파우치는 내용물을 비우고 헹굽니다.','헹군 파우치는 비닐류로 배출합니다.'],
+  bad:['랩을 비닐류에 같이 섞기','소스·사료가 그대로 남은 파우치 배출'],
+  loc:'랩·은박 포장재는 지자체·처리시설에 따라 안내가 다릅니다. 앱·지자체 안내를 확인하세요.',
+  why:'PVC 계열 랩은 선별과 재활용 공정에서 문제를 일으켜 일반쓰레기로 안내하는 경우가 많습니다.'
+});
+A('rc','vinyl_film','ziplock_glove_apron','🧤','지퍼백·비닐장갑·비닐 앞치마·파스 비닐','비닐류','PE 재질 비닐은 이물질 제거 후 비닐류로 배출',{
+  k:'지퍼백 비닐장갑 비닐앞치마 파스 비닐 위생장갑 냉동팩 지퍼 폐비닐',
+  m:['vinyl_pe'], g:'ok',
+  ex:['지퍼백','일회용 비닐장갑','비닐 앞치마','파스 겉 비닐','냉동 보관 팩'],
+  p:[['PE 비닐','폴리에틸렌','비닐류','헹궈 말려 배출'],['지퍼(슬라이더)','PE','함께 배출 가능','굳이 안 잘라도 됨']],
+  st:['안쪽 이물질을 씻어냅니다.','물기를 말립니다.','비닐류와 함께 투명 봉투에 담아 배출합니다.'],
+  bad:['고기·생선 기름이 묻은 채 배출'],
+  tip:['위생장갑·앞치마는 서울시 안내 Q&A에도 비닐류로 분류됩니다.'],
+  why:'단일 재질 PE 필름은 비닐 재활용 흐름에 맞는 소재입니다.'
+});
+
+// ───────── 비닐: 코팅·복합·라벨 정리 (판단 가이드) ─────────
+A('rc','vinyl_film','coated_vinyl_guide','🧭','코팅·복합재질 비닐, 일반쓰레기일까 비닐류일까? (판단 가이드)','원칙은 비닐류 · 오염/분리불가만 일반','‘코팅됐다’는 이유만으로 일반쓰레기는 아닙니다 — 재질·분리 가능 여부·오염 3가지로 판단',{
+  k:'코팅 비닐 복합재질 알루미늄 증착 적층 일반쓰레기 비닐류 헷갈 판단 라벨 종이컵 코팅 접착제 테이프 오염 기름 양념',
+  m:['vinyl_other','vinyl_pp','vinyl_pe'], g:'care', gl:'핵심 판단 기준',
+  ex:['과자·라면·커피믹스 봉지','종이컵 안쪽 PE 코팅','기름·양념 묻은 비닐','테이프·접착제가 붙은 비닐','페트병·소주병 라벨'],
+  gd:[
+    ['과자·라면·커피믹스 봉지 (플라스틱 필름 + 알루미늄 증착 적층)','비닐류 배출','ok','겉보기엔 비닐 한 장이어도 여러 층을 겹친 복합재질이 많습니다. 재활용 용이성 등급은 낮을 수 있지만, 깨끗하다면 비닐류로 배출하는 것이 지자체 안내입니다. 코팅·복합재질이라는 이유만으로 일반쓰레기로 분류하면 안 됩니다.'],
+    ['종이컵·종이 용기 안쪽의 플라스틱(PE) 코팅','비닐 아님 → 종이컵류','oth','종이에 얇은 막이 붙은 구조라 종이 재활용 때 섬유와 코팅층을 분리해야 합니다. 일반 종이와 똑같이 처리할 수 없으므로 종이컵 전용 수거(없으면 지자체 기준)로 배출합니다. 비닐류에 넣는 대상이 아닙니다.'],
+    ['기름·음식물·양념이 심하게 묻은 비닐','닦아서 비닐류 / 안 지워지면 일반','no','이물질이 섞이면 재생 원료 품질이 떨어지고 세척 비용이 늘어납니다. 먼저 내용물을 비우고 오염을 제거해 보세요. 세척해도 오염이 남거나 제거가 어렵다면 일반쓰레기로 배출하는 것이 원칙입니다.'],
+    ['테이프·접착제·다른 재질이 많이 붙은 비닐','분리되면 떼고 비닐만 / 어려우면 일반','sep','다른 재질을 분리할 수 있으면 떼어 내고 비닐만 배출합니다. 분리하기 어려운 복합재질은 재활용이 곤란할 수 있습니다.'],
+    ['음료 페트병의 얇은 비닐 라벨','비닐류 배출 (병은 투명 페트병 수거함)','ok','대부분 코팅 비닐이 아니라 라벨용 플라스틱 필름(PP·PET 계열)입니다. 병에서 떼어 낸 라벨은 비닐류로, 라벨을 뗀 병은 비우고 압착해 투명 페트병 전용 수거함에 넣습니다.'],
+    ['소주 유리병의 라벨 (종이 / 플라스틱 필름 등 다양)','쉽게 떨어지면 떼서 재질별 / 어렵면 그대로','sep','쉽게 분리되는 라벨은 떼어 재질에 맞게 배출하고, 유리병은 내용물을 비워 유리병으로 배출합니다. 라벨 재질을 모르면 무조건 비닐이라고 단정할 수 없습니다.']
+  ],
+  p:[['깨끗한 복합 비닐(과자봉지 등)','플라스틱 필름 + 알루미늄 증착','비닐류','털어서 투명 봉투에 모아 배출'],['종이컵·종이용기','종이 + PE 코팅','종이컵류','비닐류에 넣지 않기'],['오염 심한 비닐','오염 필름','일반쓰레기','닦아도 안 지워질 때'],['접착·테이프가 붙은 비닐','복합','분리 후 비닐류 / 불가 시 일반','다른 재질 먼저 떼기']],
+  st:['① 재질 확인: 비닐류 마크(PE·PP·OTHER)나 포장지 재질 표기를 확인합니다. ‘OTHER’나 알루미늄 증착 표시가 있어도 비닐류 표시라면 비닐류입니다.','② 오염 제거: 내용물을 비우고 털거나 헹궈 이물질을 최대한 없앱니다.','③ 분리 가능 여부: 테이프·접착 라벨 등 다른 재질이 떨어지면 떼어 각각 배출합니다.','④ 판정: 깨끗하고 비닐류 → 비닐류 / 닦아도 오염이 남음·복합재질을 분리할 수 없음 → 일반쓰레기'],
+  bad:['‘코팅이라서 재활용 안 될 것 같다’며 깨끗한 과자봉지를 일반쓰레기로 버리기','종이컵 안쪽 코팅을 비닐이라고 보고 비닐류에 넣기','오염이 심한 비닐을 닦지 않고 그대로 비닐류에 투입'],
+  tip:['핵심은 코팅 여부 자체가 아니라 ‘비닐류로 재활용할 수 있는 재질인지 / 여러 재질이 붙어 분리하기 어려운지 / 음식물·이물질로 오염됐는지’ 입니다.','복합재질이 재활용하기 어려운 이유: ① 재질이 서로 달라 녹였을 때 균일한 재생 원료를 얻기 어렵고 ② 얇고 가벼워 다른 쓰레기와 엉키기 쉽고 세척·선별 비용이 늘며 ③ 이물질·혼합 재질이 많으면 재생 플라스틱의 강도와 품질이 떨어집니다.','과자·라면 봉지는 깨끗하면 비닐류로 배출할 수 있다는 지자체 안내가 있습니다.'],
+  loc:'비닐류 수거 방식(투명 봉투, 요일제 등)과 세부 기준은 지자체마다 조금씩 다릅니다. 헷갈리면 거주지 안내나 「내 손안의 분리배출」 앱을 확인하세요.',
+  why:'비닐 재활용은 재질이 균일하고 깨끗할수록 쉽습니다. 코팅·접착·오염이 겹칠수록 재생 원료로 만들기 어려워지는 것이지, 코팅 자체가 곧 ‘일반쓰레기’라는 뜻은 아닙니다.'
+});
+A('rc','vinyl_film','pet_soju_label','🏷️','페트병·소주병 비닐 라벨','라벨=비닐류 / 병=각 수거함','‘코팅 비닐’이 아니라 대부분 라벨용 플라스틱 필름 — 떼어서 비닐류로',{
+  k:'페트병 라벨 소주병 라벨 비닐 라벨 절취선 필름 라벨 종이 라벨 접착제 열수축',
+  m:['pet','glass','vinyl_pp'], g:'ok',
+  ex:['생수·음료 페트병 비닐 라벨','소주·맥주 유리병 라벨','수축 필름 라벨'],
+  gd:[
+    ['음료 페트병 라벨 (PP·PET 계열 얇은 필름)','비닐류','ok','병에서 떼어 낸 라벨은 비닐류로 분리배출합니다. 라벨을 뗀 투명 페트병은 내용물을 비우고 압착한 뒤 투명 페트병 전용 수거함에 넣습니다.'],
+    ['소주 유리병 라벨 (종이 라벨·플라스틱 필름 라벨 등)','쉽게 떼지면 분리 / 어려우면 그대로','sep','쉽게 분리되는 라벨은 떼어 재질에 맞게 배출하고, 유리병은 내용물을 비워 유리병으로 배출합니다. 라벨 재질이 불분명하면 비닐이라고 단정하지 않습니다.']
+  ],
+  p:[['페트병 라벨','PP/PET 필름','비닐류','절취선 따라 제거'],['투명 페트병 몸체','무색 PET','투명 페트병 수거함','비우고 압착, 뚜껑 닫기'],['소주병 라벨','종이 또는 필름','재질에 맞게 / 어렵면 그대로','쉽게 떨어지는 것만'],['유리병 몸체','유리','유리병류','내용물 비우기']],
+  st:['페트병은 절취선을 따라 라벨을 완전히 떼어 비닐류로 버립니다.','소주병 라벨은 쉽게 떨어질 때만 떼고, 떼기 어려우면 그대로 둡니다.','병은 내용물을 비우고 각 수거함에 배출합니다.'],
+  bad:['모든 라벨을 ‘코팅 비닐’이라 단정하고 일반쓰레기로 버리기','접착제·잉크가 남은 라벨을 억지로 긁어내다 병을 깨뜨리기'],
+  tip:['라벨은 쉽게 제거할 수 있도록 절취선을 만들거나, 물에서 분리되는 재질과 접착제를 쓰도록 관련 기준이 마련되어 있습니다.','라벨이 잘 안 떨어지거나 잉크·접착제가 병에 남으면 재활용 공정에서 문제가 될 수 있습니다.'],
+  why:'병과 라벨은 재질이 다르기 때문에 분리해야 재생 품질이 올라갑니다. 다만 라벨은 종류가 다양해 재질에 따라 배출 방법이 달라집니다.'
+});
+A('rc','vinyl_film','dirty_vinyl_wrap','🍳','기름·음식물·양념이 심하게 묻은 비닐','닦아서 비닐류 / 안 지워지면 일반','먼저 비우고 닦아 보고, 그래도 남으면 일반쓰레기',{
+  k:'기름 묻은 비닐 음식물 양념 소스 오염 비닐 세척 라면스프 냉동식품 포장 고기 포장',
+  m:['vinyl_pe'], g:'care', gl:'오염 정도에 따라',
+  ex:['양념·소스가 굳은 비닐','고기·생선 기름이 밴 포장 비닐','국물이 남은 라면 봉지'],
+  gd:[
+    ['털거나 헹궈서 이물질이 제거된 비닐','비닐류','ok','가벼운 오염은 닦아내거나 헹궈 말린 뒤 투명 봉투에 모아 배출합니다.'],
+    ['세척해도 오염이 남거나 제거하기 어려운 비닐','일반쓰레기','no','이물질이 섞이면 재생 원료 품질이 떨어지고 세척 비용이 늘어납니다. 세척해도 오염이 남거나 어려우면 일반쓰레기로 배출하는 것이 원칙입니다.']
+  ],
+  p:[['가벼운 오염 비닐','PE/PP 필름','비닐류','털거나 헹구기'],['심하게 굳은 오염 비닐','오염 필름','일반쓰레기','세척 불가 시']],
+  st:['남은 내용물·소스를 비웁니다.','키친타월로 닦거나 물로 헹궈 말립니다.','오염이 지워지면 비닐류, 남아 있으면 일반쓰레기로 배출합니다.'],
+  bad:['오염을 확인하지 않고 모든 비닐을 비닐류에 넣기','오염이 심한 비닐 때문에 같은 봉투 안의 깨끗한 비닐까지 못 쓰게 만들기'],
+  tip:['서울시 안내는 작거나 이물질이 묻은 폐비닐도 분리배출 가능하도록 정리했지만, 가능한 한 털고 닦는 것이 원칙입니다.'],
+  loc:'오염 비닐의 허용 기준은 지자체별로 조금 다를 수 있습니다.',
+  why:'기름·음식물은 비닐 재생 과정에서 제거되지 않는 불순물로 남아 품질을 떨어뜨립니다.'
+});
+A('rc','vinyl_film','taped_adhesive_vinyl','📎','테이프·접착제·다른 재질이 붙은 비닐','분리되면 떼고 비닐류 / 불가하면 일반','다른 재질을 떼어 낼 수 있는지가 관건',{
+  k:'테이프 접착제 붙은 비닐 스티커 박스테이프 택배 비닐 라벨 접착 복합재질 지퍼 노끈',
+  m:['vinyl_pe'], g:'care', gl:'분리 가능 여부',
+  ex:['박스 테이프가 붙은 비닐','스티커·접착 라벨이 붙은 봉투','종이·금속이 붙은 포장 비닐'],
+  gd:[
+    ['다른 재질을 손으로 떼어 낼 수 있는 경우','떼서 각각 배출','sep','테이프·종이·금속 등 다른 재질은 떼어 각 재질로 배출하고 비닐만 비닐류로 배출합니다.'],
+    ['분리하기 어려운 복합재질','일반쓰레기 (재활용 곤란)','no','여러 재질이 단단히 붙어 있으면 재생이 곤란할 수 있습니다. 서울시 안내처럼 택배 비닐봉투에 붙은 송장 스티커 정도는 안 떼어져도 배출 가능한 예외가 있으니 지자체 기준을 확인하세요.']
+  ],
+  p:[['붙은 테이프·스티커','접착 필름/종이','분리 가능하면 일반쓰레기','먼저 제거'],['비닐 본체','PE/PP','비닐류','분리 후 배출']],
+  st:['테이프·스티커·종이·금속 부분이 떨어지는지 확인합니다.','떼어 낸 것은 재질에 맞게 버리고, 비닐은 비닐류로 배출합니다.','분리가 안 되면 일반쓰레기로 배출합니다.'],
+  bad:['붙은 채로 모두 비닐류에 투입','무리하게 뜯다가 비닐이 찢어져 작은 조각이 흩어지기'],
+  tip:['택배 비닐봉투 송장 스티커는 안 떼어져도 분리배출 가능하다는 지자체 안내가 있습니다.'],
+  loc:'송장 스티커 등 예외 허용 범위는 지자체별로 확인하세요.',
+  why:'접착제와 이종 재질은 비닐 재생 과정에서 불순물이 되어 품질을 떨어뜨립니다.'
+});
+
+// ───────── 캔·금속 ─────────
+A('rc','can_metal','beverage_can_al','🥤','음료수 캔·맥주 캔 (알루미늄)','캔류','비우고 헹구고 가볍게 압착',{
+  k:'음료수 캔 맥주캔 콜라캔 알루미늄 캔 압착 탄산',
+  m:['can_al'], g:'best',
+  ex:['콜라·사이다 캔','맥주 캔','에너지드링크 캔'],
+  p:[['캔 몸체','알루미늄','캔류','헹굼 + 압착'],['캔 뚜껑 탭','알루미늄','캔에 붙은 채 배출','그대로']],
+  st:['내용물을 비우고 물로 헹굽니다.','가볍게 눌러 압착합니다.','캔류 수거함에 배출합니다.'],
+  bad:['담배꽁초를 캔 속에 넣기','음료가 남은 상태로 버리기'],
+  tip:['자석에 붙으면 철 캔, 안 붙으면 알루미늄입니다. 둘 다 같은 캔류 수거함에 배출합니다.'],
+  why:'알루미늄은 몇 번이고 재활용해도 품질이 유지되고, 새로 만드는 것보다 훨씬 적은 에너지가 듭니다.'
+});
+A('rc','can_metal','canned_food_can','🥫','통조림·참치캔·분유통 (철 캔)','캔류','내용물·기름을 닦고 비닐/플라스틱 부분 분리',{
+  k:'통조림 참치캔 분유통 햄캔 스팸캔 복숭아캔 철캔 기름',
+  m:['can_fe'], g:'ok',
+  ex:['참치·꽁치 통조림','햄 캔','과일 통조림','분유통(철)'],
+  p:[['캔 몸체','철(스틸)','캔류','기름 닦고 헹굼'],['플라스틱 뚜껑','PE/PP','플라스틱류','분리'],['종이·비닐 라벨','종이/필름','종이류/비닐류','가능하면 제거'],['캔 뚜껑','철','캔 속에 넣어 함께 배출','몸체 안에 넣거나 별도']],
+  st:['내용물을 비우고 기름기를 키친타월로 닦은 뒤 세제로 씻습니다.','플라스틱 뚜껑·라벨을 분리합니다.','날카로운 뚜껑은 캔 안에 넣어 안전하게 배출합니다.'],
+  bad:['기름이 그대로 남은 참치캔 배출','플라스틱 뚜껑째로 배출'],
+  tip:['기름 묻은 캔은 신문지나 키친타월로 한 번 닦고 세제를 쓰면 훨씬 쉽게 씻깁니다.'],
+  why:'기름기는 철 재활용 용해로에서 불순물이 되고 선별장 악취의 원인이 됩니다.'
+});
+A('rc','can_metal','gas_spray_can','💨','부탄가스·살충제·헤어스프레이 캔','캔류 (내용물 완전 사용 후)','남은 가스를 모두 사용한 뒤 배출',{
+  k:'부탄가스 스프레이 살충제 에어로졸 에프킬라 헤어스프레이 가스 캔 구멍 폭발',
+  m:['can_fe'], g:'care',
+  ex:['부탄가스 캔','살충제 스프레이','헤어스프레이','에어 스프레이'],
+  p:[['금속 용기','철/알루미늄','캔류','잔량 모두 소진 후'],['플라스틱 노즐·캡','PE/PP','플라스틱류','분리']],
+  st:['내용물과 가스를 모두 사용합니다(야외·환기가 잘 되는 곳, 화기 금지).','플라스틱 노즐·캡을 분리합니다.','캔류로 배출합니다.'],
+  bad:['불 근처에서 가스를 빼기','가스가 남은 채로 수거함에 투입','캔을 억지로 눌러 찌그러뜨리기'],
+  tip:['과거에는 구멍을 뚫으라고 안내했으나, 현재는 내용물을 모두 사용한 뒤 구멍을 뚫지 않고 배출하라는 안내가 일반적입니다.'],
+  loc:'일부 지자체는 구멍 뚫기를 안내하기도 하므로 거주지 안내를 확인하세요.',
+  why:'잔여 가스가 있는 캔은 압착·파쇄 단계에서 폭발과 수거차량 화재를 일으킬 수 있습니다.'
+});
+A('rc','can_metal','scrap_metal','🍳','고철류 (냄비·프라이팬·철제 식기·못·철사)','고철류 / 캔류','철·스테인리스 위주 금속 생활용품',{
+  k:'고철 냄비 프라이팬 후라이팬 철제 수저 스테인리스 못 철사 공구 옷걸이 주전자 양은',
+  m:['can_fe'], g:'ok',
+  ex:['냄비·주전자','프라이팬(손잡이 분리 불가 시 포함)','철제 수저·식기','못·나사·철사','철제 옷걸이'],
+  p:[['금속 본체','철/스테인리스/알루미늄','고철류','이물질 제거'],['플라스틱·나무 손잡이','플라스틱/목재','분리 가능하면 분리','분리 불가 시 포함']],
+  st:['음식물·기름때를 씻어냅니다.','플라스틱·나무 부분이 분리되면 따로 버립니다.','고철류 수거함(또는 지자체 안내)에 배출합니다.'],
+  bad:['불소(테프론) 코팅이 심하게 벗겨진 프라이팬을 그대로 배출하는 경우 지자체 확인 필요'],
+  tip:['고철이 너무 크거나 무거우면 대형폐기물로 신고하세요.'],
+  loc:'크기·무게 기준과 수거 방식(고철 수거함/방문수거)은 지자체마다 다릅니다.',
+  why:'철·스테인리스는 재활용 가치가 높은 금속 자원입니다.'
+});
+A('rc','can_metal','aluminum_foil_tray','🍗','알루미늄 호일·은박 용기','캔류 / 일반 (지자체별)','깨끗이 씻은 경우만 금속으로, 오염되면 일반쓰레기',{
+  k:'호일 알루미늄 호일 은박 용기 은박접시 구이 포일 쿠킹호일 도시락',
+  m:['can_al'], g:'local',
+  ex:['쿠킹 호일','은박 도시락 용기','은박 접시'],
+  p:[['깨끗한 알루미늄 호일','알루미늄','캔류(안내 지자체)','구겨서 뭉치기'],['음식물 오염 호일','오염','일반쓰레기','종량제']],
+  st:['음식물·기름이 묻은 호일은 일반쓰레기로 분리합니다.','깨끗한 호일은 구겨 공 모양으로 뭉칩니다.','지자체 안내에 따라 캔류 수거함에 배출합니다.'],
+  bad:['기름이 묻은 채 캔류에 투입'],
+  loc:'얇은 호일은 선별이 어려워 일반쓰레기로 안내하는 지자체도 있습니다.',
+  why:'작고 얇은 금속 조각은 선별장에서 인식되지 않을 수 있어 뭉쳐서 배출해야 합니다.'
+});
+A('rc','can_metal','bottle_cap_metal','🔩','병뚜껑·왕관 (금속 뚜껑)','캔류 (병과 분리)','유리병에서 떼어 금속 뚜껑끼리 따로 모으기',{
+  k:'병뚜껑 왕관 맥주병뚜껑 금속 뚜껑 병 뚜껑 잼 병뚜껑',
+  m:['can_fe'], g:'ok',
+  ex:['맥주·소주 병뚜껑','잼·소스병 금속 뚜껑','캔 뚜껑'],
+  p:[['금속 뚜껑','철','캔류','병과 분리 후 모아서 배출']],
+  st:['유리병에서 뚜껑을 분리합니다.','이물질을 닦고 모읍니다.','캔류에 함께 배출합니다.'],
+  bad:['유리병에 뚜껑을 닫은 채 배출'],
+  tip:['뚜껑이 너무 작으면 모아 놓았다가 캔 안에 넣어 배출하면 선별이 쉽습니다.'],
+  why:'금속과 유리는 녹는 온도가 달라 서로 섞이면 재활용 품질이 떨어집니다.'
+});
+
+// ───────── 유리병 ─────────
+A('rc','glass_bottle','beverage_glass_bottle','🍾','음료·주류 유리병 (소주·맥주·콜라병)','유리병류 / 보증금 병은 소매점 반환','보증금 대상 병은 마트·편의점에 반환하면 돈을 돌려받아요',{
+  k:'소주병 맥주병 유리병 빈병 보증금 콜라병 음료병 와인병 반환',
+  m:['glass'], g:'best',
+  ex:['소주·맥주병','콜라·사이다 유리병','와인병','양주병','박카스병'],
+  p:[['유리병 몸체','유리','유리병류 (보증금 대상은 반환)','내용물 비우고 헹굼'],['병뚜껑','철/알루미늄','캔류','분리'],['라벨·스티커','종이/필름','제거 불필요(대부분)','떼기 어려우면 그대로']],
+  st:['내용물을 비우고 물로 헹굽니다.','금속·플라스틱 뚜껑을 분리합니다.','보증금 대상 병(소주·맥주 등)은 소매점에 반환하고, 그 외는 유리병 수거함에 색깔별로 배출합니다.'],
+  bad:['내용물이 남은 채 배출','깨진 병을 유리병 수거함에 투입 (신문지에 싸서 불연성/일반으로)'],
+  tip:['빈용기보증금: 소주병 100원, 맥주병 130원 등을 돌려받을 수 있습니다(지정 용기 기준).','색깔별 수거함(투명·갈색·초록)이 있는 단지는 색깔별로 구분하세요.'],
+  why:'유리병은 깨끗하게 모으면 새 병으로 거의 무한히 재활용할 수 있는 자원입니다.'
+});
+A('rc','glass_bottle','food_glass_jar','🍯','잼·소스·피클·건강식품 유리병','유리병류','철 뚜껑을 분리하고 속을 씻어 배출',{
+  k:'잼병 소스병 피클병 꿀병 건강식품 유리용기 올리브병 소스 유리병',
+  m:['glass'], g:'ok',
+  ex:['잼·꿀 병','피클·올리브 병','파스타 소스 병','건강즙 유리병'],
+  p:[['유리병','유리','유리병류','헹굼'],['금속 뚜껑','철','캔류','분리']],
+  st:['내용물을 비우고 따뜻한 물로 씻습니다.','금속·플라스틱 뚜껑을 분리합니다.','유리병류로 배출합니다.'],
+  bad:['잼이 굳어 붙은 병을 그대로 배출'],
+  tip:['굳은 잼은 뜨거운 물을 붓고 불린 뒤 씻으면 쉽게 떨어집니다.'],
+  why:'유리 외 이물질이 섞이면 용해 과정에서 불순물이 됩니다.'
+});
+
+// ───────── 스티로폼 ─────────
+A('rc','styrofoam_box','styrofoam_packing','📺','가전·전자제품 스티로폼 완충재','스티로폼 수거함','테이프·라벨·이물질 제거 후 깨끗한 흰색만',{
+  k:'스티로폼 완충재 가전 포장 흰색 EPS 박스 테이프 라벨',
+  m:['styro'], g:'ok',
+  ex:['TV·냉장고 포장 완충재','컴퓨터 포장재','선물 포장 스티로폼'],
+  p:[['스티로폼 본체','EPS(발포 PS)','스티로폼류','테이프·스티커 제거'],['테이프·택배 송장','접착/종이','일반쓰레기','제거']],
+  st:['붙어 있는 테이프·스티커·송장을 제거합니다.','음식물·이물질을 털어냅니다.','깨끗한 흰색 스티로폼을 모아 스티로폼 수거함에 배출합니다.'],
+  bad:['색이 있는 스티로폼·오염된 것을 섞기','큰 박스를 그대로 방치 (부피 차지)'],
+  tip:['서울시 안내: 깨끗한 스티로폼 상자는 라벨을 제거하고 분리배출합니다.'],
+  why:'스티로폼은 가열 압축해 잉고트(원료 덩어리)로 만들어 재활용되지만, 이물질이 많으면 사용 불가입니다.'
+});
+A('rc','styrofoam_box','styrofoam_fruit_fish_box','🐟','과일·생선·아이스박스 스티로폼 상자','스티로폼 수거함','물로 헹궈 말린 깨끗한 상자만',{
+  k:'생선 상자 과일 상자 아이스박스 스티로폼 상자 보냉 냄새 헹굼',
+  m:['styro'], g:'care',
+  ex:['생선·해산물 포장 상자','과일 포장 상자','보냉용 스티로폼 박스'],
+  p:[['스티로폼 상자','EPS','스티로폼류','헹궈 말리기'],['테이프·라벨','접착제','일반쓰레기','제거']],
+  st:['내용물을 비우고 물로 헹궈 냄새와 오염을 제거합니다.','테이프·스티커를 제거하고 말립니다.','스티로폼 수거함에 배출합니다.'],
+  bad:['생선 비린내·핏물이 남은 상태로 배출'],
+  tip:['여름철 아이스박스는 재사용하면 가장 좋습니다.'],
+  why:'오염된 스티로폼은 재활용 공정에서 불순물이라 처리비용이 증가합니다.'
+});
+A('rc','styrofoam_box','styrofoam_dirty_food_tray','🥩','컵라면·정육 트레이 등 음식물 묻은 스티로폼','헹굼 가능하면 스티로폼 / 불가능하면 일반','음식물 오염이 심하면 일반쓰레기',{
+  k:'컵라면 용기 정육 트레이 스티로폼 도시락 오염 음식 묻은 스티로폼 국물',
+  m:['styro'], g:'care',
+  ex:['컵라면 스티로폼 용기','정육·생선 트레이','일회용 스티로폼 도시락'],
+  p:[['깨끗이 헹군 용기','EPS','스티로폼류','헹굼 + 건조'],['양념·국물 착색 심한 용기','오염 EPS','일반쓰레기','씻어도 지워지지 않으면']],
+  st:['국물·건더기를 모두 비웁니다.','물로 헹궈 양념 착색이 심하지 않은지 확인합니다.','깨끗하면 스티로폼 수거함, 착색·오염이 심하면 일반쓰레기로 배출합니다.'],
+  bad:['국물이 남은 용기를 그대로 배출'],
+  tip:['종이로 된 컵라면 용기는 종이컵류로 구분하세요.'],
+  why:'기름과 양념이 스며든 스티로폼은 가열 압축 재활용이 불가능합니다.'
+});
+
+// ───────── 다부속/복합 ─────────
+A('rc','mixed_multipart','cosmetic_spray_pump','💄','화장품 펌프·에센스·스프레이 용기','재질별로 분리 배출','스프링이 든 펌프 헤드는 일반쓰레기, 본체는 재질대로',{
+  k:'화장품 펌프 에센스 스프레이 용기 펌핑 스포이드 향수 유리병 스프링 토너',
+  m:['glass','pp'], g:'hard', gl:'재활용 어려움',
+  ex:['에센스 펌프병','토너 스프레이','핸드크림 튜브','향수병'],
+  p:[['용기 본체','유리 또는 PET/PP','유리병류 또는 플라스틱류','내용물 세척 후 배출'],['펌프 헤드(스프링 포함)','PP + 철제 스프링','일반쓰레기','분리 불가 시 종량제']],
+  st:['내용물을 최대한 비우고 헹굽니다.','펌프 헤드를 돌려 본체와 분리합니다.','헤드는 일반쓰레기, 본체는 재질에 맞춰 배출합니다.'],
+  bad:['펌프를 통째로 플라스틱 수거함에 투입'],
+  tip:['스포이드(고무+유리)는 분리해 유리는 유리병류, 고무는 일반쓰레기로 버립니다.','내용물이 남아 있으면 휴지로 닦아낸 뒤 배출하세요.'],
+  why:'펌프 속 금속 스프링은 플라스틱 파쇄기를 고장 내는 주요 원인입니다.'
+});
+A('rc','mixed_multipart','delivery_food_container','🍱','배달음식 용기 (플라스틱 + 실링 비닐)','플라스틱류 (세척 후)','양념·기름때를 씻어 햇볕에 말리면 착색도 완화',{
+  k:'배달용기 배달음식 포장용기 일회용 용기 짬뽕 국물 용기 실링 필름 고춧가루 착색 족발 치킨 소스통',
+  m:['pp','ps','plastic_other'], g:'care', gl:'보통~어려움',
+  ex:['배달 반찬·국물 용기','김치 용기','소스통','샐러드 포장용기','도시락 용기'],
+  p:[['플라스틱 메인 용기','PP (폴리프로필렌)','플라스틱류','세제 세척 후 배출'],['테두리 실링 비닐','OTHER 필름','비닐류/일반','가급적 완전 제거'],['일회용 숟가락·젓가락','PP/목재','일반쓰레기','분리']],
+  st:['남은 음식·국물을 비우고 키친타월로 기름을 닦습니다.','주방세제로 씻어 햇볕에 말리면 고춧가루 착색이 옅어집니다.','실링 비닐을 제거하고 플라스틱류로 배출합니다. 착색이 심하면 일반쓰레기로 버립니다.'],
+  bad:['세척 없이 그대로 배출','소스가 굳은 용기를 모아서 배출 (선별장 오염)'],
+  tip:['따뜻한 물에 베이킹소다 한 스푼을 넣어 불리면 기름기 제거가 쉽습니다.','가능하면 다회용기 서비스를 이용하세요.'],
+  why:'기름때·착색은 재생 플라스틱의 품질과 인장강도를 떨어뜨리고 악취를 유발합니다.'
+});
+A('rc','mixed_multipart','cup_ramen_paper','🍜','종이 컵라면 용기·종이 도시락','종이컵류 (오염 시 일반)','안쪽 코팅 종이 용기는 종이컵과 같이 헹궈서',{
+  k:'컵라면 종이용기 종이 도시락 즉석 국수 용기 코팅 종이',
+  m:['paper'], g:'care',
+  ex:['종이 컵라면 용기','종이 도시락','종이 국수 컵'],
+  p:[['코팅 종이 용기','종이 + PE 코팅','종이컵 수거함 / 종이팩류','국물 비우고 헹굼'],['포일·비닐 뚜껑','필름','비닐류','제거']],
+  st:['국물·면발을 완전히 비웁니다.','물로 헹굽니다.','뚜껑 필름을 떼고 종이컵류로 배출합니다.'],
+  bad:['국물이 남은 채 종이류에 투입'],
+  tip:['기름·양념이 너무 많이 배면 일반쓰레기로 버립니다.'],
+  why:'기름과 양념이 종이에 배면 재활용이 불가능합니다.'
+});
+A('rc','mixed_multipart','tube_cosmetic_case','🪥','치약·화장품 튜브 / 립스틱·쿠션 케이스','일반쓰레기 (단일재질은 플라스틱)','알루미늄·플라스틱 복합이라 대부분 일반쓰레기',{
+  k:'치약 튜브 화장품 튜브 립스틱 쿠션 팩트 아이섀도 립밤 케이스 핸드크림 튜브 복합재질',
+  m:['general'], g:'no', gl:'재활용 어려움',
+  ex:['치약 튜브','핸드크림·폼클렌징 튜브','쿠션 팩트','립스틱·립밤 케이스'],
+  p:[['튜브·케이스','복합재질','일반쓰레기','내용물 최대한 비우기'],['유리 용기(분리 가능한 경우)','유리','유리병류','내용물 제거 후']],
+  st:['내용물을 모두 사용하거나 휴지로 닦아냅니다.','재질이 분리되는 부분(유리·단일 PE 튜브)은 따로 배출합니다.','분리가 안 되면 일반쓰레기로 버립니다.'],
+  bad:['내용물이 남은 채 플라스틱 수거함에 투입'],
+  tip:['튜브 하단에 PE 마크가 있고 알루미늄층이 없다면 플라스틱류 가능성이 있으니 마크를 확인하세요.'],
+  loc:'지자체와 튜브 재질에 따라 안내가 다를 수 있습니다.',
+  why:'알루미늄·플라스틱·접착층이 얇게 합쳐져 있어 분리해도 재생 효율이 낮습니다.'
+});
+A('rc','mixed_multipart','coffee_capsule','☕','캡슐커피 (알루미늄·플라스틱 캡슐)','제조사 회수 / 일반쓰레기','회수 프로그램이 있다면 우선 이용',{
+  k:'캡슐 커피 네스프레소 돌체구스토 알루미늄 캡슐 일회용 캡슐 회수',
+  m:['general'], g:'local',
+  ex:['알루미늄 캡슐','플라스틱 캡슐'],
+  p:[['커피 찌꺼기','유기물','일반쓰레기','캡슐 속 찌꺼기 제거'],['빈 캡슐','알루미늄/플라스틱','제조사 회수 / 일반쓰레기','회수 프로그램 이용']],
+  st:['사용한 캡슐을 모읍니다.','제조사 회수 서비스(매장 반납·택배 회수)가 있는지 확인합니다.','없다면 커피 찌꺼기는 일반쓰레기로, 캡슐은 지자체 안내에 따릅니다.'],
+  bad:['커피가 남은 채 캔류에 투입'],
+  loc:'제조사별 회수 프로그램 운영 여부가 수시로 바뀝니다.',
+  why:'소형 캡슐은 선별장에서 크기 때문에 걸러지지 않을 수 있어 별도 회수 방식을 권장합니다.'
+});
+A('rc','mixed_multipart','clothes_hanger','🧷','옷걸이 (플라스틱·철·혼합 재질)','재질별 / 혼합은 일반쓰레기','한 가지 재질이면 재활용, 혼합이면 일반쓰레기',{
+  k:'옷걸이 플라스틱 옷걸이 철 옷걸이 세탁소 옷걸이 혼합 우산',
+  m:['plastic_other','can_fe'], g:'care',
+  ex:['플라스틱 옷걸이','철 옷걸이(세탁소)','고무·집게 달린 옷걸이'],
+  p:[['플라스틱 단일 옷걸이','PP/PS','플라스틱류','그대로'],['철 옷걸이','철','고철류/캔류','비닐 제거'],['혼합 재질(집게·고무 포함)','복합','일반쓰레기','분리 불가']],
+  st:['옷걸이 재질을 확인합니다.','단일 재질이면 해당 수거함, 집게·고무 등이 붙은 혼합 재질은 일반쓰레기로 버립니다.'],
+  bad:['집게 달린 옷걸이를 플라스틱으로 배출'],
+  tip:['세탁소 철 옷걸이는 세탁소에 돌려주면 재사용됩니다.'],
+  why:'혼합 재질은 분해 없이 선별되지 않아 전체가 잔재물이 됩니다.'
+});
+A('rc','mixed_multipart','tumbler_thermos','🥤','텀블러·보온병·스테인리스 물병','분리 후 고철류 / 계속 사용 권장','쓸 수 있는 동안 끝까지 쓰는 것이 최선',{
+  k:'텀블러 보온병 스테인리스 물병 보냉병 이중 진공 뚜껑 실리콘 패킹',
+  m:['can_fe','pp'], g:'care',
+  ex:['스테인리스 텀블러','보온병','보냉 물병'],
+  p:[['스테인리스 본체','스테인리스','고철류','손잡이·실리콘 분리'],['플라스틱 뚜껑','PP','플라스틱류','분리'],['실리콘 패킹','실리콘','일반쓰레기','분리']],
+  st:['뚜껑·실리콘 패킹을 분리합니다.','본체는 고철류로 배출합니다.'],
+  bad:['사용 가능한 텀블러를 쉽게 버리기'],
+  tip:['텀블러는 수차례 이상 반복 사용해야 일회용컵 대비 환경 효과가 커집니다.'],
+  why:'다회용기는 오래 쓰는 것이 자원순환의 핵심입니다.'
+});
+/* ============ 2. 음식물 쓰레기 ============ */
+// 판단 기준: "가축이 먹을 수 있고(사료), 분쇄·건조 설비를 고장 내지 않으며, 퇴비 품질을 해치지 않는가?"
+
+// ───────── ⭕ 음식물 인정 ─────────
+A('fd','food_ok','food_soft_fruit_peels','🍌','부드러운 과일 껍질 (사과·배·바나나·귤·오렌지·감·토마토·포도)','음식물쓰레기','소화가 잘 되는 부드러운 껍질은 사료·퇴비 원료',{
+  k:'사과껍질 배 바나나 귤 오렌지 감 토마토 포도 귤껍질 레몬 자몽 유자 과일껍질 과일',
+  m:['food'], g:'foodok',
+  ex:['사과·배 껍질','바나나 껍질','귤·오렌지·레몬 껍질','감 껍질','포도 알맹이·껍질','토마토 꼭지(부드러운 것)'],
+  p:[['부드러운 과일 껍질','유기물·수분','음식물 수거함','물기 짜서 배출'],['과일 스티커·망','접착 라벨·비닐','일반쓰레기','반드시 제거']],
+  st:['과일에 붙은 상표 스티커와 포장 비닐·망을 모두 제거합니다.','물기를 손이나 체망으로 꼭 짜냅니다.','음식물 전용 수거함·봉투에 배출합니다.'],
+  bad:['스티커를 떼지 않고 그대로 투입','과일망·비닐봉지째 배출'],
+  tip:['바나나·귤처럼 일상적인 껍질은 전부 음식물입니다. 단, 단단한 껍질·씨는 아래 ❌ 목록을 확인하세요.'],
+  why:'부드러운 껍질은 건조·분쇄 후 가축 사료와 유기성 퇴비로 최상의 재활용 품질을 가집니다.'
+});
+A('fd','food_ok','food_large_fruit_peels','🍉','대형 과일 껍질 (수박·멜론·참외·파인애플 과육 껍질)','음식물쓰레기 (잘게 잘라서)','큰 덩어리는 자르고 물기를 빼서 배출',{
+  k:'수박 껍질 멜론 참외 파인애플 대형 과일 자르기 물기',
+  m:['food'], g:'foodok', gl:'⭕ 잘라서 배출',
+  ex:['수박 껍질','멜론·참외 껍질','파인애플 과육 부분','석류 속 하얀 껍질(부드러운 것)'],
+  p:[['수박·멜론 껍질','고수분 유기물','음식물 수거함','2~3cm로 잘라 배출'],['파인애플 단단한 심·크라운','목질 섬유','일반쓰레기','분리']],
+  st:['통째로 넣지 않고 칼로 2~3cm 크기로 자릅니다.','체에 받쳐 하루 정도 물기를 뺍니다.','음식물 수거함에 배출합니다.'],
+  bad:['수박 껍질을 통째로 배출 (분쇄기 고장·수분 과다)'],
+  tip:['수박 껍질은 수분이 90% 이상이라 물기를 빼면 부피·무게·악취가 크게 줄어듭니다.','파인애플의 단단한 껍질과 심, 코코넛 껍질은 일반쓰레기입니다.'],
+  why:'큰 덩어리는 사료 분쇄기를 고장 내고 처리 비용을 올립니다. 잘게 자르고 물기를 빼는 것이 핵심입니다.'
+});
+A('fd','food_ok','food_vege_trimmings','🥬','잎채소·채소 다듬은 부분 (배추·상추·시금치·브로콜리·호박·오이)','음식물쓰레기','부드러운 채소류는 모두 음식물',{
+  k:'배추 상추 시금치 브로콜리 호박 오이 양배추 무청 채소 다듬은 겉잎 파 줄기 채소부산물',
+  m:['food'], g:'foodok',
+  ex:['배추 겉잎','상추·시금치','브로콜리 줄기(부드러운 부분)','애호박·오이 꼭지','양배추 심(부드러운 것)'],
+  p:[['부드러운 채소류','식물성 섬유','음식물 수거함','흙 씻고 물기 제거']],
+  st:['뿌리·잎에 묻은 흙을 씻어냅니다.','물기를 털고 음식물 수거함에 배출합니다.'],
+  bad:['단단한 뿌리·마른 껍질까지 한꺼번에 투입'],
+  tip:['파 흰 줄기는 음식물이지만 파 뿌리(수염뿌리)는 일반쓰레기입니다.'],
+  why:'흙이 섞이면 퇴비의 무기질 비율이 올라가 퇴비 등급이 떨어집니다.'
+});
+A('fd','food_ok','food_root_veg_peels','🥕','감자·고구마·무·당근·연근·우엉 껍질','음식물쓰레기','뿌리채소 껍질은 흙만 씻으면 음식물',{
+  k:'감자 고구마 무 당근 연근 우엉 껍질 뿌리채소 싹 감자싹',
+  m:['food'], g:'foodok',
+  ex:['감자·고구마 껍질','당근·무 껍질','연근·우엉 껍질','양파 속살(껍질 아님)'],
+  p:[['뿌리채소 껍질','식물성 섬유','음식물 수거함','흙 제거 후 배출']],
+  st:['흙을 물로 씻어냅니다.','큰 덩어리는 잘라 음식물로 배출합니다.'],
+  bad:['흙이 묻은 채 배출'],
+  tip:['양파는 마른 겉껍질만 일반쓰레기이고 속살을 다듬은 부분은 음식물입니다.'],
+  why:'뿌리채소 껍질은 수분·영양분이 있어 사료화에 적합합니다.'
+});
+A('fd','food_ok','food_grains_noodles','🍚','밥·빵·떡·면·과자·곡물·잡곡 (포장 제거)','음식물쓰레기','포장지·이쑤시개만 제거하면 대부분 음식물',{
+  k:'밥 빵 떡 라면 국수 과자 곡물 쌀 잡곡 쌀겨 콩 팥 시리얼 남은 음식 유통기한',
+  m:['food'], g:'foodok',
+  ex:['남은 밥·죽','빵·케이크','떡·면류','과자·시리얼(포장 제거)','쌀·잡곡·콩·팥'],
+  p:[['곡물·가공식품','탄수화물','음식물 수거함','포장 제거'],['포장지·비닐','PE/PP','비닐류','반드시 제거']],
+  st:['과자·빵 봉지·포장을 모두 벗깁니다.','국물이 있다면 체에 걸러 건더기만 배출합니다.','음식물 수거함에 배출합니다.'],
+  bad:['포장째 버리기','초·이쑤시개·종이가 섞여 들어가기'],
+  tip:['곡식의 껍질인 왕겨는 일반쓰레기이지만, 쌀겨와 쌀·콩은 음식물입니다.'],
+  why:'곡물류는 사료·퇴비로 재활용하기에 가장 좋은 원료입니다.'
+});
+A('fd','food_ok','food_meat_soft_parts','🥩','살코기·부드러운 내장·비계·닭껍질·햄·소시지','음식물쓰레기','뼈가 없는 육류는 음식물 — 양념은 가볍게 헹궈서',{
+  k:'살코기 고기 내장 비계 닭껍질 햄 소시지 베이컨 육류 삼겹살 순대 곱창 껍질 기름',
+  m:['food'], g:'foodok',
+  ex:['삼겹살 살코기·비계','닭 껍질','내장류(곱창·순대)','햄·소시지','베이컨'],
+  p:[['육류 살코기·내장','동물성 단백질','음식물 수거함','양념 헹굼 후 배출'],['뼈','골질','일반쓰레기','분리']],
+  st:['뼈를 발라내 일반쓰레기로 분리합니다.','양념 국물은 물로 가볍게 헹굽니다.','물기를 빼고 음식물 수거함에 배출합니다.'],
+  bad:['뼈째 투입 (기계 파손)','포장 비닐·이쑤시개를 같이 투입'],
+  tip:['삼겹살 비계 등은 음식물로 인정되지만, 응고된 기름 덩어리는 양이 많으면 지자체 안내를 확인하세요.'],
+  why:'단백질·지방은 사료 원료로 활용 가치가 높은 편이며, 뼈가 없어야 설비 고장을 막을 수 있습니다.'
+});
+A('fd','food_ok','food_fish_small','🐟','생선살·멸치·작은 가시·건어물','음식물쓰레기','큰 가시와 대가리는 일반쓰레기, 작고 부드러운 것은 음식물',{
+  k:'생선 살 멸치 건어물 작은 가시 꽁치 고등어 오징어 조기 새우살 어묵 젓갈',
+  m:['food'], g:'foodok',
+  ex:['생선살','멸치 육수 멸치','오징어·쥐포','어묵','부드러운 작은 생선뼈'],
+  p:[['생선살·작은 가시','단백질','음식물 수거함','양념 헹굼'],['뾰족하고 단단한 큰 뼈·대가리','골질','일반쓰레기','분리']],
+  st:['큰 생선뼈·대가리·지느러미를 분리합니다.','살코기와 작은 뼈는 음식물로 배출합니다.'],
+  bad:['대가리·큰 뼈를 그대로 음식물에 투입'],
+  tip:['멸치 육수를 낸 멸치는 작은 뼈라 음식물로 배출합니다.'],
+  why:'뾰족한 큰 뼈는 설비를 고장 내고 가축 위장에 위험합니다.'
+});
+A('fd','food_ok','food_sauces_kimchi','🌶️','김치·장아찌·젓갈·된장·고추장·간장 (염분 있는 식품)','음식물쓰레기 (헹궈서)','소금기 많은 음식도 헹궈서 음식물로 — 일반쓰레기 아님',{
+  k:'김치 장아찌 젓갈 된장 고추장 쌈장 간장 염분 장류 소금 짜게 양념 소스 고추장 된장',
+  m:['food'], g:'foodok', gl:'⭕ 헹궈서 음식물',
+  ex:['묵은 김치','장아찌','된장·고추장·쌈장','젓갈','양념 소스'],
+  p:[['장류·김치','염분 유기물','음식물 수거함','물에 헹궈 염분 낮추기'],['용기','플라스틱/유리','재질별 분리배출','씻어서']],
+  st:['용기에서 덜어냅니다.','체에 걸러 물에 한 번 헹구어 염분과 국물을 줄입니다.','물기를 빼고 음식물 수거함에 배출합니다.'],
+  bad:['장류·김치를 일반쓰레기로 버리기 (잘못된 상식)','국물까지 통째로 투입'],
+  tip:['※ 예전 안내에서 장류를 일반쓰레기로 보는 곳이 있었지만, 환경부·지자체 지침은 헹궈서 음식물로 배출하는 것입니다.'],
+  loc:'과거 일부 지자체는 염도 높은 장류의 별도 처리를 안내한 적이 있으므로 최종 기준은 거주지 안내를 확인하세요.',
+  why:'염분은 헹구면 크게 줄어 사료·퇴비 원료로 사용할 수 있습니다.'
+});
+A('fd','food_ok','food_eggs_dairy_tofu','🥚','달걀(속)·치즈·두부·견과류 알맹이·콩','음식물쓰레기','껍데기만 일반쓰레기, 속은 음식물',{
+  k:'달걀 계란 치즈 두부 비지 견과류 알맹이 호두 아몬드 땅콩 콩 우유 요거트',
+  m:['food'], g:'foodok',
+  ex:['달걀 흰자·노른자(껍데기 제외)','치즈·버터','두부·비지','호두·땅콩 알맹이','요거트·우유(액체는 하수구)'],
+  p:[['식품 내용물','단백질·지방','음식물 수거함','포장 제거'],['달걀 껍데기·견과류 껍데기','석회질·섬유','일반쓰레기','분리']],
+  st:['껍데기·포장을 모두 제거합니다.','액체 상태 우유·요거트는 하수구에 흘려보낸 뒤 용기를 분리배출합니다.','고형 식품은 음식물로 배출합니다.'],
+  bad:['달걀 껍데기를 함께 투입'],
+  tip:['삶은 달걀의 흰자·노른자는 음식물, 껍데기는 일반쓰레기입니다.'],
+  why:'단단한 석회질 껍데기는 분쇄가 어려워 설비 고장 원인입니다.'
+});
+A('fd','food_ok','food_seaweed_dried','🌊','미역·김·다시마·나물·버섯','음식물쓰레기','해조류·나물·버섯류는 음식물',{
+  k:'미역 김 다시마 파래 나물 버섯 표고 고사리 해조류 육수 건더기',
+  m:['food'], g:'foodok',
+  ex:['미역·김·다시마','국 건더기','각종 나물','표고·느타리 버섯'],
+  p:[['해조류·나물·버섯','식물성','음식물 수거함','물기 제거']],
+  st:['국물·양념을 걸러냅니다.','물기를 빼고 음식물 수거함에 배출합니다.'],
+  bad:['김 포장의 방습제(실리카겔)를 같이 투입'],
+  tip:['육수를 낸 다시마·멸치·표고는 건더기만 모아 음식물로 배출합니다.'],
+  why:'해조류와 나물은 사료·퇴비로 이용하기 쉬운 식물성 원료입니다.'
+});
+A('fd','food_ok','food_expired_packaged','📅','유통기한 지난 가공식품·상한 음식·곰팡이 핀 음식','음식물쓰레기 (포장 제거)','포장은 분리하고 내용물만 음식물로',{
+  k:'유통기한 소비기한 지난 식품 상한 곰팡이 냉동식품 과자 통조림 포장 개봉 라면 레토르트',
+  m:['food'], g:'foodok',
+  ex:['유통기한 지난 라면·과자','곰팡이 핀 빵·밥','상한 반찬','냉동식품'],
+  p:[['식품 내용물','유기물','음식물 수거함','포장 제거'],['포장재','플라스틱/비닐/캔','재질별 분리배출','씻어서']],
+  st:['포장지·용기를 분리합니다.','내용물만 음식물 수거함에 배출합니다.','액체는 하수구에 흘려보내고 용기를 분리배출합니다.'],
+  bad:['포장째 통째로 버리기'],
+  tip:['통조림은 내용물을 옮겨 담고 캔은 캔류로 배출하세요.'],
+  why:'포장 재질이 음식물 처리 설비에 들어가면 기계가 고장 나고 사료 품질이 떨어집니다.'
+});
+A('fd','food_ok','food_pet_feed','🐶','반려동물 사료·간식 (포장 제거)','음식물쓰레기','사료·간식은 음식물, 배설물과 모래는 일반쓰레기',{
+  k:'강아지 사료 고양이 사료 반려동물 사료 간식 개껌 포장 펫푸드',
+  m:['food'], g:'foodok',
+  ex:['개·고양이 사료','습식 사료','간식(뼈 제외)'],
+  p:[['사료·간식','유기물','음식물 수거함','포장 제거'],['개껌·뼈 간식','딱딱한 골질','일반쓰레기','분리']],
+  st:['포장을 제거합니다.','남은 사료를 음식물 수거함에 배출합니다.'],
+  bad:['동물 배설물·모래를 음식물에 투입'],
+  tip:['뼈로 만든 간식(개껌)은 일반쓰레기입니다.'],
+  why:'사료는 곡물·단백질로 이루어져 일반 음식물과 같게 처리됩니다.'
+});
+A('fd','food_ok','food_soup_liquid','🍲','국물·기름기 많은 음식 (찌개·탕·죽·소스)','건더기=음식물 / 국물=하수구','건더기는 체에 거르고 국물만 하수구로',{
+  k:'국물 찌개 탕 죽 소스 육수 국 국밥 액체 건더기 체망 하수구',
+  m:['food'], g:'foodok', gl:'⭕ 건더기만',
+  ex:['국·찌개 건더기','탕·죽','소스 건더기','샐러드 드레싱 건더기'],
+  p:[['건더기','유기물','음식물 수거함','체에 걸러 배출'],['국물·소스','액체','하수구(소량)','체에 걸러 흘려보내기'],['기름덩어리','지방','일반쓰레기/폐식용유','소량은 휴지로 닦아 일반']],
+  st:['체망으로 건더기와 국물을 분리합니다.','국물은 싱크대로 흘려보냅니다.','건더기는 물기를 빼고 음식물로 배출합니다.'],
+  bad:['국물째 음식물 수거함에 쏟기 (수거차 누수·악취)'],
+  tip:['수분을 줄이는 것만으로도 음식물 처리 비용과 악취가 크게 줄어듭니다.'],
+  why:'음식물류 폐기물은 수분이 많을수록 건조·사료화 단계에서 에너지가 많이 들고 악취가 납니다.'
+});
+
+// ───────── ❌ 일반쓰레기 ─────────
+A('fd','food_no','food_hard_seeds','🍑','단단한 과일 씨 (복숭아·자두·살구·감·체리·매실·대추·망고·아보카도·올리브)','일반쓰레기','분쇄기 칼날 파손 원인 1위, 목질화된 단단한 씨',{
+  k:'복숭아씨 자두씨 살구씨 감씨 체리씨 매실씨 대추씨 망고씨 아보카도씨 올리브씨 핵과류 과일씨',
+  m:['general'], g:'foodno',
+  ex:['복숭아·자두·살구씨','감씨·매실씨','체리·대추씨','망고·아보카도씨','올리브 씨'],
+  p:[['단단한 씨','목질 무기질','일반쓰레기','종량제 배출']],
+  st:['과육을 발라낸 뒤 씨를 모아 휴지에 싸서 일반쓰레기로 버립니다.'],
+  bad:['씨를 과육과 함께 음식물에 투입'],
+  tip:['수박씨·포도씨·사과씨·참외씨처럼 작고 부드러운 씨는 음식물입니다.'],
+  why:'단단한 씨는 사료 분쇄기 칼날을 부러뜨리고 가축 소화에도 부적합합니다.'
+});
+A('fd','food_no','food_hard_fruit_peels','🥥','단단한 과일 껍질 (코코넛·파인애플 껍질·두리안·석류 겉껍질·밤 겉껍질)','일반쓰레기','섬유질이 억센 껍질은 일반쓰레기',{
+  k:'코코넛 파인애플 껍질 두리안 석류 단단한 껍질 과일 껍질 일반쓰레기',
+  m:['general'], g:'foodno',
+  ex:['코코넛 껍질','파인애플 겉껍질·심·잎','두리안 껍질','석류 겉껍질'],
+  p:[['단단한 껍질','목질 섬유','일반쓰레기','종량제 배출']],
+  st:['과육을 제거하고 단단한 껍질은 종량제봉투로 배출합니다.'],
+  bad:['단단한 껍질을 음식물로 배출'],
+  tip:['파인애플 껍질은 지자체에 따라 안내가 다르니 의심스러우면 확인하세요.'],
+  why:'질기고 단단한 섬유는 분쇄가 어려워 설비를 고장 냅니다.'
+});
+A('fd','food_no','food_onion_garlic_peel','🧅','양파·마늘·생강 마른 겉껍질, 파뿌리, 옥수수 껍질·대, 마늘대·고춧대','일반쓰레기','질기고 마른 섬유질은 사료 가치가 없어 일반쓰레기',{
+  k:'양파껍질 마늘껍질 생강껍질 파뿌리 옥수수껍질 옥수수대 마늘대 고춧대 대 줄기 뿌리 수염',
+  m:['general'], g:'foodno',
+  ex:['양파·마늘·생강 마른 껍질','파 뿌리','옥수수 껍질·옥수수대','고춧대·마늘대(단단한 줄기)'],
+  p:[['건조 겉껍질·뿌리·대','조섬유질','일반쓰레기','종량제 배출']],
+  st:['다듬을 때 나오는 마른 껍질과 뿌리는 모아서 일반쓰레기로 버립니다.','양파·마늘 속살과 부드러운 줄기는 음식물로 배출합니다.'],
+  bad:['양파껍질을 음식물에 투입'],
+  tip:['서울시 통일 기준에서도 양파껍질은 일반쓰레기로 명시되어 있습니다.'],
+  why:'마르고 질긴 섬유는 분쇄망에 엉켜 설비를 고장 냅니다.'
+});
+A('fd','food_no','food_stems_chili','🌶️','고추씨·고추꼭지·고추대','일반쓰레기','캡사이신 성분으로 사료·퇴비 품질을 해치는 고추 부산물',{
+  k:'고추씨 고추꼭지 고추대 청양고추 캡사이신 고추',
+  m:['general'], g:'foodno',
+  ex:['말린 고추씨','고추 꼭지','고추대'],
+  p:[['고추씨·꼭지·대','자극성 섬유','일반쓰레기','종량제 배출']],
+  st:['고추를 다듬고 남은 꼭지·씨를 모아 일반쓰레기로 버립니다.'],
+  bad:['고추씨를 음식물로 배출'],
+  tip:['서울시 표준안에서 고추씨(캡사이신 함유)는 일반쓰레기로 규정했습니다. 고춧가루 양념은 음식물입니다.'],
+  loc:'지자체에 따라 고추씨를 음식물로 안내하던 곳도 있으니 최종 기준은 거주지 안내를 확인하세요.',
+  why:'캡사이신은 사료화 과정과 가축 소화에 영향을 줄 수 있고, 퇴비 품질에도 영향을 줍니다.'
+});
+A('fd','food_no','food_animal_bones','🍗','동물 뼈·털·발톱 (소·돼지·닭·오리·족발·갈비·사골)','일반쓰레기','뼈는 분쇄기 파손과 가축 위험 때문에 반드시 일반쓰레기',{
+  k:'뼈 닭뼈 치킨뼈 돼지뼈 족발 갈비 사골 뼈다귀 소뼈 오리 털 닭발 발톱',
+  m:['general'], g:'foodno',
+  ex:['치킨·닭강정 뼈','족발·갈비 뼈','사골·도가니 뼈','동물 털'],
+  p:[['동물 뼈·털','골질·케라틴','일반쓰레기','살점 제거 후 종량제']],
+  st:['살점·양념을 최대한 떼어냅니다.','뼈는 모아 일반쓰레기로 버립니다(뾰족하면 신문지로 감싸기).'],
+  bad:['치킨 뼈를 음식물에 투입 (가장 흔한 실수)'],
+  tip:['뼈에 붙은 살점은 음식물로, 뼈 자체는 일반쓰레기로 분리하세요.'],
+  why:'뼈 조각은 가축 위장을 해치고 건조·분쇄 설비를 파손합니다.'
+});
+A('fd','food_no','food_fish_hard','🦐','생선 대가리·큰 생선뼈·새우·게 껍데기','일반쓰레기','단단하고 뾰족해서 설비·가축에 위험',{
+  k:'생선 대가리 생선뼈 새우껍질 게 껍질 꽃게 대하 조기 갈치 뼈',
+  m:['general'], g:'foodno',
+  ex:['생선 대가리·큰 뼈','새우·가재 껍데기','게 껍데기·집게','굵은 생선가시'],
+  p:[['생선 뼈·갑각류 껍질','골질·키틴','일반쓰레기','종량제 배출']],
+  st:['살을 발라내고 뼈·대가리를 모읍니다.','갑각류 껍질도 함께 모아 일반쓰레기로 버립니다.'],
+  bad:['새우 껍질을 음식물로 배출'],
+  tip:['작고 부드러운 멸치 뼈 등은 음식물입니다.'],
+  why:'딱딱한 껍질·뼈는 소화되지 않고 기계를 파손시킵니다.'
+});
+A('fd','food_no','food_shellfish_egg_shells','🐚','조개·굴·전복·소라 껍데기, 달걀·메추리알 껍데기','일반쓰레기','탄산칼슘 껍데기는 분쇄 불가',{
+  k:'조개 껍데기 굴 전복 소라 멍게 홍합 달걀껍데기 계란껍질 메추리알 패각 석회질',
+  m:['general'], g:'foodno',
+  ex:['조개·홍합 껍데기','굴·전복 껍데기','달걀·메추리알 껍데기','골뱅이 껍데기'],
+  p:[['패각류·알껍데기','탄산칼슘','일반쓰레기','종량제 배출']],
+  st:['조개·굴을 먹고 난 껍데기는 모아 일반쓰레기로 버립니다.','알 껍데기는 부수지 않고 그대로 일반쓰레기로 버립니다.'],
+  bad:['껍데기를 음식물에 투입'],
+  tip:['껍데기에 붙은 살은 떼어 음식물로 분리하세요.'],
+  why:'석회질은 소화되지 않고 분쇄 기계를 마모시킵니다.'
+});
+A('fd','food_no','food_nut_shells','🥜','견과류 껍데기 (호두·밤·땅콩·도토리·은행·아몬드), 왕겨','일반쓰레기','단단한 껍데기는 사료·퇴비화 불가',{
+  k:'호두 밤 땅콩 도토리 은행 아몬드 껍데기 왕겨 견과류 껍질 밤껍질',
+  m:['general'], g:'foodno',
+  ex:['호두·밤 껍데기','땅콩 껍질','도토리·은행 껍데기','왕겨'],
+  p:[['단단한 껍데기','목질 섬유','일반쓰레기','종량제 배출']],
+  st:['알맹이를 제외한 껍데기를 모아 일반쓰레기로 버립니다.'],
+  bad:['밤 속껍질·겉껍질을 음식물에 투입'],
+  tip:['알맹이(호두·땅콩)는 음식물입니다.'],
+  why:'단단한 껍데기는 분쇄 설비를 고장 내고 사료 소화에도 해롭습니다.'
+});
+A('fd','food_no','food_tea_coffee','🍵','찻잎·티백·원두 찌꺼기·한약재','일반쓰레기','카페인·타닌·섬유질로 사료·퇴비화 부적합',{
+  k:'찻잎 티백 녹차 홍차 커피찌꺼기 원두 한약재 한약 찌꺼기 커피 가루 차 찌꺼기',
+  m:['general'], g:'foodno',
+  ex:['티백·녹차 찌꺼기','원두 찌꺼기','한약 찌꺼기','허브차 건더기'],
+  p:[['찌꺼기','섬유·카페인','일반쓰레기','물기 말려서 종량제 배출']],
+  st:['찌꺼기를 물기를 빼고 말립니다.','티백은 종이·실을 포함해 일반쓰레기로 버립니다.'],
+  bad:['커피 찌꺼기를 음식물로 배출','티백 철침·실을 분리하지 않고 투입'],
+  tip:['말린 커피 찌꺼기는 냉장고·신발장 탈취제로 재활용해도 좋습니다.'],
+  loc:'일부 지자체는 커피 찌꺼기 별도 수거(퇴비·연료 등) 시범사업을 운영합니다.',
+  why:'차·커피 찌꺼기는 사료로 쓰기에 부적합하고 잔류 성분이 퇴비화에 영향을 줍니다.'
+});
+A('fd','food_no','food_contaminants','⚠️','음식물에 섞이면 안 되는 이물질 (비닐·이쑤시개·나무젓가락·병뚜껑·과일 스티커·티슈)','제거 후 재질별 배출','음식물을 버릴 때 가장 많이 섞이는 이물질 정리',{
+  k:'이물질 비닐 이쑤시개 나무젓가락 병뚜껑 스티커 티슈 고무장갑 수저 포장 낚시바늘 호일 쓰레기 섞임',
+  m:['general'], g:'foodno',
+  ex:['비닐봉지·포장지','이쑤시개·꼬치·젓가락','병뚜껑·캔 뚜껑','과일 상표 스티커','휴지·물티슈','수저·고무장갑'],
+  p:[['이물질 전반','복합','일반쓰레기 / 재질별 분리배출','철저히 제거']],
+  st:['버리기 전에 눈으로 이물질이 없는지 확인합니다.','비닐·젓가락은 일반쓰레기로, 병뚜껑은 재질별로 분리합니다.'],
+  bad:['비닐봉지째 음식물 버리기','숟가락·포크 투입'],
+  tip:['수거함 앞에서 한 번 더 확인하는 습관이 가장 효과적입니다.'],
+  why:'이물질이 섞이면 사료화·퇴비화 자체가 불가능해 음식물 전체가 소각·폐기됩니다.'
+});
+
+// ───────── 💡 노하우 ─────────
+A('fd','food_knowhow','food_handling_knowhow','💡','수분 줄이기·악취 방지·여름철 초파리 차단 노하우','핵심 수칙','음식물 쓰레기 무게의 70~80%는 물',{
+  k:'수분 탈수 악취 냄새 초파리 날파리 여름 냉동 보관 식초 체망 물기',
+  m:['food'], g:'tip',
+  ex:['체망·짤순이 사용','냉동실 보관','식초 분무','신문지 깔기'],
+  p:[['수분 감량','물기 제거','배출 전 보관 단계','체망 탈수'],['여름철 악취 방지','위생 관리','보관 단계','냉동·식초']],
+  st:['1. 탈수: 체망·탈수기·손으로 국물·물기를 최대한 짭니다.','2. 부피 축소: 수박·무 등 큰 것은 칼로 작게 잘라 배출합니다.','3. 악취 차단: 용기에 신문지를 깔고, 분무기로 식초를 뿌려 날파리를 줄입니다.','4. 냉동 보관: 냄새가 심한 것(생선·고기)은 밀폐 용기에 담아 냉동실에 보관했다가 배출일에 버립니다.'],
+  bad:['국물을 그대로 쏟기','뚜껑 없이 방치 (초파리 번식)'],
+  tip:['수거 용기 속 물기를 줄이면 수거차의 연료와 처리 에너지를 직접 줄이게 됩니다.'],
+  why:'음식물류 폐기물은 사료·퇴비로 만들기 위해 건조하는 과정에서 처리비용의 큰 부분이 수분 증발에 쓰입니다.'
+});
+A('fd','food_knowhow','food_collection_systems','🗑️','음식물 배출 방식 (종량제 봉투·전용 용기·RFID·스티커)','지역 방식을 따르세요','같은 음식물이라도 배출 방식은 지자체마다 다릅니다',{
+  k:'음식물 종량제 RFID 스티커 전용용기 수거함 칩 카드 봉투 배출방법 아파트 단독주택 배출시간',
+  m:['food'], g:'local',
+  ex:['음식물 전용 종량제 봉투','수거 용기+스티커','RFID 계량 수거함(아파트)','음식물 전용 수거 스티커'],
+  p:[['공동주택','RFID 계량기','음식물 수거함','세대 카드·칩 인식'],['단독주택','전용 봉투/용기','집 앞 지정 장소','배출 시간 확인']],
+  st:['거주지 지자체의 음식물류 폐기물 배출 방식을 확인합니다(봉투/용기/스티커/RFID).','전용 봉투나 수거함 외에는 사용하지 않습니다.','정해진 요일·시간에 배출합니다.'],
+  bad:['일반 종량제봉투에 음식물을 담아 배출','비닐봉지에 담아 수거함에 쏟기'],
+  tip:['RFID 방식은 배출량만큼 수수료를 내므로 수분을 줄일수록 이득입니다.','일부 지역은 음식물 전용 종량제 봉투 사용이 폐지된 곳도 있어 확인이 필요합니다.'],
+  loc:'배출 시간, 요일, 비용이 지자체마다 다릅니다.',
+  why:'음식물류 폐기물은 지자체 책임으로 수거·처리되며, 방식이 지역 시설에 맞춰 설계되어 있습니다.'
+});
+A('fd','food_knowhow','food_disposer_machine','⚙️','주방 오물분쇄기·가정용 음식물 처리기','주의해서 사용','싱크대 분쇄기와 건조 처리기는 규정과 폐기 방법을 확인',{
+  k:'음식물 분쇄기 오물분쇄기 음식물 처리기 건조기 미생물 처리 싱크대 배수구 막힘',
+  m:['food'], g:'local',
+  ex:['싱크대 오물분쇄기','가정용 음식물 건조·분쇄기','미생물 처리기'],
+  p:[['분쇄기 처리물','분쇄 음식물','지자체 안내에 따라','하수구 직배출 금지']],
+  st:['제품의 처리물 배출 방법(음식물 수거함 또는 일반)을 확인합니다.','분쇄 후 하수구에 흘려보내지 않습니다.'],
+  bad:['분쇄한 음식물을 싱크대 하수구로 흘려보내기'],
+  tip:['건조·분쇄 처리기 사용 후 남은 건조물이 사료/퇴비로 쓸 수 없는 경우가 있어 지자체 안내를 확인하세요.'],
+  loc:'제품 종류와 지자체별 처리 기준이 다릅니다.',
+  why:'하수도로 유입된 음식물 찌꺼기는 배관 막힘과 수질 오염의 원인이 됩니다.'
+});
+A('fd','food_knowhow','food_reduce_tips','🥗','음식물 쓰레기 줄이는 생활 팁','줄이는 게 최선','버리기 전에 줄이면 환경과 지갑에 모두 이득',{
+  k:'음식물 줄이기 장보기 냉동 소분 유통기한 소비기한 냉장고 정리 푸드뱅크 남은 음식',
+  m:['food'], g:'tip',
+  ex:['장보기 목록 만들기','소분해 냉동','선입선출','소비기한 이해하기'],
+  p:[['장보기 단계','계획','구매 전','필요한 만큼만']],
+  st:['1. 장보기 전 냉장고 재고를 확인하고 목록을 작성합니다.','2. 사 온 식재료는 1회분씩 소분해 냉동 보관합니다.','3. 먼저 산 식품부터 먹는 선입선출을 지킵니다.','4. 소비기한과 유통기한의 차이를 이해합니다(소비기한은 먹어도 안전한 기한).','5. 남은 음식은 다음 요리 재료로 재활용합니다.'],
+  bad:['대용량 1+1 행사 상품을 많이 사서 방치'],
+  tip:['‘소비기한 표시제’는 식품 안전성이 유지되는 기한을 의미하며, 표시 방식이 변경되어 시행 중입니다.'],
+  why:'버려지는 음식물의 상당수는 먹을 수 있었던 식품입니다. 발생 억제가 가장 큰 환경 효과를 냅니다.'
+});
+A('fd','food_knowhow','food_recycle_process','🔄','음식물 쓰레기는 어떻게 재활용될까? (사료·퇴비·바이오가스)','재활용 과정','내가 버린 음식물은 이런 길을 거칩니다',{
+  k:'음식물 재활용 과정 사료 퇴비 바이오가스 자원화시설 분쇄 선별 건조 발효 소화',
+  m:['food'], g:'tip',
+  ex:['사료화 시설','퇴비화 시설','바이오가스 시설'],
+  p:[['수거','음식물 수거차','자원화시설','분쇄 선별'],['건조·사료화','건조 사료','축산 사료','가축 급이'],['발효·퇴비화','유기질 비료','농지','토양 개선']],
+  st:['1. 수거: 전용 차량으로 자원화시설에 운반합니다.','2. 선별·파쇄: 이물질(비닐·뼈·껍데기)을 걸러내고 잘게 부숩니다.','3. 건조 또는 발효: 사료 또는 퇴비로 가공하거나 혐기성 소화로 바이오가스를 만듭니다.','4. 활용: 가축 사료·농지 비료·가스(전기·연료) 등으로 활용합니다.'],
+  bad:['이물질이 섞이면 선별에서 걸러져 소각 처리되는 비율이 늘어납니다'],
+  tip:['‘가축이 먹을 수 있는가?’가 ‘음식물’을 판단하는 가장 쉬운 기준입니다.'],
+  why:'우리나라는 음식물류 폐기물의 직매립이 금지되어 사료·퇴비·바이오가스 등으로 자원화하고 있습니다.'
+});
+/* ============ 3. 일반 종량제 · 불연성 · 특수/대형 ============ */
+
+// ───────── 🔥 타는 쓰레기 (종량제 봉투) ─────────
+A('gn','standard_burn','wooden_chopsticks','🥢','나무젓가락·이쑤시개·꼬치','일반쓰레기 (종량제)','표백·방부 처리와 음식물 오염으로 재활용 불가',{
+  k:'나무젓가락 이쑤시개 꼬치 대나무 젓가락 일회용 수저',
+  m:['general'], g:'no',
+  ex:['나무젓가락','이쑤시개','꼬치 막대','일회용 수저'],
+  p:[['나무·대나무 제품','목재 펄프','일반쓰레기','부러뜨려 봉투가 찢어지지 않게']],
+  st:['반으로 부러뜨려 종량제봉투 안에 넣습니다(봉투 찢김 방지).'],
+  bad:['음식물에 이쑤시개 섞기','종이류로 배출'],
+  tip:['뾰족한 꼬치는 신문지로 감싸면 안전합니다.'],
+  why:'화학 처리와 음식물 오염 때문에 목재·종이 재활용이 불가능합니다.'
+});
+A('gn','standard_burn','wet_wipes_disposable','🧻','물티슈 (합성섬유 원단)','일반쓰레기 (종량제)','종이가 아닌 플라스틱 섬유 — 변기에 버리면 막혀요',{
+  k:'물티슈 클렌징티슈 화장솜 면봉 일회용 티슈 변기',
+  m:['general'], g:'no', gl:'재활용 불가 (변기 투입 금지)',
+  ex:['물티슈','클렌징 티슈','화장솜','면봉'],
+  p:[['물티슈 원단','폴리에스테르/레이온','일반쓰레기','종량제'],['플라스틱 캡 뚜껑','PP','플라스틱류','떼어서 분리'],['물티슈 포장 비닐','PE','비닐류','분리']],
+  st:['플라스틱 캡은 분리해 플라스틱류로, 포장 비닐은 비닐류로 버립니다.','물티슈 본체는 일반쓰레기로 버립니다.'],
+  bad:['변기에 버리기 (배관 막힘)','종이류로 배출'],
+  tip:['‘변기에 버려도 되는 물티슈’ 표시가 있어도 가급적 일반쓰레기로 버리세요.'],
+  why:'물에 녹지 않는 합성섬유라 하수 배관·정화시설에 큰 문제를 일으킵니다.'
+});
+A('gn','standard_burn','receipt_thermal_paper','🧾','영수증·감열지(전산지)·택배 송장','일반쓰레기 (종량제)','화학 발색 코팅 때문에 종이 재활용이 안 돼요',{
+  k:'영수증 감열지 전산지 택배송장 포스 용지 카드전표 BPA',
+  m:['general'], g:'no',
+  ex:['매장 영수증','카드 전표','감열 송장','번호표'],
+  p:[['감열지 종이','감열 코팅지','일반쓰레기','개인정보는 찢어서']],
+  st:['개인정보가 있는 부분은 찢어서 일반쓰레기로 버립니다.'],
+  bad:['영수증을 종이류에 섞기'],
+  tip:['손으로 문지르면 검게 변하면 감열지입니다.','전자영수증을 선택하면 종이를 아낄 수 있습니다.'],
+  why:'감열지 표면의 약품 처리는 펄프 재생 공정에서 이물질이 됩니다.'
+});
+A('gn','standard_burn','tissue_hygiene','🧼','사용한 휴지·키친타월·기저귀·생리대·반창고','일반쓰레기 (종량제)','오염 종이와 위생용품은 모두 일반쓰레기',{
+  k:'휴지 화장지 키친타월 기저귀 생리대 반창고 붕대 면도기 위생용품 코푼 휴지',
+  m:['general'], g:'no',
+  ex:['사용한 휴지·화장지','키친타월','기저귀','생리대','반창고'],
+  p:[['위생·오염 종이','오염 펄프','일반쓰레기','밀봉해서 배출']],
+  st:['사용한 위생용품은 종량제 봉투에 넣고 입구를 단단히 묶습니다.'],
+  bad:['변기에 버리기 (기저귀·생리대는 특히 위험)'],
+  tip:['기저귀 내용물(대변)은 변기에 비우고 버리라는 안내가 있습니다.'],
+  why:'오염·접착제·고흡수성 소재가 섞여 있어 재활용이 불가능합니다.'
+});
+A('gn','standard_burn','coated_sticker_paper','🧷','코팅·기름종이·벽지·스티커·포스트잇·사진·카본지','일반쓰레기 (종량제)','접착·코팅 종이는 펄프로 재생되지 않아요',{
+  k:'코팅종이 기름종이 벽지 스티커 포스트잇 사진 인화지 카본지 은박지 상품권 택배송장 라벨 접착',
+  m:['general'], g:'no',
+  ex:['코팅 종이','기름종이','벽지','스티커·라벨','포스트잇','사진·인화지','카본지(복사지)'],
+  p:[['코팅·접착 종이','종이+접착/필름','일반쓰레기','종량제']],
+  st:['종이류에 섞지 말고 일반쓰레기로 버립니다.'],
+  bad:['종이류 수거함에 투입'],
+  tip:['은박·금박 포장지, 비닐 코팅된 종이 박스는 일반쓰레기'],
+  why:'접착제·코팅층은 펄프 재생 공정에서 제거되지 않는 불순물입니다.'
+});
+A('gn','standard_burn','dirty_paper_plate','🍽️','음식물이 묻은 종이·종이접시·종이컵 뚜껑','일반쓰레기 (종량제)','깨끗하지 않은 종이는 재활용 불가',{
+  k:'오염 종이 종이접시 음식 묻은 종이 일회용 접시 닭강정 포장 햄버거 포장지 배달 포장지 기름',
+  m:['general'], g:'no',
+  ex:['음식물 묻은 종이','종이 접시','햄버거 포장지','기름 배인 종이 포장'],
+  p:[['오염 종이','오염 펄프','일반쓰레기','종량제']],
+  st:['음식물 덩어리를 제거하고 일반쓰레기로 버립니다.'],
+  bad:['오염된 종이를 종이류와 함께 배출'],
+  tip:['오염되지 않은 부분만 잘라 종이류로 분리할 수 있습니다.'],
+  why:'기름과 음식물은 종이 재생 과정에서 제거되지 않아 전체 품질을 해칩니다.'
+});
+A('gn','standard_burn','rubber_leather_cloth','🧤','고무장갑·고무줄·가죽·스펀지·솜·인형·먼지','일반쓰레기 (종량제)','재활용 체계가 없는 소재들',{
+  k:'고무장갑 고무줄 가죽 스펀지 솜 인형 봉제인형 먼지 머리카락 청소기 먼지 수세미 행주',
+  m:['general'], g:'no',
+  ex:['고무장갑','고무줄','가죽 제품','스펀지·수세미','인형·솜','청소기 먼지','머리카락'],
+  p:[['고무·섬유·가죽','복합 소재','일반쓰레기','종량제']],
+  st:['종량제봉투에 담아 배출합니다.','인형은 상태가 좋다면 기부·중고거래도 고려합니다.'],
+  bad:['고무장갑을 비닐류에 섞기'],
+  tip:['수세미는 천연(삼베·루파)이 아니라면 플라스틱 섬유라 일반쓰레기입니다.'],
+  why:'혼합 소재라 선별·재생이 어렵거나 시장이 없어 재활용 체계에 포함되지 않습니다.'
+});
+A('gn','standard_burn','toothbrush_pen_misc','🖊️','칫솔·면도기·볼펜·필기구·립스틱·혼합재질 문구','일반쓰레기 (종량제)','플라스틱 + 금속·고무가 합쳐진 소형 제품',{
+  k:'칫솔 면도기 볼펜 필기구 샤프 형광펜 문구 지우개 가위 자 필통 파일철 혼합재질',
+  m:['general'], g:'no',
+  ex:['칫솔','면도기','볼펜·샤프','형광펜','파일철','지우개'],
+  p:[['소형 혼합 제품','플라스틱+금속·고무','일반쓰레기','종량제']],
+  st:['분리가 되지 않는 제품은 종량제봉투에 버립니다.'],
+  bad:['플라스틱으로 분리배출'],
+  tip:['서울시 안내 기준으로 칫솔·파일철·필기구·혼합재질 완구는 재활용 비해당 품목입니다.'],
+  why:'크기가 작고 재질이 섞여 선별 불가능합니다.'
+});
+A('gn','standard_burn','small_plastics_straw','🥄','빨대·일회용 숟가락·포크·병뚜껑 작은 것·이쑤시개','일반쓰레기 (종량제)','손바닥보다 작은 플라스틱은 선별장에서 걸러지지 않아요',{
+  k:'빨대 일회용 숟가락 포크 칼 작은 플라스틱 소품 병뚜껑 마개 플라스틱 조각 ',
+  m:['general'], g:'no',
+  ex:['빨대','일회용 숟가락·포크·나이프','작은 마개','플라스틱 조각'],
+  p:[['소형 플라스틱','PP/PS 등','일반쓰레기','종량제']],
+  st:['크기가 아주 작은 플라스틱은 종량제봉투로 배출합니다.'],
+  bad:['페트병 뚜껑을 일반쓰레기로 버리기 (뚜껑은 병에 닫아서 배출)'],
+  tip:['페트병 뚜껑은 병에 닫아 같이 배출합니다.'],
+  loc:'작은 플라스틱 기준(크기)은 지자체에 따라 안내가 다릅니다.',
+  why:'작은 플라스틱은 컨베이어 선별에서 낱개로 걸러지지 못해 잔재물이 됩니다.'
+});
+A('gn','standard_burn','mask_gloves_nonwoven','😷','일회용 마스크·부직포·장갑','일반쓰레기 (종량제)','끈을 자르고 봉투에 담아 배출',{
+  k:'마스크 부직포 일회용 장갑 방역 마스크 KF94 일회용 가운',
+  m:['general'], g:'no',
+  ex:['KF 마스크','부직포','일회용 장갑','가운'],
+  p:[['마스크·부직포','PP 부직포','일반쓰레기','끈 자르기']],
+  st:['마스크 끈을 가위로 잘라 풀어 놓습니다(동물 걸림 방지).','종량제봉투에 담아 버립니다.'],
+  bad:['길가에 방치'],
+  tip:['개인정보가 없어도 사용한 마스크는 오염되어 있으니 입구를 묶어 버리세요.'],
+  why:'오염되고 재질이 혼합되어 재활용 대상이 아닙니다.'
+});
+A('gn','standard_burn','cigarette_candle_hotpack','🚬','담배꽁초·양초·핫팩·라이터(소진)·껌','일반쓰레기 (종량제)','불씨·잔열을 확실히 끄고 버리기',{
+  k:'담배꽁초 양초 핫팩 라이터 껌 불씨 화재 파라핀 손난로 쓴 핫팩',
+  m:['general'], g:'no',
+  ex:['담배꽁초','양초','핫팩(사용 후)','라이터(가스 소진)','껌'],
+  p:[['소형 위험·오염물','복합','일반쓰레기','불씨·잔열 제거']],
+  st:['담배꽁초는 물에 충분히 적셔 불씨를 완전히 끈 뒤 버립니다.','핫팩은 완전히 식은 뒤 종량제로 배출합니다.','라이터는 가스를 모두 사용하고 배출합니다.'],
+  bad:['불씨가 남은 꽁초를 종량제에 투입 (수거차 화재)','가스가 남은 라이터를 버리기'],
+  tip:['핫팩 속 내용물은 철분이 산화된 것이라 일반쓰레기로 안내됩니다.'],
+  why:'불씨나 가스가 남아 있으면 수거 과정에서 화재가 발생합니다.'
+});
+A('gn','standard_burn','pet_waste_sand','🐈','반려동물 배설물·고양이 모래·털','일반쓰레기 (종량제)','배설물은 밀봉해 일반쓰레기',{
+  k:'반려동물 배설물 강아지 응가 고양이 모래 화장실 모래 털 배변패드 펫 배변봉투',
+  m:['general'], g:'no',
+  ex:['강아지 배설물(배변봉투)','배변 패드','고양이 모래·배설물','반려동물 털'],
+  p:[['배설물·모래','유기물+무기물','일반쓰레기','밀봉 후 종량제']],
+  st:['배변봉투에 담아 단단히 묶습니다.','종량제봉투에 넣어 배출합니다.'],
+  bad:['고양이 모래를 변기에 버리기 (배관 막힘)','음식물에 투입'],
+  tip:['생분해 배변봉투도 별도 수거가 없다면 일반쓰레기입니다.'],
+  why:'병원균·기생충 위험이 있어 음식물·재활용과 섞을 수 없습니다.'
+});
+A('gn','standard_burn','bedding_shoes_bag','🛌','낡은 이불·베개·방석·신발·가방 (수거함 불가 것)','일반쓰레기 / 대형폐기물','의류수거함에 받지 않는 낡은 섬유류',{
+  k:'이불 베개 방석 신발 가방 낡은 솜 커튼 매트 러그 슬리퍼 구두 운동화 헌옷 못 입는',
+  m:['general','cloth'], g:'care',
+  ex:['낡은 이불·베개','방석','낡은 신발','헤진 가방','러그'],
+  p:[['재사용 가능한 깨끗한 섬유','면/합성섬유','의류수거함','깨끗한 것만'],['낡고 오염된 섬유류','혼합','일반쓰레기','크면 대형폐기물']],
+  st:['깨끗하고 재사용 가능한 것은 의류수거함·기부로 보냅니다.','젖었거나 오염된 낡은 이불·신발은 종량제봉투(큰 것은 대형폐기물)로 버립니다.'],
+  bad:['젖은 옷·이불을 의류수거함에 투입'],
+  loc:'의류수거함 수용 범위(신발·가방·이불 포함 여부)는 지자체와 수거업체에 따라 다릅니다.',
+  why:'수거함에는 깨끗하고 재판매·재사용·섬유 재생이 가능한 것만 들어가야 합니다.'
+});
+
+// ───────── 🧱 불연성 마대 ─────────
+A('gn','incombustible_madae','incombustible_ceramics','🏺','깨진 도자기·뚝배기·사기그릇·화분·타일','불연성 종량제 마대','타지 않는 무기물 — 신문지로 싸서 불연성 마대',{
+  k:'도자기 뚝배기 사기그릇 화분 타일 컵 접시 깨진 그릇 식기 불연성 마대 불연성',
+  m:['general'], g:'mad',
+  ex:['깨진 도자기·사기그릇','뚝배기·옹기','도기 화분(흙 제거)','소량의 타일'],
+  p:[['도자기·유리·무기물','불연성','불연성 마대(지자체)','신문지에 싸서 투입']],
+  st:['날카로운 조각은 신문지·두꺼운 종이로 감쌉니다.','마트·편의점에서 판매하는 불연성 종량제 마대에 담습니다.','‘깨진 유리·도자기’라고 겉에 표시한 뒤 배출합니다.'],
+  bad:['유리병 수거함에 투입 (녹는 온도가 달라 유리 재활용 공정을 오염)','일반 종량제봉투에 담아 배출 (수거원 부상)'],
+  tip:['불연성 마대가 없는 지자체는 일반 종량제봉투로 안내하기도 하니 확인하세요.'],
+  loc:'불연성 쓰레기 마대 제도는 지자체별로 운영 방식이 다릅니다.',
+  why:'도자기·내열유리는 일반 유리병과 녹는 온도가 달라 유리병 용해로의 불순물이 됩니다.'
+});
+A('gn','incombustible_madae','heat_resistant_glass','🍲','내열유리(글라스락·파이렉스)·유리컵·크리스탈','불연성 마대 / 일반 (지자체)','일반 유리병과 달리 재활용 유리병에 섞이면 안 돼요',{
+  k:'내열유리 글라스락 파이렉스 유리컵 크리스탈 유리 용기 밀폐용기 유리컵 와인잔 접시',
+  m:['general'], g:'mad',
+  ex:['내열 유리 밀폐용기','유리컵·와인잔','크리스탈','유리 접시'],
+  p:[['내열·특수 유리','붕규산 등','불연성 마대','신문지에 싸서 배출'],['플라스틱 뚜껑','PP','플라스틱류','분리']],
+  st:['플라스틱 뚜껑을 분리해 플라스틱류로 버립니다.','깨진 경우 신문지에 싸서 불연성 마대에 배출합니다.'],
+  bad:['유리병 수거함에 투입'],
+  tip:['유리컵·와인잔도 일반 유리병과 성분이 달라 재활용 병에 섞이지 않도록 하세요.'],
+  why:'내열유리는 일반 유리병 용해 온도에서 녹지 않고 이물질로 남아 병 제조 품질을 망칩니다.'
+});
+A('gn','incombustible_madae','broken_glass_mirror','🪞','깨진 유리병·거울·판유리·유리조각','불연성 마대 / 일반','신문지로 단단히 싸서 수거원 부상 방지',{
+  k:'깨진 유리 유리조각 거울 판유리 창문 유리 깨진 병 유리 파편 다침',
+  m:['general'], g:'mad',
+  ex:['깨진 유리병','거울','판유리','깨진 유리컵'],
+  p:[['유리 조각','유리','불연성 마대','신문지로 감싸 배출']],
+  st:['장갑을 끼고 큰 조각부터 주워 신문지·종이상자에 담습니다.','테이프로 입구를 막고 ‘깨진 유리’라고 표시합니다.','불연성 마대(없으면 종량제봉투)에 배출합니다.'],
+  bad:['맨손으로 줍기','깨진 유리를 그냥 봉투에 투입'],
+  tip:['작은 파편은 젖은 신문지·테이프로 문지르면 모입니다.'],
+  loc:'거울·판유리 크기가 크면 대형폐기물로 신고해야 하는 경우가 있습니다.',
+  why:'날카로운 유리는 수거원 부상의 흔한 원인입니다.'
+});
+A('gn','incombustible_madae','construction_small','🧱','소량의 벽돌·시멘트·석고·연탄재·흙·모래·자갈','불연성 마대','가정 소량은 불연성 마대, 대량은 건설폐기물',{
+  k:'벽돌 시멘트 석고 보드 연탄재 흙 모래 자갈 돌 인테리어 건설 폐기물',
+  m:['general'], g:'mad',
+  ex:['연탄재','벽돌 조각','석고 보드 조각','흙·모래(소량)'],
+  p:[['무기물 소량','석재·재','불연성 마대','소량만']],
+  st:['소량은 불연성 마대에 담아 배출합니다.','인테리어 공사로 나온 대량 폐기물은 별도 신고·업체 위탁합니다.'],
+  bad:['대량의 공사 폐기물을 가정 쓰레기로 배출'],
+  loc:'가정 배출 허용량과 연탄재 배출 방식은 지자체별로 다릅니다.',
+  why:'타지 않는 무기물은 소각이 아니라 매립 또는 재생골재로 처리됩니다.'
+});
+A('gn','incombustible_madae','incandescent_bulb','💡','백열전구·할로겐 전구','불연성 마대 (지자체별)','LED·형광등과 처리 방법이 다릅니다',{
+  k:'백열전구 할로겐 전구 LED 전구 조명 램프 전등 필라멘트',
+  m:['bulb'], g:'mad',
+  ex:['백열전구','할로겐 램프'],
+  p:[['백열·할로겐 전구','유리+필라멘트','불연성 마대','신문지에 싸서']],
+  st:['깨지지 않게 신문지로 싸서 불연성 마대에 배출합니다.'],
+  bad:['형광등 수거함에 투입 (형광등과 구분)'],
+  tip:['LED 전구는 지자체에 따라 전용 수거함(형광등 수거함) 또는 일반쓰레기로 안내합니다.'],
+  loc:'LED 램프의 처리 방식은 지자체별로 확인이 필요합니다.',
+  why:'백열전구엔 수은이 없으나 유리라 재활용 유리병과 섞이면 안 됩니다.'
+});
+
+// ───────── 🔋 전용 수거 / 특수 배출 ─────────
+A('gn','special_collection','expired_medicine','💊','폐의약품 (알약·물약·연고·시럽)','약국·보건소·주민센터 수거함','하수구·종량제에 버리면 수질·토양 오염',{
+  k:'폐의약품 약 알약 물약 연고 시럽 약국 보건소 유통기한 약 PTP 포장 항생제',
+  m:['pill'], g:'spec',
+  ex:['남은 알약·캡슐','물약·시럽','연고·안약','가루약'],
+  p:[['남은 약','의약물질','약국·보건소·주민센터 수거함','알약만 모아 배출'],['빈 PTP 포장·약봉지','PVC/알루미늄/종이','일반쓰레기','종량제']],
+  st:['PTP 포장에서 알약만 꺼내 한 곳에 모읍니다.','물약·시럽은 새지 않게 뚜껑을 닫고 약국·보건소·주민센터의 폐의약품 수거함에 배출합니다.','빈 PTP·약봉지는 일반쓰레기로 버립니다.'],
+  bad:['변기·싱크대에 흘려보내기','종량제봉투에 그냥 버리기'],
+  tip:['서울시 안내 기준으로 알약 포장재(PTP)는 재활용 비해당 품목입니다.'],
+  why:'항생제 등 약 성분이 하천·토양에 유입되면 생태계 파괴와 항생제 내성균 확산을 일으킬 수 있습니다.'
+});
+A('gn','special_collection','waste_batteries','🔋','일반 건전지·소형 전지 (AA·AAA·단추전지)','폐건전지 전용 수거함','일반쓰레기에 섞이면 화재·중금속 문제',{
+  k:'건전지 폐건전지 AA AAA 단추전지 배터리 수은전지 알카라인 망간 전지류 수거함',
+  m:['battery'], g:'spec',
+  ex:['AA·AAA 건전지','단추전지(시계·리모컨)','소형 충전지'],
+  p:[['건전지','알칼라인/망간/아연 등','폐건전지 수거함','단자 절연 후 배출']],
+  st:['사용한 건전지는 종류별로 모읍니다.','단추전지·큰 전지는 단자에 절연테이프를 붙입니다.','주민센터·아파트·편의점 등 폐건전지 전용 수거함에 넣습니다.'],
+  bad:['일반쓰레기·재활용 봉투에 섞어 배출','젖은 건전지·부풀어 오른 건전지를 방치'],
+  tip:['서울시 통일 기준: 건전지는 ‘전지류’로 따로 분리배출합니다.','지자체에 따라 일정 개수를 모아 가면 새 건전지로 교환해 주는 사업이 있습니다.'],
+  why:'아연·니켈·망간 등 금속 자원을 회수할 수 있고, 일반쓰레기에 섞이면 소각·압축 시 화재 위험이 있습니다.'
+});
+A('gn','special_collection','li_ion_powerbank','⚡','보조배터리·리튬이온 배터리 (킥보드·전동 자전거·무선이어폰)','전용 수거 / 제조사 회수','수거차량 화재 원인 — 반드시 전용으로',{
+  k:'보조배터리 리튬 이온 배터리 킥보드 전동 자전거 무선이어폰 에어팟 스마트폰 배터리 부풀어 화재 노트북 전기차',
+  m:['battery'], g:'spec',
+  ex:['보조배터리','전동킥보드·전기자전거 배터리','무선이어폰·스마트워치(내장 배터리)','노트북 배터리'],
+  p:[['리튬이온 배터리','리튬 전지','폐건전지/폐가전 전용 수거함','단자 절연'],['배터리 내장 전자제품','복합','소형가전 수거함','분리하지 않고 배출']],
+  st:['배터리가 부풀었거나 변형되면 즉시 사용을 중단합니다.','단자에 절연테이프를 붙이고 보관합니다.','주민센터·아파트 단지 폐건전지·소형가전 수거함, 제조사·이동통신사 회수 프로그램을 이용합니다.'],
+  bad:['일반쓰레기·재활용에 섞기','분해·압착','충전 상태로 방치'],
+  tip:['큰 배터리(전동킥보드·전기자전거)는 판매처·제조사에 회수를 문의하세요.','충전 후 방치하지 않고, 배터리가 부풀면 소화 모래·물통에 보관 후 신고하는 것이 안전합니다.'],
+  loc:'대형 리튬 배터리는 소방·지자체 별도 수거 체계가 있는 곳이 있습니다.',
+  why:'리튬 배터리는 충격·압력에 열폭주가 일어날 수 있어 수거차·선별장 화재의 주요 원인입니다.'
+});
+A('gn','special_collection','fluorescent_lamp','💡','폐형광등 (직관·삼파장·환형)','형광등 전용 수거함','수은 함유 — 깨지지 않게 전용 수거',{
+  k:'형광등 직관 삼파장 환형 수은 램프 폐형광등 전구 조명 수거함 LED',
+  m:['bulb'], g:'spec',
+  ex:['직관형 형광등','삼파장 램프','환형 형광등'],
+  p:[['형광등','수은+유리','형광등 수거함','깨지지 않게']],
+  st:['형광등을 깨지지 않게 상자·원래 포장에 넣습니다.','동주민센터·아파트 단지의 형광등 전용 수거함에 배출합니다.'],
+  bad:['일반쓰레기·유리병 수거함에 투입','깨진 형광등을 맨손으로 줍기'],
+  tip:['서울시 통일 기준: 형광등은 전용 수거함에 분리배출합니다.','깨졌다면 창문을 열고 환기한 뒤 장갑을 끼고 조각을 모아 밀봉합니다.'],
+  why:'형광등 속 수은은 환경과 인체에 유해하므로 안전하게 회수·처리합니다.'
+});
+A('gn','special_collection','waste_cooking_oil','🛢️','폐식용유 (튀김·볶음 기름)','폐식용유 수거함 / 주민센터','하수구에 부으면 배관·수질 오염',{
+  k:'폐식용유 식용유 튀김기름 기름 하수구 비누 바이오디젤 주민센터 수거',
+  m:['oil'], g:'spec',
+  ex:['튀김 후 남은 기름','볶음 기름','오래된 식용유'],
+  p:[['기름','지방','수거함·주민센터','식은 뒤 페트병에 담아'],['소량 잔기름','지방','신문지·키친타월로 흡수 후 일반쓰레기','소량']],
+  st:['기름이 완전히 식은 뒤 이물질을 체로 거릅니다.','뚜껑이 있는 페트병에 모읍니다.','주민센터나 아파트 폐식용유 수거함 등 지자체 지정 장소에 배출합니다.'],
+  bad:['하수구·변기에 붓기','뜨거운 기름을 플라스틱 용기에 부어 사고 내기'],
+  tip:['소량의 기름은 키친타월·신문지로 닦아 일반쓰레기로 버립니다.','폐식용유는 비누·바이오디젤로 재활용됩니다.'],
+  loc:'수거 방식은 지자체별로 다릅니다.',
+  why:'기름은 배관을 막고 하천 오염을 일으키지만, 적절히 수거하면 바이오디젤 원료가 됩니다.'
+});
+A('gn','special_collection','old_clothes','👕','헌 옷·신발·가방·커튼 (의류수거함)','의류수거함','깨끗하고 재사용 가능한 것만',{
+  k:'헌옷 의류수거함 옷 신발 가방 커튼 기부 중고 재사용 아름다운가게 의류',
+  m:['cloth'], g:'spec',
+  ex:['티셔츠·바지','코트','가방','깨끗한 신발','커튼'],
+  p:[['재사용 가능 의류','섬유','의류수거함','깨끗이 말려 묶어서'],['젖거나 심하게 오염된 의류','오염 섬유','일반쓰레기','종량제']],
+  st:['깨끗하게 세탁·건조합니다.','신발은 짝을 맞춰 끈으로 묶습니다.','비닐봉투에 담아 의류수거함에 넣습니다.'],
+  bad:['젖은 옷·곰팡이 핀 옷 넣기','신발 한 짝만 넣기'],
+  tip:['아름다운가게·지역 기부처에서 중고 의류를 직접 받기도 합니다.','수거함에 이불·베개 등 큰 침구류 수용 여부는 지자체별 상이합니다.'],
+  why:'헌 옷은 재판매·재사용·섬유 재생 경로로 이어지지만, 오염되면 전부 폐기됩니다.'
+});
+A('gn','special_collection','syringe_needles','💉','주사기·바늘·채혈침 (가정 사용)','약국·보건소 지정 수거 / 병원','일반쓰레기에 넣으면 찔려 감염 위험',{
+  k:'주사기 바늘 채혈침 인슐린 의료폐기물 혈당 란셋 주삿바늘 날카로운 의료',
+  m:['pill'], g:'spec',
+  ex:['인슐린 주사바늘','혈당 채혈침(란셋)','가정용 주사기'],
+  p:[['주삿바늘·채혈침','금속+플라스틱','약국·보건소·의료기관 수거','뚜껑 닫아 단단한 용기에']],
+  st:['사용한 바늘은 뚜껑을 덮고 단단한 통(빈 페트병 등)에 모읍니다.','약국·보건소·의료기관의 의료폐기물 수거 안내를 확인해 배출합니다.'],
+  bad:['일반쓰레기·재활용에 섞기','뚜껑 없이 방치'],
+  loc:'가정용 날카로운 의료폐기물 수거 방식은 지자체와 약국마다 다릅니다.',
+  why:'바늘 찔림 사고는 감염 위험이 높아 의료폐기물 체계로 처리해야 합니다.'
+});
+A('gn','special_collection','mercury_thermo','🌡️','수은 체온계·수은 혈압계·수은 램프','보건소·주민센터 지정 수거','수은은 깨뜨리지 말고 전용 수거',{
+  k:'수은 체온계 수은 혈압계 수은 램프 온도계 체온계 보건소 수거',
+  m:['bulb'], g:'spec',
+  ex:['수은 체온계','수은 혈압계'],
+  p:[['수은 제품','수은','보건소·주민센터','깨지지 않게 밀폐']],
+  st:['깨지지 않게 밀폐 용기에 보관합니다.','보건소·주민센터 등 지자체가 지정한 수거처에 배출합니다.'],
+  bad:['일반쓰레기에 버리기','깨졌을 때 청소기로 흡입'],
+  tip:['깨졌다면 환기하고 장갑을 끼고 구슬을 종이로 쓸어 밀폐 용기에 담아 신고합니다.'],
+  loc:'수은 제품 수거 방식은 지자체별로 확인하세요.',
+  why:'수은은 인체와 환경에 매우 유해합니다.'
+});
+A('gn','special_collection','waste_paint_chemicals','🎨','폐페인트·유기용제·살충제 등 유해 폐기물','지자체 지정 수거 (하수구 금지)','소량도 하수구에 붓지 않고 지자체 안내를 확인',{
+  k:'폐페인트 페인트 유기용제 신나 살충제 접착제 가정용 화학 폐기물 락스 곰팡이 제거제',
+  m:['general'], g:'local',
+  ex:['남은 페인트','신나·시너','접착제','살충제'],
+  p:[['유해 폐기물','화학물질','지자체 안내 수거처','밀폐 보관']],
+  st:['원래 용기에 담아 뚜껑을 단단히 닫습니다.','지자체(주민센터·환경과)에 배출 방법을 확인합니다.'],
+  bad:['하수구에 붓기','다른 약품과 혼합'],
+  loc:'폐페인트 등은 지자체 수거 일정이나 지정 장소로 배출하는 지역이 많습니다.',
+  why:'유해 화학물질이 수질·토양을 오염시킵니다.'
+});
+A('gn','special_collection','fire_extinguisher','🧯','폐소화기 (가정용 분말 소화기)','제조사·소방서 회수 안내','압력 용기라 일반 배출 금지',{
+  k:'소화기 폐소화기 분말 소화기 가정용 소화기 유효기간 압력',
+  m:['general'], g:'local',
+  ex:['가정용 분말 소화기'],
+  p:[['소화기','압력 용기+분말','제조사·소방서 안내','유효기간 확인']],
+  st:['소화기 몸체에 적힌 제조사에 폐기 방법을 문의합니다.','지자체·소방서의 폐소화기 수거 안내를 확인합니다.'],
+  bad:['일반 쓰레기·고철로 배출'],
+  loc:'폐소화기 수거 방식은 소방·지자체별로 다릅니다.',
+  why:'내부 압력과 분말 때문에 일반 폐기 시 폭발·분진 위험이 있습니다.'
+});
+
+// ───────── 🛋️ 대형폐기물·폐가전 ─────────
+A('gn','bulky','bulky_furniture','🛋️','가구·침대 프레임·소파·책상 (대형폐기물)','대형폐기물 신고 + 스티커','주민센터·온라인 신고 후 수수료 스티커 부착',{
+  k:'대형폐기물 가구 책상 의자 소파 장롱 침대 프레임 책장 신고 스티커 수수료 자전거 유모차',
+  m:['general'], g:'local', gl:'신고·수수료 필요',
+  ex:['소파·침대 프레임','책상·의자','장롱·서랍장','자전거','유모차','운동기구'],
+  p:[['대형 생활 폐기물','복합','지자체 대형폐기물 신고 배출','수수료 스티커']],
+  st:['지자체 대형폐기물 배출 신고 사이트·앱·주민센터에서 품목과 수수료를 확인합니다.','신고 후 배출 스티커를 구매하거나 결제해 부착합니다.','지정 일시·장소에 내놓습니다.'],
+  bad:['스티커 없이 배출','신고 없이 아무 데나 배출 (과태료)'],
+  tip:['아직 쓸 만한 가구는 중고거래·기부를 우선 고려하세요.','일부 지자체는 가구 해체 후 일반쓰레기로 배출하는 것을 허용하지 않습니다.'],
+  loc:'수수료·대상 품목·신고 방법은 지자체마다 다릅니다.',
+  why:'큰 폐기물은 일반 수거차로 처리할 수 없어 별도 수거·처리 체계를 둡니다.'
+});
+A('gn','bulky','old_mattress','🛏️','매트리스·스프링 침대','대형폐기물 신고','스프링 포함 침대는 해체 불가 시 대형폐기물',{
+  k:'매트리스 침대 스프링 침대 토퍼 라텍스 폼 침구',
+  m:['general'], g:'local', gl:'신고·수수료 필요',
+  ex:['스프링 매트리스','메모리폼 토퍼'],
+  p:[['매트리스','스프링+폼','대형폐기물','신고 후 스티커']],
+  st:['대형폐기물 신고를 합니다.','지정 스티커를 부착해 배출합니다.'],
+  bad:['매트리스를 무단 투기'],
+  tip:['일부 지자체는 매트리스 전용 수거 방식을 운영합니다.'],
+  loc:'매트리스 수거 방식·수수료는 지자체별 상이.',
+  why:'스프링·폼이 섞여 일반 쓰레기로 처리할 수 없습니다.'
+});
+A('gn','bulky','large_appliance','🧊','냉장고·세탁기·TV·에어컨 (대형 폐가전)','폐가전 무상방문수거 / 판매처 회수','신제품 구매 시 판매점이 회수하거나 무상 방문수거 신청',{
+  k:'냉장고 세탁기 TV 에어컨 폐가전 무상수거 방문수거 전자제품 1599-0903 대형 가전 가전 폐기',
+  m:['general'], g:'spec',
+  ex:['냉장고','세탁기','TV','에어컨','전기밥솥(대형)'],
+  p:[['대형 가전','복합','폐가전 무상방문수거 / 판매처','신청 후 수거']],
+  st:['신제품을 구매한다면 판매점에 기존 제품 회수를 요청합니다(대부분 무료).','신제품 구매가 아니라면 폐가전 무상방문수거 서비스(전화·온라인 신청)를 이용합니다.','수거일에 맞춰 집 앞에 내놓거나 방문 수거를 받습니다.'],
+  bad:['그냥 길가에 내놓기','불법 폐기물 업자에게 돈 주고 맡기기'],
+  tip:['‘폐가전 무상방문수거’ 콜센터 번호는 1599-0903으로 알려져 있으나 변경될 수 있으니 공식 안내를 확인하세요.','대형 가전은 1대도 수거가 가능한 경우가 많습니다.'],
+  loc:'수거 가능 품목·수량·지역은 서비스 정책에 따릅니다.',
+  why:'폐가전에는 유용한 금속과 유해 물질이 함께 있어 전문 재활용 체계(생산자책임재활용제도)로 처리합니다.'
+});
+A('gn','bulky','small_appliance','📺','소형 가전 (선풍기·밥솥·전자레인지·청소기·헤어드라이어)','소형가전 수거함 / 무상방문수거','수량이 적으면 수거함, 많으면 방문수거',{
+  k:'소형가전 선풍기 밥솥 전자레인지 청소기 헤어드라이어 전기포트 믹서 다리미 수거함 폐가전',
+  m:['battery'], g:'spec',
+  ex:['선풍기','전기밥솥','전자레인지','청소기','헤어드라이어','전기포트'],
+  p:[['소형 가전','복합','소형가전 수거함 / 방문수거','배터리 분리 후']],
+  st:['건전지·내장 배터리가 분리되면 제거해 전용 수거함에 넣습니다.','주민센터·아파트 단지 소형가전 수거함에 넣거나 무상방문수거를 신청합니다.'],
+  bad:['일반쓰레기로 배출','배터리 포함 상태로 압착'],
+  tip:['소형가전은 여러 개를 모아야 방문수거가 가능한 경우가 있습니다.'],
+  loc:'소형가전 수거함 위치와 방문수거 최소 수량은 지역마다 다릅니다.',
+  why:'소형 가전에도 구리·알루미늄·희소금속이 있어 재활용 가치가 높습니다.'
+});
+A('gn','bulky','old_phone_laptop','📱','폐휴대폰·노트북·태블릿·충전기','제조사·통신사 회수 / 소형가전 수거','개인정보 삭제 후 전용 회수',{
+  k:'폐휴대폰 폐핸드폰 스마트폰 노트북 태블릿 충전기 이어폰 케이블 개인정보 초기화 회수',
+  m:['battery'], g:'spec',
+  ex:['사용하지 않는 스마트폰','노트북','태블릿','충전기·케이블'],
+  p:[['전자기기','복합+배터리','제조사/통신사 회수·소형가전 수거함','데이터 삭제']],
+  st:['개인정보와 계정을 로그아웃하고 초기화합니다.','제조사·통신사 대리점의 보상 판매·회수 프로그램을 확인합니다.','소형가전 수거함에 배출할 수도 있습니다.'],
+  bad:['데이터 삭제 없이 배출','일반쓰레기로 버리기'],
+  tip:['쓸 수 있는 기기는 기부·중고 판매가 가장 좋은 재활용입니다.'],
+  loc:'회수 프로그램은 제조사·통신사 정책에 따라 바뀔 수 있습니다.',
+  why:'스마트폰·노트북에는 금·구리·희소금속이 들어 있어 도시광산이라 불립니다.'
+});
+/* ============ FAQ ============ */
+const FAQ_CATS = [
+  { id:'basic',   name:'기본 원칙',      icon:'📘' },
+  { id:'marks',   name:'마크·등급',      icon:'🏷️' },
+  { id:'plastic', name:'플라스틱·페트',  icon:'🥤' },
+  { id:'vinyl',   name:'비닐',           icon:'🛍️' },
+  { id:'paper',   name:'종이·종이팩',    icon:'📰' },
+  { id:'glass',   name:'유리·캔·금속',   icon:'🍾' },
+  { id:'styro',   name:'스티로폼',       icon:'📦' },
+  { id:'food',    name:'음식물',         icon:'🍎' },
+  { id:'general', name:'일반·특수 배출', icon:'🗑️' },
+  { id:'living',  name:'배출 방법·생활', icon:'🏠' }
+];
+
+const FAQS = [];
+function F(cat, q, head, body) { FAQS.push({ cat, q, head, body }); }
+
+// ── 기본 원칙 ──
+F('basic','왜 분리배출을 해야 하나요?','분리배출의 품질이 재활용 품질을 결정합니다.','집에서 재질별로 나누어 버려야 선별장에서 재활용 가능한 자원이 제대로 골라집니다. 제대로 분리되지 않은 재활용폐기물은 수거되더라도 선별되지 않아 잔재물로 분류되어 소각·매립되는 경우가 많습니다. 즉, 배출 단계에서의 정확한 분리가 재활용의 시작입니다.');
+F('basic','재활용품은 얼마나 깨끗이 씻어야 하나요?','‘내용물 비우고 물로 헹구는’ 수준이면 충분합니다.','새것처럼 닦을 필요는 없습니다. 음식물 찌꺼기·양념·기름이 눈에 띄지 않을 정도로 헹구면 됩니다. 기름기가 심한 용기(치킨·짜장·참치캔 등)는 키친타월로 한 번 닦고 세제를 쓰면 쉽습니다. 헹궈도 지워지지 않는 심한 오염은 재활용되지 않으므로 일반쓰레기로 버립니다.');
+F('basic','재활용품을 비닐봉지에 담아 버려도 되나요?','안 됩니다. 비닐은 비닐 대로, 재질은 재질별로 따로 배출하세요.','다른 재활용품을 비닐봉지에 담아 배출하면 선별장에서 봉지를 일일이 뜯어야 해서 선별되지 않고 폐기되는 경우가 많습니다. 종이·캔·유리·플라스틱은 봉지 없이 각각의 수거함에 직접 배출하고, 비닐류만 투명 봉투에 모아 배출하세요.');
+F('basic','헷갈리는 품목은 어디서 확인하나요?','‘내 손안의 분리배출’ 앱과 거주지 지자체 안내를 확인하세요.','환경부(현 기후에너지환경부)가 보급한 「내 손안의 분리배출」 앱에서 품목 검색·FAQ·1:1 질문이 가능합니다. 분리배출 기준은 「재활용가능자원의 분리수거 등에 관한 지침」을 기준으로 하되, 주택 유형과 지자체 시설에 따라 세부 요령이 다를 수 있습니다.');
+F('basic','왜 지자체마다 분리배출 기준이 조금씩 다른가요?','처리시설과 수거 방식이 지역마다 다르기 때문입니다.','어떤 지자체는 고철류·스티로폼·종이컵·멸균팩을 별도 수거하고, 어떤 곳은 합쳐서 수거합니다. 선별장 설비와 재활용업체 연결 구조가 다르기 때문입니다. 최근에는 서울시처럼 자치구마다 달랐던 기준을 통일하는 움직임도 있습니다.');
+F('basic','재활용이 안 될 것 같은 걸 일단 분리수거함에 넣으면 안 되나요?','‘희망 재활용’은 오히려 재활용을 방해합니다.','선별장에서 걸러지지 않는 물건이 섞이면 선별 비용이 늘고 다른 재활용품까지 오염됩니다. 확신이 없으면 앱·지자체 안내로 확인하고, 재활용 불가 품목은 일반쓰레기로 버리세요.');
+F('basic','라벨은 항상 떼어야 하나요?','투명 페트병은 반드시 제거, 그 외는 ‘떼기 쉬운 경우’에만 제거합니다.','투명 페트병은 비닐 라벨이 있으면 고품질 재생이 어려워서 라벨 제거가 필수입니다. 유리병·캔·플라스틱 용기는 라벨이 쉽게 떨어지는 경우만 떼고, 접착이 강한 라벨은 그대로 배출해도 대부분 선별 과정에서 처리됩니다.');
+F('basic','찌그러뜨려서(압착해서) 버려야 하나요?','페트병·캔은 압착하면 좋고, 스프레이 캔은 압착하지 마세요.','수거 부피를 줄이는 데 도움이 됩니다. 단, 가스가 남아 있는 부탄가스·스프레이 캔을 억지로 누르면 위험합니다. 유리병은 절대 깨지 않습니다.');
+
+// ── 마크·등급 ──
+F('marks','‘재활용 어려움’ 문구가 있으면 일반 종량제 봉투에 버려야 하나요?','아닙니다! 분리배출함에 정상 배출해야 합니다.','‘재활용 어려움’은 제품 포장재의 재질·구조에 따른 등급 평가이며, 소비자에게 종량제로 버리라는 뜻이 아닙니다. 복합재질이라 수거·선별·재생 공정이 까다롭다는 의미일 뿐, 마크대로 분리배출하면 건축자재·열분해유·고형연료 등으로 활용됩니다.');
+F('marks','분리배출 마크가 없는 제품은 어떻게 버리나요?','재질을 확인해 가장 가까운 분류로 배출하세요.','장난감·문구·옷걸이처럼 분리배출 표시 의무 대상이 아닌 제품도 많습니다. 단일 재질이면 해당 재질로, 여러 재질이 합쳐져 분리가 안 되면 일반쓰레기로 배출하세요. 서울시 안내에 따르면 플라스틱 외 재질이 부착된 완구·문구류, 혼합재질 옷걸이, 칫솔, 파일철, CD·DVD, 알약 포장재는 재활용 비해당 품목입니다.');
+F('marks','마크가 여러 개 붙어 있으면 어떻게 하나요?','부속품마다 각각의 마크대로 분리하세요.','예를 들어 페트병은 몸체(무색 페트), 라벨(비닐류), 뚜껑(플라스틱)이 각각 다른 재질이라 마크가 따로 있습니다. 가능한 한 분리해서 각각 배출하세요.');
+F('marks','‘재활용 용이성 등급’은 무슨 뜻인가요?','최우수·우수·보통·어려움 4단계로 포장재 재질·구조를 평가한 결과입니다.','제조·수입업체가 포장재 재활용 용이성을 평가해 겉면에 표시합니다. 등급이 낮을수록 생산자의 분담금(EPR)이 커지는 구조로, 기업이 재활용이 쉬운 포장을 쓰도록 유도하는 제도입니다. 소비자 입장에서는 ‘어려움’이어도 분리배출은 똑같이 해야 합니다.');
+F('marks','삼각형 숫자 마크(1~7)와 분리배출 마크는 다른가요?','네, 삼각형 숫자는 ‘재질 식별 코드’, 분리배출 마크는 ‘버리는 방법’을 알려줍니다.','삼각형 안 숫자(1 PET, 2 HDPE, 4 LDPE, 5 PP, 6 PS, 7 OTHER)는 수지의 종류를 알려주는 코드입니다. 분리배출 마크는 해당 포장재를 어떤 수거함에 버릴지 알려주는 표시입니다. 두 가지를 함께 보면 정확합니다.');
+F('marks','‘페트’ 마크가 ‘무색페트’로 바뀐 이유는 뭔가요?','투명(무색) 페트병 별도 분리배출이 시행되었기 때문입니다.','환경부 지침 개정으로 2022년 1월 1일 이후 출시·제조되는 제품부터 도안 속 문자가 ‘페트’에서 ‘무색페트’로 바뀌고, 플라스틱·비닐류 표시 재질에서 PVC가 삭제되었습니다. PVC 포장재 사용이 금지된 점을 반영한 것입니다.');
+F('marks','‘생분해’ ‘바이오’ 마크가 있으면 땅에 묻거나 음식물로 버려도 되나요?','아니요. 가정에서 분리배출 대상이 아닙니다.','생분해성 플라스틱은 산업용 퇴비화 시설 같은 특정 조건에서 분해되도록 만든 소재입니다. 일반 재활용 수거함에 넣으면 재생 공정을 방해하고, 음식물 수거함에 넣으면 이물질이 됩니다. 별도 수거 체계가 없다면 일반쓰레기로 배출하세요.');
+F('marks','환경표지·GR 마크가 있으면 분리배출을 어떻게 하나요?','구매 단계의 친환경 인증일 뿐, 버릴 땐 재질 마크를 따릅니다.','환경표지는 환경 영향이 적은 제품, GR(우수재활용제품)은 재활용 원료로 만든 제품임을 나타내는 인증입니다. 분리배출 방법은 제품에 적힌 재질별 분리배출 마크를 확인하세요.');
+F('marks','‘도포·첩합’ 표시는 무슨 뜻인가요?','종이 위에 코팅(도포)하거나 다른 재질을 붙인(첩합) 경우를 알려주는 표시입니다.','분리배출 표시에서 코팅이나 접착으로 결합된 포장재의 재질 구성을 함께 적도록 한 제도입니다. 예를 들어 종이팩에 PE 코팅이 되어 있다면 그 정보가 도안과 함께 표시됩니다.');
+F('marks','제품에 ‘일반팩’과 ‘멸균팩’ 표시가 따로 있는 이유는?','안쪽 재질(알루미늄 포함 여부)이 달라 재활용 방법이 다르기 때문입니다.','2022년부터 종이팩을 ‘일반팩’과 ‘멸균팩’으로 구분해 표시하도록 해 별도 수거·재활용을 유도하고 있습니다. 멸균팩은 알루미늄박이 포함되어 있어 일반 종이팩과 섞이지 않게 배출하세요.');
+
+// ── 플라스틱·페트 ──
+F('plastic','투명 페트병 입구에 남은 뚜껑 링(고리)은 왜 꼭 떼지 않아도 되나요?','물 비중 차이로 세척·파쇄 공정에서 자동 분리됩니다.','투명 페트(PET)는 비중이 약 1.38로 물보다 무거워 가라앉고, 뚜껑·링 재질(PP/HDPE)은 약 0.9~0.95로 물에 뜹니다. 세척 탱크에서 뜨는 조각과 가라앉는 조각이 자연스럽게 분리되므로 칼로 링을 잘라내는 위험한 작업은 필요 없습니다. 뚜껑을 닫아서 배출하면 됩니다.');
+F('plastic','투명 페트병 라벨을 안 떼고 버리면 어떻게 되나요?','고품질 재생(의류용 섬유·재생 병)이 어려워집니다.','비닐 라벨이 붙은 채 배출되면 선별·세척 과정에서 완전히 분리되지 않아 불순물이 됩니다. 절취선이 있는 라벨은 손으로 쉽게 떼어지니 꼭 제거하세요.');
+F('plastic','페트병 뚜껑은 닫아서 버리나요, 열어서 버리나요?','닫아서 버리세요.','압착한 페트병은 뚜껑을 닫아야 부피가 유지되고, 뚜껑이 낱개로 흩어져 작은 플라스틱 잔재물이 되는 것을 막을 수 있습니다. 재활용 공정에서 뚜껑은 비중 차이로 분리됩니다.');
+F('plastic','소주병·막걸리병 같은 투명 페트병도 투명 페트병 수거함에 넣나요?','무색 투명 재질이면 라벨 제거 후 넣습니다.','먹는 샘물·음료·막걸리 등의 무색 페트병이 해당됩니다. 단, 색이 있거나 기름·간장 등이 담긴 병은 일반 플라스틱으로 배출하세요.');
+F('plastic','기름·양념이 묻은 플라스틱 용기는 어떻게 하나요?','세제로 씻어 말려서 배출하세요.','주방세제로 기름기를 닦고 헹구면 대부분 정상 재활용됩니다. 고춧가루 착색은 햇볕에 말리면 옅어지며, 그래도 심하게 남는 착색 용기는 일반쓰레기로 안내하는 경우가 있습니다.');
+F('plastic','플라스틱 빨대·일회용 숟가락은 플라스틱류인가요?','크기가 아주 작아 대부분 일반쓰레기입니다.','손바닥보다 작은 플라스틱은 선별 컨베이어에서 낱개로 인식되지 않아 잔재물이 됩니다. 지자체 안내에 따라 다를 수 있으니 의심되면 확인하세요.');
+F('plastic','‘OTHER(기타)’ 재질은 무슨 뜻인가요?','여러 재질이 합쳐졌거나 위 분류에 없는 수지라는 뜻입니다.','즉석밥 용기(PP+EVOH)처럼 복합 수지이거나 폴리카보네이트처럼 특수 수지가 여기에 해당합니다. 재활용이 어려울 수 있지만, 분리배출 대상이면 플라스틱류로 배출하는 것이 원칙입니다.');
+F('plastic','플라스틱 장난감은 어떻게 버리나요?','금속·전자부품이 없는 단일 재질만 플라스틱류입니다.','건전지가 들어 있거나 금속·고무 부품이 섞인 장난감은 재활용 비해당(일반쓰레기)입니다. 크기가 큰 장난감은 대형폐기물 신고가 필요할 수 있습니다.');
+F('plastic','샴푸 펌프는 왜 따로 버려야 하나요?','펌프 안 금속 스프링 때문에 플라스틱 파쇄 설비가 고장 날 수 있습니다.','본체는 플라스틱류로, 스프링이 든 펌프 헤드는 일반쓰레기로 분리해 배출하는 것이 안전합니다.');
+
+// ── 비닐 ──
+F('vinyl','비닐은 씻어야 하나요?','이물질을 털어내면 되고, 작거나 오염된 비닐도 분리배출 가능합니다.','서울시 통일 기준에 따르면 작거나 이물질(물·기름)이 묻은 폐비닐도 분리배출할 수 있습니다. 가능한 한 털어내고 헹궈 말리면 더 좋습니다. 단, 음식물이 심하게 굳어 있는 비닐은 일반쓰레기로 안내하는 곳도 있습니다.');
+F('vinyl','검은 비닐봉지는 재활용이 되나요?','색과 관계없이 비닐류로 배출합니다.','검은색 비닐도 PE 재질이면 비닐류에 포함됩니다. 다만 종량제봉투 대용으로 쓰레기를 담아 배출하는 것은 안 됩니다.');
+F('vinyl','과자봉지·라면봉지는 비닐인가요?','네, 비닐류입니다.','여러 겹 적층 필름이라 재활용 등급은 낮을 수 있으나 비닐류로 배출합니다. 사탕 껍질처럼 작은 포장재도 모아서 투명 봉투에 담아 배출하세요.');
+F('vinyl','택배 비닐에 송장이 붙어 있으면 그냥 버려도 되나요?','송장이 안 떼어져도 비닐류로 배출할 수 있습니다.','서울시 안내 기준으로 택배봉투는 송장이 떨어지지 않아도 분리배출 가능합니다. 개인정보가 걱정되면 송장 부분을 가려서 버리세요.');
+F('vinyl','비닐은 낱개로 버리나요, 모아서 버리나요?','투명 봉투에 모아 담아 배출하세요.','작은 비닐은 낱개로 선별이 되지 않으므로 모아서 큰 투명 봉투에 담아야 합니다. 단독주택의 경우 비닐류·투명 페트병 별도 요일제를 운영하는 지자체도 많습니다.');
+F('vinyl','랩은 비닐류인가요?','식품용 랩은 일반쓰레기로 안내하는 경우가 많습니다.','랩은 PVC·PE 재질이 섞여 있고 음식물 오염이 많아 재활용 대상에서 제외하는 경우가 많습니다. 지자체 안내를 확인하세요.');
+F('vinyl','코팅된 비닐은 전부 일반쓰레기인가요?','아닙니다. ‘코팅’ 여부가 아니라 재질·분리 가능성·오염 정도로 판단합니다.','핵심은 ① 비닐류로 재활용할 수 있는 재질인지, ② 여러 재질이 붙어 분리하기 어려운지, ③ 음식물·이물질로 오염됐는지입니다. 과자·라면·커피믹스 봉지처럼 플라스틱 필름과 알루미늄 증착층을 겹친 복합재질도 깨끗하면 비닐류로 배출하라는 지자체 안내가 있습니다. 반대로 오염이 지워지지 않거나 다른 재질을 분리할 수 없다면 일반쓰레기로 배출합니다.');
+F('vinyl','코팅 비닐은 왜 재활용이 어렵다고 하나요?','재질이 섞이고, 선별·세척이 어렵고, 재생 원료 품질이 떨어지기 때문입니다.','① PE·PP·PET·알루미늄층 등 서로 다른 재질을 겹쳐 만들면 녹였을 때 균일한 재생 원료를 얻기 어렵습니다. ② 얇고 가벼운 비닐은 다른 쓰레기와 엉키기 쉽고, 음식물·접착제가 묻으면 세척·선별 비용이 늘어납니다. ③ 이물질·혼합 재질이 많으면 재생 플라스틱의 강도와 품질이 나빠집니다. ‘어렵다’는 것이지 ‘불가능해서 일반쓰레기’라는 뜻은 아닙니다.');
+F('vinyl','종이컵 안쪽의 코팅도 비닐인가요?','비닐류가 아니라 종이컵(종이팩류)으로 구분합니다.','종이에 얇은 플라스틱(PE) 막이 붙은 구조라, 종이 재활용 과정에서 섬유와 코팅층을 분리해야 합니다. 일반 종이와 똑같이 처리할 수 없으므로 종이컵 전용 수거 또는 지자체 기준을 따르세요.');
+F('vinyl','기름·양념이 심하게 묻은 비닐은 어떻게 하나요?','먼저 닦아 보고, 세척해도 오염이 남으면 일반쓰레기입니다.','내용물을 비우고 키친타월·물로 오염을 제거해 보세요. 이물질이 섞이면 재생 원료 품질이 떨어지고 세척 비용이 늘어납니다. 그래도 오염이 남거나 제거하기 어렵다면 일반쓰레기로 배출하는 것이 원칙입니다.');
+F('vinyl','테이프·접착제가 붙은 비닐은 어떻게 하나요?','분리할 수 있으면 떼고 비닐만, 분리하기 어려운 복합재질은 일반쓰레기입니다.','다른 재질을 분리할 수 있으면 떼어 내 각각 배출합니다. 분리하기 어려운 복합재질은 재활용이 곤란할 수 있습니다. 단, 택배 비닐봉투의 송장 스티커처럼 지자체가 예외를 허용하는 경우도 있습니다.');
+F('vinyl','페트병 라벨은 코팅 비닐인가요? 어떻게 버리나요?','대부분 코팅 비닐이 아니라 라벨용 플라스틱 필름(PP·PET 계열)이며, 떼어서 비닐류로 배출합니다.','라벨을 뗀 투명 페트병은 내용물을 비우고 압착해 투명 페트병 전용 수거함에 넣습니다. 다만 라벨 재질은 제품마다 달라서, 일반 비닐류로 재활용할 수 있는 라벨도 있고 아닌 경우도 있습니다.');
+F('vinyl','소주병 라벨은 떼야 하나요?','쉽게 떨어지는 라벨만 떼어 재질에 맞게 배출하고, 병은 비워서 유리병으로 배출합니다.','소주병 라벨은 종이 라벨, 플라스틱 필름 라벨 등 종류가 다양해서 ‘무조건 비닐’이라고 단정할 수 없습니다. 쉽게 분리되지 않으면 그대로 배출해도 됩니다.');
+F('vinyl','병에 붙은 라벨이 왜 재활용을 방해하나요?','병과 재질이 다르고, 라벨이 안 떨어지거나 잉크·접착제가 남으면 재활용 공정에 문제가 생기기 때문입니다.','그래서 라벨을 쉽게 제거할 수 있도록 절취선을 만들거나, 물에서 분리되는 재질과 접착제를 쓰도록 관련 기준이 마련되어 있습니다.');
+
+// ── 종이·종이팩 ──
+F('paper','영수증은 종이류로 버려도 되나요?','아니요, 일반쓰레기입니다.','영수증(감열지)은 열에 반응하는 화학 코팅이 되어 있어 일반 종이 재활용 공정에서 불순물이 됩니다.');
+F('paper','종이컵은 종이류에 넣어도 되나요?','안쪽 PE 코팅 때문에 종이컵 수거함 또는 종이팩류로 별도 배출하세요.','깨끗이 헹군 종이컵은 종이팩과 함께 별도 재활용되는 경우가 많습니다. 수거함이 없다면 지자체 안내를 확인하세요.');
+F('paper','코팅된 책 표지나 스프링 노트는 어떻게 하나요?','스프링·비닐 표지를 제거한 뒤 종이만 종이류로 배출합니다.','분리가 어려운 코팅 표지는 지자체에 따라 일반쓰레기로 안내하기도 합니다.');
+F('paper','택배 상자의 테이프는 꼭 떼야 하나요?','네, 테이프를 제거하고 납작하게 펴서 종이류로 배출하세요.','서울시 통일 기준에서도 일반 골판지 상자는 테이프 제거 후 종이류로 배출합니다. 송장은 안 떼도 되지만 테이프는 제거해야 재활용이 쉽습니다.');
+F('paper','우유팩과 멸균팩은 같이 버려도 되나요?','가능하면 구분해서 배출하세요.','일반 우유팩은 고급 화장지 원료로, 멸균팩은 알루미늄 분리 공정을 거쳐 재생됩니다. 섞이면 재활용 효율이 떨어집니다. 지자체 안내에 따라 별도 수거함을 사용하세요.');
+F('paper','종이팩을 모으면 휴지로 바꿔주나요?','지자체와 주민센터에서 교환 사업을 운영하는 곳이 많습니다.','종이팩을 일정량 모아 주민센터에 가져가면 휴지·종량제봉투 등으로 교환해 주는 사업이 있습니다. 교환 기준은 지자체마다 다릅니다.');
+F('paper','기름 묻은 피자박스는 종이류인가요?','오염된 부분은 일반쓰레기, 깨끗한 부분만 종이류입니다.','기름이 배어든 종이는 재활용이 불가능합니다. 오염 정도가 심하면 통째로 일반쓰레기로 버리세요.');
+
+// ── 유리·캔·금속 ──
+F('glass','깨진 유리는 어떻게 버리나요?','신문지에 싸서 불연성 마대(또는 지자체 안내 방법)로 배출하세요.','깨진 유리를 유리병 수거함에 넣으면 안 됩니다. 장갑을 끼고 신문지로 싸서 ‘깨진 유리’ 표시를 한 뒤 불연성 마대에 담습니다.');
+F('glass','빈 병 보증금은 어떻게 돌려받나요?','소매점(마트·편의점 등)에 반환하면 보증금을 돌려받습니다.','보증금 대상 병(소주병·맥주병 등)은 소매점에 가져가 환불받을 수 있습니다. 보증금은 소주병 100원, 맥주병 130원 수준입니다(지정 용기 기준). 분리수거함에 버리면 보증금을 포기하는 셈입니다.');
+F('glass','유리병은 색깔별로 분리해야 하나요?','수거함이 색깔별로 구분되어 있으면 구분하고, 아니면 한 곳에 배출합니다.','색깔별 수거 시 재활용 품질이 올라갑니다. 투명·갈색·초록색 병이 섞이면 재생 유리의 색이 변합니다.');
+F('glass','내열유리(글라스락)는 유리병 수거함에 넣어도 되나요?','아니요, 불연성 마대 또는 일반쓰레기입니다.','내열유리·유리컵·크리스탈은 일반 유리병과 녹는 온도가 달라 병 재활용을 방해합니다.');
+F('glass','캔은 꼭 찌그러뜨려야 하나요?','가볍게 압착하면 좋지만 필수는 아닙니다.','압착하면 부피가 줄어 수거에 유리합니다. 단, 스프레이·부탄가스 캔은 압착하지 말고 내용물을 모두 사용한 뒤 배출하세요.');
+F('glass','철 캔과 알루미늄 캔은 어떻게 구분하나요?','자석에 붙으면 철, 안 붙으면 알루미늄입니다.','둘 다 같은 캔류로 배출하면 됩니다. 마크에 ‘철(Fe)’ 또는 ‘알루미늄(Al)’이 표시되어 있습니다.');
+F('glass','부탄가스·스프레이 캔은 구멍을 뚫어야 하나요?','과거와 달리 구멍을 뚫지 않고 내용물을 모두 사용한 뒤 배출하라는 안내가 일반적입니다.','다만 지자체에 따라 다를 수 있으니 확인하세요. 불 근처에서 가스를 빼면 매우 위험합니다.');
+
+// ── 스티로폼 ──
+F('styro','스티로폼에 이물질이나 테이프가 붙어 있으면 어떻게 하나요?','테이프·라벨을 제거하고 깨끗한 흰색만 배출하세요.','오염이 심하거나 색이 있는 스티로폼은 일반쓰레기로 안내하는 곳이 있습니다. 서울시는 깨끗한 스티로폼 상자는 라벨 제거 후 분리배출하도록 정리했습니다.');
+F('styro','컵라면 스티로폼 용기는 어떻게 하나요?','헹궈서 스티로폼, 착색이 심하면 일반쓰레기입니다.','국물이 남은 채 배출하면 안 됩니다. 종이 컵라면 용기는 종이컵류로 구분하세요.');
+F('styro','과일 포장 스티로폼 망은 스티로폼인가요?','지자체에 따라 비닐류 또는 일반쓰레기로 안내합니다.','발포 네트 형태는 재활용이 어렵습니다. 지자체 안내를 확인하세요.');
+
+// ── 음식물 ──
+F('food','수박·멜론 같은 대형 과일 껍질은 음식물 쓰레기인가요?','네, 부드러운 과일 껍질로 음식물 쓰레기가 맞습니다!','수박·멜론·참외 껍질은 가축 사료나 퇴비로 재활용됩니다. 다만 덩어리가 크면 사료 분쇄기를 고장 낼 수 있으므로 잘게 잘라 수분을 최대한 빼서 배출하세요.');
+F('food','음식물과 일반쓰레기를 구분하는 가장 직관적인 기준은 뭔가요?','‘동물(가축)이 사료로 먹을 수 있는가?’가 기본 기준입니다.','수거된 음식물은 건조·분쇄를 거쳐 사료·퇴비로 재활용됩니다. 그래서 단단하거나 질긴 것(뼈·껍데기·씨·양파껍질), 염분·카페인 성분이 문제가 되는 것(고추씨·찻잎 등)은 일반쓰레기로 분류됩니다. 지자체 기준이 다를 수 있습니다.');
+F('food','된장·고추장·김치 같은 염분이 높은 식품은 일반쓰레기인가요?','아니요, 헹궈서 음식물로 배출합니다.','소금기가 많은 된장·고추장·간장·김치는 물에 한 번 헹궈 염분을 줄인 뒤 음식물로 배출하는 것이 환경부·지자체 지침입니다. 일부에서 ‘염분 때문에 일반쓰레기’라고 알려져 있으나 올바른 안내가 아닙니다.');
+F('food','커피 찌꺼기는 음식물인가요?','일반쓰레기입니다.','원두 찌꺼기·티백·한약재는 사료 부적합 성분 때문에 일반쓰레기로 배출합니다. 말려서 탈취제로 쓰는 방법도 있습니다.');
+F('food','치킨 뼈(닭뼈)는 음식물인가요?','아니요, 일반쓰레기입니다.','뼈는 기계 파손과 가축 안전 문제 때문에 일반쓰레기입니다. 뼈에 붙은 살은 떼어 음식물로 분리할 수 있습니다.');
+F('food','달걀 껍데기는 음식물인가요?','일반쓰레기입니다.','탄산칼슘 껍데기는 분쇄가 어렵고 퇴비화에도 방해가 됩니다. 달걀 속(노른자·흰자)은 음식물입니다.');
+F('food','양파 껍질은 음식물인가요?','일반쓰레기입니다.','양파·마늘·생강의 마른 겉껍질과 뿌리는 질긴 섬유라 사료화가 어렵습니다. 서울시 통일 기준에도 양파껍질은 일반쓰레기로 명시되어 있습니다.');
+F('food','수박씨·사과씨는 음식물인가요?','네, 작고 부드러운 씨는 음식물입니다.','단단한 핵과류 씨(복숭아·살구·감·매실 등)와 대추·망고·아보카도 씨만 일반쓰레기입니다.');
+F('food','음식물을 비닐봉지에 담아 수거함에 버려도 되나요?','아니요, 전용 봉투·용기 외에는 쓰지 마세요.','비닐은 사료화·퇴비화를 방해하는 이물질입니다. 지자체가 지정한 음식물 전용 봉투·용기·RFID 수거함을 사용하세요.');
+F('food','상한 음식이나 곰팡이 핀 음식도 음식물인가요?','네, 음식물로 배출합니다.','상한 음식도 포장을 제거하면 음식물입니다. 다만 곰팡이가 너무 심하면 냄새가 퍼지지 않게 밀봉해 보관했다가 배출하세요.');
+F('food','국물은 어떻게 버리나요?','건더기는 체에 걸러 음식물로, 국물은 하수구로 흘려보냅니다.','국물째 쏟으면 수거차 누수와 악취, 처리 비용 증가의 원인이 됩니다.');
+F('food','생선 가시는 음식물인가요?','작고 부드러운 가시는 음식물, 크고 뾰족한 뼈는 일반쓰레기입니다.','생선 대가리와 큰 뼈는 일반쓰레기입니다.');
+
+// ── 일반·특수 ──
+F('general','폐건전지는 어떻게 버리나요?','‘전지류’로 따로 모아 전용 수거함에 배출하세요.','주민센터·아파트 단지·편의점 등에 있는 전용 수거함에 넣습니다. 보조배터리 같은 리튬 배터리는 화재 위험이 크니 단자를 절연하고 전용 수거로 보내세요.');
+F('general','남은 약은 어떻게 버리나요?','약국·보건소·주민센터의 폐의약품 수거함에 넣습니다.','알약만 꺼내 모으고, 포장재(PTP)는 일반쓰레기로 버립니다. 하수구나 일반쓰레기에 버리면 환경오염을 일으킵니다.');
+F('general','형광등은 어떻게 버리나요?','형광등 전용 수거함에 깨지지 않게 배출하세요.','수은이 들어 있어 일반쓰레기나 유리병 수거함에 버리면 안 됩니다.');
+F('general','헌 옷은 어떻게 버리나요?','깨끗하고 재사용 가능한 것은 의류수거함으로 배출합니다.','젖거나 심하게 오염된 옷은 수거함에 넣지 말고 일반쓰레기로 버리세요.');
+F('general','TV·냉장고 같은 폐가전은 어떻게 버리나요?','판매점 회수 또는 폐가전 무상방문수거 서비스를 이용하세요.','대형 가전은 1대도 수거 가능한 경우가 많습니다. 서비스 번호와 정책은 변경될 수 있으니 공식 안내를 확인하세요.');
+F('general','가구·침대 등 대형폐기물은 어떻게 하나요?','지자체에 신고하고 수수료 스티커를 붙여 배출합니다.','신고 없이 배출하면 과태료 대상이 될 수 있습니다. 아직 쓸 만한 가구는 중고거래·기부를 먼저 고려하세요.');
+F('general','물티슈는 변기에 버려도 되나요?','아니요, 일반쓰레기입니다.','물에 녹지 않는 합성섬유라 배관이 막히고 하수처리 시설에 문제를 일으킵니다.');
+F('general','마스크는 어떻게 버리나요?','끈을 자르고 일반쓰레기로 버립니다.','부직포 소재라 재활용되지 않습니다.');
+F('general','일회용 라이터는 어떻게 버리나요?','가스를 모두 사용한 뒤 일반쓰레기로 배출합니다.','가스가 남은 라이터는 수거차량 화재의 원인이 됩니다.');
+F('general','아이스팩은 어떻게 버리나요?','포장 비닐은 비닐류, 내용물은 물이면 하수구·젤이면 일반쓰레기입니다.','젤(고흡수성수지)을 하수구에 버리면 배관이 막힙니다.');
+F('general','주사기·바늘은 일반쓰레기인가요?','아니요, 약국·보건소·의료기관의 수거 안내를 따릅니다.','가정에서도 날카로운 의료폐기물은 감염 위험이 있어 별도 처리가 필요합니다.');
+
+// ── 배출 방법·생활 ──
+F('living','아파트와 단독주택의 배출 방법이 다른가요?','네, 수거 방식과 요일이 다릅니다.','공동주택은 분리수거함을 단지 내에서 운영하고, 단독주택은 지정 요일·시간·장소에 내놓는 ‘요일제’를 운영하는 지자체가 많습니다.');
+F('living','투명 페트병은 의무로 따로 버려야 하나요?','공동주택은 2020년 12월부터 별도 배출이 의무입니다.','공동주택은 투명 페트병 전용 수거함을 설치해 일반 플라스틱과 분리 배출해야 하며, 단독주택은 지자체별 요일제·전용 봉투 방식으로 시행합니다.');
+F('living','분리배출을 잘못하면 과태료가 있나요?','지자체 조례에 따라 부과될 수 있습니다.','종량제봉투 미사용, 무단투기, 대형폐기물 무신고 배출 등은 과태료 대상입니다. 단속과 금액은 지자체마다 다릅니다.');
+F('living','이사할 때 나오는 쓰레기는 어떻게 하나요?','대형폐기물은 신고·스티커, 포장재는 재질별 분리, 남은 물건은 중고·기부를 활용하세요.','이삿짐센터에서 가져가는 경우와 직접 배출하는 경우의 기준이 다릅니다. 박스는 테이프를 제거해 종이류로 배출하세요.');
+F('living','일회용품을 줄이는 가장 쉬운 방법은?','텀블러·장바구니·다회용기를 쓰는 것입니다.','재활용보다 중요한 것은 쓰레기 자체를 줄이는 것입니다. 리필 제품, 소포장 줄이기, 다회용 배달용기 서비스도 도움이 됩니다.');
+/* ============ 퀴즈 ============ */
+const QUIZ = [
+  { q:'치킨을 먹고 남은 닭뼈는 어디로 버릴까요?', o:['음식물 쓰레기','일반 종량제 봉투','플라스틱류','종이류'], a:1, e:'뼈는 분쇄기 파손과 가축 안전 문제로 일반쓰레기입니다. 붙은 살점만 음식물로 분리하세요.' },
+  { q:'‘재활용 어려움’ 표시가 있는 과자 봉지는 어떻게 버릴까요?', o:['일반쓰레기','비닐류로 분리배출','음식물 쓰레기','종이류'], a:1, e:'재활용 용이성 등급은 생산자 평가이며, 소비자는 마크대로 비닐류로 분리배출합니다.' },
+  { q:'투명 페트병을 버릴 때 가장 먼저 해야 할 일은?', o:['라벨 제거','내용물 비우고 헹구기','뚜껑 제거','발로 밟아 납작하게'], a:1, e:'비우고 헹구기 → 라벨 제거 → 압착 → 뚜껑 닫기 순서입니다.' },
+  { q:'영수증(감열지)은 어디에 버릴까요?', o:['종이류','일반쓰레기','비닐류','종이팩'], a:1, e:'감열지 코팅 때문에 종이 재활용이 안 되어 일반쓰레기입니다.' },
+  { q:'양파 껍질은 어디에 버릴까요?', o:['음식물 쓰레기','일반쓰레기','퇴비함','종이류'], a:1, e:'마르고 질긴 섬유라 사료·퇴비화가 어려워 일반쓰레기입니다.' },
+  { q:'된장·고추장·김치 같은 염분 있는 식품은?', o:['일반쓰레기','음식물 쓰레기(헹궈서)','하수구에 모두 버림','플라스틱류'], a:1, e:'헹궈서 염분을 줄인 뒤 음식물로 배출하는 것이 지침입니다.' },
+  { q:'복숭아 씨는 어디에 버릴까요?', o:['음식물 쓰레기','일반쓰레기','종이류','퇴비함'], a:1, e:'단단한 핵과류 씨는 분쇄기를 고장 내므로 일반쓰레기입니다.' },
+  { q:'수박씨·사과씨 같은 작고 부드러운 씨는?', o:['일반쓰레기','음식물 쓰레기','불연성 마대','종이류'], a:1, e:'작고 부드러운 씨는 음식물입니다.' },
+  { q:'깨진 유리 조각은 어떻게 버릴까요?', o:['유리병 수거함','신문지에 싸서 불연성 마대(지자체 안내)','플라스틱류','음식물 쓰레기'], a:1, e:'유리병 수거함에 넣으면 안 되고, 신문지로 싸서 불연성 마대 등으로 배출합니다.' },
+  { q:'멸균팩(두유팩)은 왜 일반 우유팩과 구분할까요?', o:['색이 달라서','알루미늄박이 들어 있어서','크기가 달라서','냄새가 나서'], a:1, e:'멸균팩은 알루미늄층이 있어 재활용 방법이 다릅니다.' },
+  { q:'폐건전지는 어떻게 배출할까요?', o:['일반쓰레기에 섞어서','전용 수거함에','캔류에 함께','음식물에 함께'], a:1, e:'전지류는 전용 수거함에 배출합니다.' },
+  { q:'보조배터리가 부풀어 올랐을 때 올바른 행동은?', o:['계속 사용','일반쓰레기에 버리기','사용 중단 후 단자 절연하고 전용 수거로 배출','분해해 보기'], a:2, e:'리튬 배터리는 화재 위험이 있어 전용 수거로 보내야 합니다.' },
+  { q:'소주병 보증금은 어디서 돌려받을까요?', o:['주민센터','소매점(마트·편의점)','약국','학교'], a:1, e:'보증금 대상 병은 소매점에 반환하면 환불됩니다.' },
+  { q:'세제 펌프(스프링 포함) 헤드는 어떻게 버릴까요?', o:['플라스틱류','일반쓰레기','캔류','비닐류'], a:1, e:'금속 스프링이 파쇄기를 고장 내므로 펌프 헤드는 일반쓰레기입니다.' },
+  { q:'물티슈는 어디로?', o:['변기','종이류','일반쓰레기','비닐류'], a:2, e:'합성섬유라 일반쓰레기이며 변기에 버리면 막힙니다.' },
+  { q:'수거 용기에 국물째 음식물을 쏟아도 될까요?', o:['된다','건더기만 체에 걸러 배출','국물만 배출','상관없다'], a:1, e:'수분을 줄이는 것이 악취·처리비 절감의 핵심입니다.' },
+  { q:'내열유리(글라스락)는 어디에?', o:['유리병 수거함','불연성 마대/일반(지자체 안내)','플라스틱류','캔류'], a:1, e:'일반 유리병과 녹는 온도가 달라 유리병 재활용을 방해합니다.' },
+  { q:'페트병 뚜껑은 어떻게 할까요?', o:['떼어서 일반쓰레기로','닫아서 같이 배출','태워서','음식물에'], a:1, e:'닫아서 배출하면 비중 차이로 공정에서 자동 분리됩니다.' },
+  { q:'젤 타입 아이스팩의 내용물은?', o:['하수구에 붓기','일반쓰레기(종량제)','음식물 쓰레기','변기에 버리기'], a:1, e:'고흡수성수지는 하수구를 막으므로 종량제로 버립니다.' },
+  { q:'깨끗한 과자 봉지(알루미늄 증착 복합필름)는 어떻게 버릴까요?', o:['코팅이니 무조건 일반쓰레기','비닐류로 배출','종이류','플라스틱류'], a:1, e:'코팅·복합재질이라는 이유만으로 일반쓰레기가 되지 않습니다. 깨끗하면 비닐류, 오염이 안 지워지거나 분리 불가한 복합재질만 일반쓰레기입니다.' },
+  { q:'커피 찌꺼기는 어디에?', o:['음식물 쓰레기','일반쓰레기','플라스틱류','퇴비함'], a:1, e:'커피·차 찌꺼기는 일반쓰레기로 안내됩니다.' }
+];
+/* ============ APP ============ */
+const TABS = [
+  { id:'recyclable',    label:'1. 분리수거',        icon:'fa-recycle',          color:'text-emerald-600' },
+  { id:'food_waste',    label:'2. 음식물 쓰레기',   icon:'fa-apple-whole',      color:'text-amber-600' },
+  { id:'general_waste', label:'3. 종량제·특수·대형', icon:'fa-trash-can',        color:'text-rose-600' },
+  { id:'marks',         label:'4. 마크·라벨 도감',  icon:'fa-shapes',           color:'text-violet-600' },
+  { id:'faq',           label:'5. FAQ',             icon:'fa-circle-question',  color:'text-sky-600' },
+  { id:'quiz',          label:'6. 퀴즈',            icon:'fa-bullseye',         color:'text-pink-600' }
+];
+const QUICK = ['치킨뼈','영수증','양파껍질','컵라면','햇반','아이스팩','보조배터리','깨진유리','멸균팩','캡슐커피','물티슈','장류'];
+
+let currentMainTab = 'recyclable', currentSubTab = 'all', searchQuery = '', favOnly = false;
+let faqCat = 'all';
+let favs = new Set();
+try { favs = new Set(JSON.parse(localStorage.getItem('sortFavs') || '[]')); } catch (e) {}
+function saveFavs() { try { localStorage.setItem('sortFavs', JSON.stringify([...favs])); } catch (e) {} }
+
+const $ = id => document.getElementById(id);
+const mainTabContainer = $('mainTabContainer'), subTabContainer = $('subTabContainer'), itemsGrid = $('itemsGrid');
+const marksTab = $('marksTab'), faqTab = $('faqTab'), quizTab = $('quizTab'), searchResults = $('searchResults');
+const emptyState = $('emptyState'), searchInput = $('searchInput'), clearBtn = $('clearSearchBtn');
+const detailModal = $('detailModal'), modalContent = $('modalContent');
+
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const regEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function hl(text) {
+  const t = esc(text);
+  const toks = searchQuery.trim().split(/\s+/).filter(Boolean);
+  if (!toks.length) return t;
+  const re = new RegExp('(' + toks.map(x => regEsc(esc(x))).join('|') + ')', 'gi');
+  return t.replace(re, '<mark class="hl">$1</mark>');
+}
+function tokens() { return searchQuery.toLowerCase().trim().split(/\s+/).filter(Boolean); }
+function hay(item) {
+  return [item.name, item.summary, item.keywords, item.target, item.examples.join(' '),
+    item.parts.map(p => p.join(' ')).join(' '), item.steps.join(' '), item.mistakes.join(' '), item.tips.join(' ')].join(' ').toLowerCase();
+}
+ITEMS.forEach(i => i._hay = hay(i));
+FAQS.forEach(f => f._hay = (f.q + ' ' + f.head + ' ' + f.body).toLowerCase());
+ITEMS.forEach(i => { i.parts = i.parts.map(p => ({ name:p[0], material:p[1], target:p[2], action:p[3] })); });
+// parts 변환 후 hay 재계산
+ITEMS.forEach(i => { i._hay = [i.name, i.summary, i.keywords, i.target, i.examples.join(' '), i.parts.map(p => Object.values(p).join(' ')).join(' '), i.steps.join(' '), i.mistakes.join(' '), i.tips.join(' ')].join(' ').toLowerCase(); });
+const tabLabel = id => (TABS.find(t => t.id === id) || {}).label || '';
+
+// ── 탭 ──
+function renderMainTabs() {
+  mainTabContainer.innerHTML = TABS.map(t => {
+    const on = t.id === currentMainTab && !searchQuery.trim();
+    return `<button role="tab" aria-selected="${on}" data-maintab="${t.id}" class="main-tab-btn flex-shrink-0 py-3 px-4 rounded-t-2xl text-sm sm:text-base border-b-4 flex items-center justify-center gap-2 transition whitespace-nowrap ${on ? 'border-emerald-600 text-emerald-700 bg-emerald-50/70 font-black' : 'border-transparent text-slate-500 hover:text-slate-800 hover:bg-slate-100 font-bold'}"><i class="fa-solid ${t.icon} ${t.color}"></i>${t.label}</button>`;
+  }).join('');
+  mainTabContainer.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+    currentMainTab = b.dataset.maintab; currentSubTab = 'all'; favOnly = false;
+    if (searchQuery.trim()) { searchInput.value = ''; searchQuery = ''; clearBtn.classList.add('hidden'); }
+    renderAll(); window.scrollTo({ top: 0, behavior: 'smooth' });
+  }));
+}
+function renderSubTabs() {
+  const list = subCategoriesMap[currentMainTab] || [];
+  if (!list.length || searchQuery.trim()) { subTabContainer.innerHTML = ''; return; }
+  subTabContainer.innerHTML = list.map(s => {
+    const on = s.id === currentSubTab && !favOnly;
+    const n = s.id === 'all' ? ITEMS.filter(i => i.mainTab === currentMainTab).length : ITEMS.filter(i => i.mainTab === currentMainTab && i.subCategory === s.id).length;
+    return `<button data-sub="${s.id}" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition ${on ? 'bg-emerald-700 text-white shadow-sm' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'}">${s.name} <span class="opacity-60 font-bold">${n}</span></button>`;
+  }).join('') + `<button data-fav="1" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition ${favOnly ? 'bg-amber-500 text-white' : 'bg-white text-amber-600 border border-amber-200 hover:bg-amber-50'}"><i class="fa-solid fa-star"></i> 즐겨찾기 ${favs.size}</button>`;
+  subTabContainer.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.fav) favOnly = !favOnly; else { currentSubTab = b.dataset.sub; favOnly = false; }
+    renderSubTabs(); renderItemsView();
+  }));
+}
+
+// ── 카드 ──
+function markRow(item, size) {
+  return item.marks.length ? `<div class="flex items-center gap-1.5 flex-wrap">${item.marks.map(m => markSVG(m, size)).join('')}</div>` : '';
+}
+function cardHTML(item, showTab) {
+  const fav = favs.has(item.id);
+  return `<article class="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between overflow-hidden">
+    <div class="p-5">
+      <div class="flex items-start justify-between gap-2 mb-3">
+        <span class="text-4xl leading-none" aria-hidden="true">${item.icon}</span>
+        <div class="flex flex-col items-end gap-1.5">
+          <span class="text-[11px] font-black px-2.5 py-1 rounded-lg border ${item.gradeClass}">${esc(item.officialGrade)}</span>
+          ${showTab ? `<span class="text-[10px] font-bold text-slate-400">${tabLabel(item.mainTab)}</span>` : ''}
+        </div>
+      </div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-800 mb-2 leading-snug">${hl(item.name)}</h3>
+      <div class="flex items-center gap-2 mb-3 rounded-xl px-3 py-2 ${item.badgeClass}">
+        <i class="fa-solid fa-hand-point-right text-sm"></i><span class="text-xs sm:text-sm font-black">버리는 곳: ${hl(item.target)}</span>
+      </div>
+      <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-3">${hl(item.summary)}</p>
+      ${item.marks.length ? `<div class="mb-3"><div class="text-[10px] font-black text-slate-400 mb-1.5">제품에 이런 마크가 있어요</div>${markRow(item, 44)}</div>` : ''}
+      ${item.parts.length ? `<div class="bg-slate-50 border border-slate-100 p-3 rounded-2xl space-y-1.5">
+        <div class="text-[10px] font-black text-slate-400">부속품 분리 배출처</div>
+        <div class="flex flex-wrap gap-1.5">${item.parts.slice(0, 4).map(p => `<span class="inline-flex items-center bg-white border border-slate-200 px-2 py-1 rounded-lg text-[11px] font-bold text-slate-700"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5"></span>${esc(p.name.split('(')[0].trim())}: <span class="text-emerald-700 ml-1 font-black">${esc(p.target.split(' / ')[0].split(' (')[0])}</span></span>`).join('')}</div>
+      </div>` : ''}
+    </div>
+    <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2">
+      <button data-fav-id="${item.id}" aria-label="즐겨찾기" aria-pressed="${fav}" class="fav-btn w-9 h-9 rounded-xl border ${fav ? 'bg-amber-100 border-amber-300 text-amber-500' : 'bg-white border-slate-200 text-slate-300 hover:text-amber-400'} transition"><i class="fa-solid fa-star"></i></button>
+      <button data-open="${item.id}" class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-3.5 py-2 rounded-xl transition shadow-sm">상세 가이드 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+    </div>
+  </article>`;
+}
+function bindCards(root) {
+  root.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => openModal(b.dataset.open)));
+  root.querySelectorAll('.fav-btn').forEach(b => b.addEventListener('click', () => {
+    const id = b.dataset.favId; favs.has(id) ? favs.delete(id) : favs.add(id); saveFavs();
+    if (!searchQuery.trim()) { renderSubTabs(); renderItemsView(); } else renderSearch();
+  }));
+}
+
+// ── 품목 뷰 ──
+function renderItemsView() {
+  const list = ITEMS.filter(i => i.mainTab === currentMainTab && (favOnly ? favs.has(i.id) : (currentSubTab === 'all' || i.subCategory === currentSubTab)));
+  if (!list.length) {
+    itemsGrid.innerHTML = '';
+    itemsGrid.classList.add('hidden');
+    emptyState.classList.remove('hidden');
+    emptyState.querySelector('h3').textContent = favOnly ? '즐겨찾기한 품목이 없습니다' : '품목이 없습니다';
+    return;
+  }
+  emptyState.classList.add('hidden'); itemsGrid.classList.remove('hidden');
+  itemsGrid.innerHTML = list.map(i => cardHTML(i, false)).join('');
+  bindCards(itemsGrid);
+}
+
+// ── 통합 검색 ──
+function renderSearch() {
+  const tk = tokens();
+  const its = ITEMS.filter(i => tk.every(t => i._hay.includes(t)));
+  const fq = FAQS.filter(f => tk.every(t => f._hay.includes(t)));
+  const mk = [...OFFICIAL_MARK_IDS, ...SPECIAL_MARK_IDS].filter(id => { const m = MK[id]; return tk.every(t => (m.name + ' ' + m.desc + ' ' + m.how + ' ' + m.s + ' ' + m.l).toLowerCase().includes(t)); });
+  searchResults.classList.remove('hidden');
+  if (!its.length && !fq.length && !mk.length) { searchResults.classList.add('hidden'); emptyState.classList.remove('hidden'); emptyState.querySelector('h3').textContent = '검색된 품목이 없습니다'; return; }
+  emptyState.classList.add('hidden');
+  let html = `<div class="text-sm text-slate-500 font-bold">‘${esc(searchQuery)}’ 검색 결과: 품목 ${its.length} · FAQ ${fq.length} · 마크 ${mk.length}</div>`;
+  if (its.length) html += `<section><h3 class="font-black text-lg mb-3 flex items-center gap-2"><i class="fa-solid fa-recycle text-emerald-600"></i> 품목 가이드</h3><div id="srItems" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">${its.map(i => cardHTML(i, true)).join('')}</div></section>`;
+  if (mk.length) html += `<section><h3 class="font-black text-lg mb-3 flex items-center gap-2"><i class="fa-solid fa-shapes text-violet-600"></i> 마크</h3><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">${mk.map(id => markCardHTML(id)).join('')}</div></section>`;
+  if (fq.length) html += `<section><h3 class="font-black text-lg mb-3 flex items-center gap-2"><i class="fa-solid fa-circle-question text-sky-600"></i> FAQ</h3><div class="space-y-3">${fq.map(faqHTML).join('')}</div></section>`;
+  searchResults.innerHTML = html;
+  bindCards(searchResults); bindFaq(searchResults);
+}
+
+// ── FAQ ──
+function faqHTML(f) {
+  const cat = FAQ_CATS.find(c => c.id === f.cat);
+  return `<div class="faq-item border border-slate-200 rounded-2xl overflow-hidden bg-white">
+    <button class="faq-toggle w-full px-5 py-4 bg-slate-50 hover:bg-slate-100 text-left font-extrabold text-slate-800 flex justify-between items-center gap-3 text-sm sm:text-base" aria-expanded="false">
+      <span><span class="text-[11px] font-bold text-slate-400 mr-2">${cat ? cat.icon + ' ' + cat.name : ''}</span><br class="sm:hidden">${hl(f.q)}</span>
+      <i class="faq-chev fa-solid fa-chevron-down text-slate-400 transition-transform"></i></button>
+    <div class="faq-body px-5 py-4 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+      <strong class="text-slate-900 block mb-1.5">${hl(f.head)}</strong>${hl(f.body)}</div></div>`;
+}
+function bindFaq(root) {
+  root.querySelectorAll('.faq-toggle').forEach(b => b.addEventListener('click', () => {
+    const it = b.closest('.faq-item'); it.classList.toggle('faq-open');
+    b.setAttribute('aria-expanded', it.classList.contains('faq-open'));
+  }));
+}
+function renderFaq() {
+  const list = FAQS.filter(f => faqCat === 'all' || f.cat === faqCat);
+  faqTab.innerHTML = `<div class="bg-white rounded-3xl p-5 sm:p-8 shadow-sm border border-slate-200">
+    <h3 class="text-xl sm:text-2xl font-black text-emerald-700 mb-1 flex items-center gap-2"><i class="fa-solid fa-clipboard-question"></i> 자주 헷갈리는 분리배출 FAQ</h3>
+    <p class="text-xs sm:text-sm text-slate-500 mb-4">총 ${FAQS.length}개 질문 · 분야별로 골라 보세요. 위 검색창에서 FAQ 내용도 함께 검색됩니다.</p>
+    <div class="flex flex-wrap gap-2 mb-4" id="faqCats">
+      <button data-fc="all" class="px-3 py-1.5 rounded-xl text-xs font-extrabold ${faqCat === 'all' ? 'bg-sky-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}">전체 ${FAQS.length}</button>
+      ${FAQ_CATS.map(c => `<button data-fc="${c.id}" class="px-3 py-1.5 rounded-xl text-xs font-extrabold ${faqCat === c.id ? 'bg-sky-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}">${c.icon} ${c.name} ${FAQS.filter(f => f.cat === c.id).length}</button>`).join('')}
+    </div>
+    <div class="flex gap-2 mb-4 no-print"><button id="faqExpand" class="text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50">모두 펼치기</button><button id="faqCollapse" class="text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50">모두 접기</button></div>
+    <div class="space-y-3" id="faqList">${list.map(faqHTML).join('')}</div></div>`;
+  faqTab.querySelectorAll('[data-fc]').forEach(b => b.addEventListener('click', () => { faqCat = b.dataset.fc; renderFaq(); }));
+  $('faqExpand').onclick = () => faqTab.querySelectorAll('.faq-item').forEach(i => i.classList.add('faq-open'));
+  $('faqCollapse').onclick = () => faqTab.querySelectorAll('.faq-item').forEach(i => i.classList.remove('faq-open'));
+  bindFaq(faqTab);
+}
+
+// ── 마크 도감 ──
+function markCardHTML(id) {
+  const m = MK[id];
+  return `<div class="bg-white text-slate-800 border border-slate-200 rounded-2xl p-4 flex gap-3 items-start">${markSVG(id, 64)}
+    <div class="text-xs leading-relaxed"><div class="font-black text-sm text-slate-900 mb-1">${hl(m.name)}</div><p class="text-slate-600 mb-1.5">${hl(m.desc)}</p><p class="text-emerald-700 font-bold"><i class="fa-solid fa-hand-point-right"></i> ${hl(m.how)}</p></div></div>`;
+}
+let anatomyIdx = 0;
+function renderMarks() {
+  marksTab.innerHTML = `
+  <div class="bg-amber-50 border border-amber-200 text-amber-900 rounded-2xl p-4 text-xs sm:text-sm leading-relaxed"><i class="fa-solid fa-triangle-exclamation"></i> 아래 도안은 이해를 돕기 위한 <b>단순화 일러스트</b>입니다. 실제 제품의 공식 마크와 모양·색이 조금 다를 수 있으니 ‘글자(재질명)’와 ‘그림’을 함께 확인하세요.</div>
+
+  <section class="bg-white rounded-3xl p-5 sm:p-8 border border-slate-200 shadow-sm">
+    <h3 class="text-xl font-black text-emerald-700 mb-1 flex items-center gap-2"><i class="fa-solid fa-shapes"></i> 분리배출 마크 (제품 겉면 표시)</h3>
+    <p class="text-xs sm:text-sm text-slate-500 mb-5">포장재에 인쇄된 사각형 마크는 ‘어떤 수거함에 버릴지’를 알려줍니다.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">${OFFICIAL_MARK_IDS.map(markCardHTML).join('')}</div>
+  </section>
+
+  <section class="bg-white rounded-3xl p-5 sm:p-8 border border-slate-200 shadow-sm">
+    <h3 class="text-xl font-black text-sky-700 mb-1 flex items-center gap-2"><i class="fa-solid fa-play fa-rotate-270"></i> 재질 식별 코드 (삼각형 숫자)</h3>
+    <p class="text-xs sm:text-sm text-slate-500 mb-5">용기 바닥에 찍힌 숫자는 플라스틱 수지의 종류입니다. ‘버리는 방법’은 사각형 분리배출 마크를 따르세요.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">${RESIN.map(r => `<div class="border border-slate-200 rounded-2xl p-4 flex gap-3 items-start">${triSVG(r.n, r.code, r.color, 64)}<div class="text-xs leading-relaxed"><div class="font-black text-sm mb-1">${r.n}번 ${r.code}</div><p class="text-slate-600 mb-1"><b>주로:</b> ${r.where}</p><p class="text-slate-600 mb-1"><b>재활용:</b> ${r.rec}</p><p class="text-slate-400">${r.note}</p></div></div>`).join('')}</div>
+  </section>
+
+  <section class="bg-white rounded-3xl p-5 sm:p-8 border border-slate-200 shadow-sm">
+    <h3 class="text-xl font-black text-amber-700 mb-1 flex items-center gap-2"><i class="fa-solid fa-ranking-star"></i> 재활용 용이성 등급</h3>
+    <p class="text-xs sm:text-sm text-slate-500 mb-5">제조사가 포장재의 재질·구조를 평가해 표시하는 등급입니다. <b>등급이 낮아도 소비자는 분리배출하는 것이 원칙</b>이에요.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">${GRADES.map(g => `<div class="rounded-2xl p-4 border" style="background:${g.bg};border-color:${g.color}55"><div class="flex gap-3 items-center mb-2">${gradeSVG(g, 56)}<div class="font-black text-lg" style="color:${g.color}">${g.name}</div></div><p class="text-xs text-slate-700 mb-1.5">${g.desc}</p><p class="text-[11px] text-slate-500 mb-1.5"><b>예:</b> ${g.ex}</p><p class="text-xs font-bold" style="color:${g.color}"><i class="fa-solid fa-hand-point-right"></i> ${g.act}</p></div>`).join('')}</div>
+  </section>
+
+  <section class="bg-slate-900 text-white rounded-3xl p-5 sm:p-8 shadow-xl border border-slate-800">
+    <h3 class="text-xl font-black text-emerald-400 mb-1 flex items-center gap-2"><i class="fa-solid fa-magnifying-glass-chart"></i> 제품 라벨 해부도</h3>
+    <p class="text-xs sm:text-sm text-slate-400 mb-4">대표 제품 5가지의 번호를 따라 ‘어디를 어떻게 분리하는지’ 확인하세요.</p>
+    <div class="flex flex-wrap gap-2 mb-5" id="anatomyTabs">${ANATOMY.map((a, i) => `<button data-an="${i}" class="px-3 py-2 rounded-xl text-xs font-extrabold ${i === anatomyIdx ? 'bg-emerald-500 text-slate-900' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}">${a.icon} ${a.title}</button>`).join('')}</div>
+    <div id="anatomyBody"></div>
+  </section>
+
+  <section class="bg-white rounded-3xl p-5 sm:p-8 border border-slate-200 shadow-sm">
+    <h3 class="text-xl font-black text-teal-700 mb-1 flex items-center gap-2"><i class="fa-solid fa-box-archive"></i> 전용 수거 · 특수 마크</h3>
+    <p class="text-xs sm:text-sm text-slate-500 mb-5">일반 재활용함이 아닌 전용 수거함을 이용해야 하는 품목입니다.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">${SPECIAL_MARK_IDS.map(markCardHTML).join('')}</div>
+  </section>
+
+  <section class="bg-white rounded-3xl p-5 sm:p-8 border border-slate-200 shadow-sm">
+    <h3 class="text-xl font-black text-slate-800 mb-1 flex items-center gap-2"><i class="fa-solid fa-certificate"></i> 그 밖에 자주 보이는 표시</h3>
+    <p class="text-xs sm:text-sm text-slate-500 mb-5">분리배출 방법 자체를 알려주지는 않지만 알아두면 좋은 표시입니다.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">${EXTRA_MARKS.map(m => `<div class="border border-slate-200 rounded-2xl p-4 flex gap-3 items-start">${m.svg(64)}<div class="text-xs leading-relaxed"><div class="font-black text-sm mb-1">${m.name}</div><p class="text-slate-600 mb-1.5">${m.desc}</p><p class="text-emerald-700 font-bold">${m.note}</p></div></div>`).join('')}</div>
+  </section>`;
+  const drawAnatomy = () => {
+    const a = ANATOMY[anatomyIdx];
+    $('anatomyBody').innerHTML = `<div class="grid md:grid-cols-2 gap-5 items-center"><div class="bg-white rounded-2xl p-3 flex justify-center">${a.svg}</div>
+      <ol class="space-y-2.5">${a.legend.map((l, i) => `<li class="flex gap-3 items-start"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 text-slate-900 font-black text-xs flex items-center justify-center">${i + 1}</span><div class="text-xs sm:text-sm leading-relaxed"><b class="text-emerald-300">${l[0]}</b><div class="text-slate-300">${l[1]}</div></div></li>`).join('')}</ol></div>`;
+  };
+  drawAnatomy();
+  marksTab.querySelectorAll('[data-an]').forEach(b => b.addEventListener('click', () => { anatomyIdx = +b.dataset.an; renderMarks(); }));
+}
+
+// ── 퀴즈 ──
+let qz = { order:[], i:0, score:0, answered:false, wrong:[] };
+function startQuiz() { qz = { order:[...QUIZ.keys()].sort(() => Math.random() - .5), i:0, score:0, answered:false, wrong:[] }; renderQuiz(); }
+function renderQuiz() {
+  if (!qz.order.length) { startQuiz(); return; }
+  if (qz.i >= qz.order.length) {
+    const pct = Math.round(qz.score / qz.order.length * 100);
+    const msg = pct >= 90 ? '분리배출 마스터! 🏆' : pct >= 70 ? '꽤 잘 알고 계세요! 🌱' : pct >= 50 ? '조금만 더 공부해 볼까요? 📚' : '백과사전을 다시 살펴보세요! 💪';
+    quizTab.innerHTML = `<div class="bg-white rounded-3xl p-8 border border-slate-200 text-center max-w-2xl mx-auto"><div class="text-6xl mb-3">🎉</div><h3 class="text-2xl font-black mb-1">${qz.score} / ${qz.order.length}</h3><p class="text-slate-600 mb-4">${msg} (정답률 ${pct}%)</p>
+      ${qz.wrong.length ? `<div class="text-left bg-rose-50 border border-rose-200 rounded-2xl p-4 mb-5 text-xs sm:text-sm"><b class="text-rose-700">틀린 문제 복습</b><ul class="mt-2 space-y-2">${qz.wrong.map(k => `<li><b>${esc(QUIZ[k].q)}</b><br><span class="text-slate-600">정답: ${esc(QUIZ[k].o[QUIZ[k].a])} — ${esc(QUIZ[k].e)}</span></li>`).join('')}</ul></div>` : ''}
+      <button id="quizRestart" class="bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold px-6 py-3 rounded-xl">다시 도전</button></div>`;
+    $('quizRestart').onclick = startQuiz; return;
+  }
+  const q = QUIZ[qz.order[qz.i]];
+  quizTab.innerHTML = `<div class="bg-white rounded-3xl p-5 sm:p-8 border border-slate-200 max-w-2xl mx-auto">
+    <div class="flex justify-between text-xs font-bold text-slate-500 mb-2"><span>문제 ${qz.i + 1} / ${qz.order.length}</span><span>점수 ${qz.score}</span></div>
+    <div class="h-2 bg-slate-100 rounded-full mb-5"><div class="h-2 bg-emerald-500 rounded-full" style="width:${qz.i / qz.order.length * 100}%"></div></div>
+    <h3 class="text-lg sm:text-xl font-black mb-4">${esc(q.q)}</h3>
+    <div class="space-y-2" id="qOpts">${q.o.map((o, i) => `<button data-qi="${i}" class="quiz-opt w-full text-left px-4 py-3 rounded-xl border border-slate-200 hover:bg-slate-50 font-bold text-sm">${String.fromCharCode(65 + i)}. ${esc(o)}</button>`).join('')}</div>
+    <div id="qFeed" class="hidden mt-4 p-4 rounded-xl text-sm leading-relaxed"></div>
+    <div class="mt-4 text-right"><button id="qNext" class="hidden bg-slate-900 text-white font-extrabold px-5 py-2.5 rounded-xl text-sm">${qz.i + 1 === qz.order.length ? '결과 보기' : '다음 문제'}</button></div></div>`;
+  qz.answered = false;
+  quizTab.querySelectorAll('.quiz-opt').forEach(b => b.addEventListener('click', () => {
+    if (qz.answered) return; qz.answered = true;
+    const pick = +b.dataset.qi, ok = pick === q.a;
+    if (ok) qz.score++; else qz.wrong.push(qz.order[qz.i]);
+    quizTab.querySelectorAll('.quiz-opt').forEach((x, i) => {
+      x.disabled = true;
+      if (i === q.a) x.classList.add('bg-emerald-100', 'border-emerald-400', 'text-emerald-900');
+      else if (i === pick) x.classList.add('bg-rose-100', 'border-rose-400', 'text-rose-900');
+    });
+    const f = $('qFeed'); f.classList.remove('hidden'); f.className = 'mt-4 p-4 rounded-xl text-sm leading-relaxed ' + (ok ? 'bg-emerald-50 text-emerald-900' : 'bg-rose-50 text-rose-900');
+    f.innerHTML = `<b>${ok ? '정답입니다! ⭕' : '아쉬워요 ❌'}</b><br>${esc(q.e)}`;
+    $('qNext').classList.remove('hidden');
+    $('qNext').onclick = () => { qz.i++; renderQuiz(); };
+  }));
+}
+
+// ── 모달 ──
+function listBlock(title, icon, color, arr) {
+  if (!arr.length) return '';
+  return `<div class="mb-5 bg-${color}-50 border border-${color}-200 p-4 rounded-2xl"><h4 class="text-xs sm:text-sm font-extrabold text-${color}-900 flex items-center gap-2 mb-2"><i class="fa-solid ${icon} text-${color}-600"></i> ${title}</h4><ul class="space-y-1.5 text-xs sm:text-sm text-${color}-900/90 leading-relaxed list-disc pl-5">${arr.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
+}
+const VERDICT = {
+  ok:  'bg-emerald-100 text-emerald-800 border-emerald-300',
+  no:  'bg-rose-100 text-rose-800 border-rose-300',
+  sep: 'bg-sky-100 text-sky-800 border-sky-300',
+  oth: 'bg-violet-100 text-violet-800 border-violet-300'
+};
+function guideBlock(rows) {
+  if (!rows.length) return '';
+  return `<div class="mb-5"><h4 class="text-sm font-extrabold text-slate-800 flex items-center gap-2 mb-3"><i class="fa-solid fa-scale-balanced text-emerald-600"></i> 상황별 판정표</h4>
+  <div class="space-y-2">${rows.map(r => `<div class="border border-slate-200 rounded-2xl p-3 bg-white"><div class="flex flex-wrap items-center gap-2 mb-1.5"><b class="text-xs sm:text-sm text-slate-900">${esc(r[0])}</b><span class="text-[11px] font-black px-2.5 py-0.5 rounded-full border ${VERDICT[r[2]] || VERDICT.sep}">${esc(r[1])}</span></div><p class="text-xs sm:text-sm text-slate-600 leading-relaxed">${esc(r[3])}</p></div>`).join('')}</div></div>`;
+}
+function openModal(id) {
+  const item = ITEMS.find(i => i.id === id); if (!item) return;
+  modalContent.innerHTML = `<div class="p-5 sm:p-8">
+    <div class="flex items-start justify-between gap-4 mb-5 border-b border-slate-100 pb-4">
+      <div class="flex gap-3 items-start"><span class="text-5xl leading-none">${item.icon}</span><div>
+        <div class="flex flex-wrap items-center gap-2 mb-2"><span class="px-3 py-1 rounded-full text-xs font-extrabold ${item.badgeClass}">${esc(item.target)}</span><span class="text-xs font-black px-2.5 py-1 rounded-lg border ${item.gradeClass}">${esc(item.officialGrade)}</span></div>
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 leading-snug">${esc(item.name)}</h2></div></div>
+      <button id="modalX" aria-label="닫기" class="text-slate-400 hover:text-slate-600 p-2 w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 transition flex-shrink-0"><i class="fa-solid fa-xmark text-xl"></i></button>
+    </div>
+    <p class="text-sm text-slate-700 mb-5 font-medium">${esc(item.summary)}</p>
+    ${item.marks.length ? `<div class="mb-5"><h4 class="text-sm font-extrabold text-slate-800 flex items-center gap-2 mb-3"><i class="fa-solid fa-shapes text-violet-600"></i> 제품에 인쇄된 마크</h4><div class="flex flex-wrap gap-3">${item.marks.map(m => `<div class="flex items-center gap-2.5 bg-slate-50 border border-slate-200 rounded-2xl p-2.5 pr-4">${markSVG(m, 60)}<div class="text-xs"><b class="block text-slate-800">${esc(MK[m].name)}</b><span class="text-slate-500">${esc(MK[m].how)}</span></div></div>`).join('')}</div></div>` : ''}
+    ${item.examples.length ? `<div class="mb-5"><h4 class="text-sm font-extrabold text-slate-800 flex items-center gap-2 mb-2"><i class="fa-solid fa-tags text-sky-600"></i> 대표 예시</h4><div class="flex flex-wrap gap-1.5">${item.examples.map(e => `<span class="bg-sky-50 text-sky-800 border border-sky-200 text-xs font-bold px-2.5 py-1 rounded-full">${esc(e)}</span>`).join('')}</div></div>` : ''}
+    ${item.parts.length ? `<div class="mb-5"><h4 class="text-sm font-extrabold text-slate-800 flex items-center gap-2 mb-3"><i class="fa-solid fa-cubes text-emerald-600"></i> 부속재별 세부 배출 분류</h4>
+      <div class="overflow-x-auto rounded-2xl border border-slate-200"><table class="w-full text-left text-xs sm:text-sm"><thead class="bg-slate-100 text-slate-700 border-b border-slate-200 font-black"><tr><th class="p-3">부속품</th><th class="p-3">소재</th><th class="p-3">버리는 곳</th><th class="p-3">요령</th></tr></thead>
+      <tbody class="divide-y divide-slate-100 text-slate-700">${item.parts.map(p => `<tr><td class="p-3 font-extrabold text-slate-900">${esc(p.name)}</td><td class="p-3"><span class="bg-slate-100 px-2 py-0.5 rounded text-xs border border-slate-200">${esc(p.material)}</span></td><td class="p-3 font-extrabold text-emerald-700">${esc(p.target)}</td><td class="p-3 text-slate-600">${esc(p.action)}</td></tr>`).join('')}</tbody></table></div></div>` : ''}
+    ${guideBlock(item.guide)}
+    ${item.steps.length ? `<div class="mb-5"><h4 class="text-sm font-extrabold text-slate-800 flex items-center gap-2 mb-3"><i class="fa-solid fa-list-check text-emerald-600"></i> 단계별 분리배출 순서</h4><div class="space-y-2">${item.steps.map((s, i) => `<div class="flex items-start gap-3 bg-slate-50 p-3 rounded-2xl border border-slate-200/80"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-700 text-white font-black text-xs flex items-center justify-center">${i + 1}</span><span class="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">${esc(s)}</span></div>`).join('')}</div></div>` : ''}
+    ${listBlock('이런 실수 많이 해요', 'fa-circle-xmark', 'rose', item.mistakes)}
+    ${listBlock('알아두면 좋은 팁', 'fa-lightbulb', 'sky', item.tips)}
+    ${item.local ? `<div class="mb-5 bg-violet-50 border border-violet-200 p-4 rounded-2xl text-xs sm:text-sm text-violet-900 leading-relaxed"><b><i class="fa-solid fa-location-dot"></i> 지자체 확인 필요</b><br>${esc(item.local)}</div>` : ''}
+    ${item.why ? `<div class="mb-5 bg-amber-50 border border-amber-200 p-4 rounded-2xl"><h4 class="text-xs sm:text-sm font-extrabold text-amber-900 flex items-center gap-2 mb-1"><i class="fa-solid fa-circle-info text-amber-600"></i> 왜 이렇게 버릴까? (배경 원리)</h4><p class="text-xs sm:text-sm text-amber-900/90 leading-relaxed font-medium">${esc(item.why)}</p></div>` : ''}
+    <div class="text-right border-t border-slate-100 pt-4"><button id="modalOk" class="w-full sm:w-auto px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-extrabold rounded-xl text-xs sm:text-sm transition">확인 완료</button></div></div>`;
+  detailModal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  $('modalX').onclick = $('modalOk').onclick = closeModal;
+  $('modalContainer').scrollTop = 0;
+}
+function closeModal() { detailModal.classList.add('hidden'); document.body.style.overflow = ''; }
+detailModal.addEventListener('click', e => { if (e.target === detailModal) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── 전체 렌더 ──
+function hideAll() { [itemsGrid, marksTab, faqTab, quizTab, searchResults, emptyState].forEach(el => el.classList.add('hidden')); }
+function renderAll() {
+  renderMainTabs(); renderSubTabs(); hideAll();
+  if (searchQuery.trim()) { renderSearch(); return; }
+  if (currentMainTab === 'marks') { marksTab.classList.remove('hidden'); renderMarks(); }
+  else if (currentMainTab === 'faq') { faqTab.classList.remove('hidden'); renderFaq(); }
+  else if (currentMainTab === 'quiz') { quizTab.classList.remove('hidden'); renderQuiz(); }
+  else renderItemsView();
+}
+
+// ── 검색 이벤트 ──
+let st;
+searchInput.addEventListener('input', e => {
+  clearTimeout(st);
+  st = setTimeout(() => {
+    searchQuery = e.target.value;
+    clearBtn.classList.toggle('hidden', !searchQuery.trim());
+    renderAll();
+  }, 120);
+});
+clearBtn.addEventListener('click', () => { searchInput.value = ''; searchQuery = ''; clearBtn.classList.add('hidden'); renderAll(); searchInput.focus(); });
+$('quickChips').innerHTML = '<span class="text-xs font-bold text-slate-400">자주 찾는 검색어</span>' + QUICK.map(q => `<button class="chip text-xs font-bold px-2.5 py-1 rounded-full bg-slate-100 hover:bg-emerald-100 hover:text-emerald-800 text-slate-600 transition">${q}</button>`).join('');
+$('quickChips').querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => { searchInput.value = c.textContent; searchQuery = c.textContent; clearBtn.classList.remove('hidden'); renderAll(); }));
+
+// ── 초기화 ──
+$('statItems').textContent = ITEMS.length;
+$('statMarks').textContent = TOTAL_MARK_COUNT;
+$('statFaq').textContent = FAQS.length;
+renderAll();
+</script>
+</body></html>
